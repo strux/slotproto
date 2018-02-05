@@ -1,0 +1,111 @@
+{"frames": {
+
+"anticipation_fm2":
+{
+	"frame": {"x":308,"y":770,"w":143,"h":352},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":143,"h":352},
+	"sourceSize": {"w":146,"h":356},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"anticipation_fm3":
+{
+	"frame": {"x":662,"y":770,"w":143,"h":352},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":143,"h":352},
+	"sourceSize": {"w":146,"h":356},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"bg_slot":
+{
+	"frame": {"x":0,"y":0,"w":1024,"h":768},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1024,"h":768},
+	"sourceSize": {"w":1024,"h":768},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"bigwin":
+{
+	"frame": {"x":0,"y":770,"w":217,"h":306},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":306},
+	"sourceSize": {"w":217,"h":306},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"btn_linebet_minus":
+{
+	"frame": {"x":974,"y":915,"w":49,"h":62},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":62},
+	"sourceSize": {"w":49,"h":62},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"coin_fm00":
+{
+	"frame": {"x":0,"y":989,"w":63,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":17,"w":63,"h":31},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"coin_fm06":
+{
+	"frame": {"x":130,"y":989,"w":63,"h":29},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":17,"w":63,"h":29},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"coin_fm08":
+{
+	"frame": {"x":65,"y":989,"w":63,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":17,"w":63,"h":31},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"coin_fm14":
+{
+	"frame": {"x":195,"y":989,"w":63,"h":29},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":17,"w":63,"h":29},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"logo_game":
+{
+	"frame": {"x":308,"y":915,"w":404,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":404,"h":96},
+	"sourceSize": {"w":404,"h":96},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"panel_bet":
+{
+	"frame": {"x":714,"y":915,"w":258,"h":63},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":258,"h":63},
+	"sourceSize": {"w":258,"h":63},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "slottemplate_slot2.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":1024},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:d971a7faf65c65b87e84020464f388ca:2953e2b510796dff394fd6d477283bfc:1fd7a778903d60b9f22800a2fb9a6dfc$"
+}
+}

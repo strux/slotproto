@@ -1,0 +1,21 @@
+{"frames": {
+
+"bg_paytable":
+{
+	"frame": {"x":0,"y":0,"w":1024,"h":768},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1024,"h":768},
+	"sourceSize": {"w":1024,"h":768},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "slottemplate_paytable1.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":1024},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:699ff7a8ebb6df8a5065fdb473febee9:dd9e4cf49479249ff66e899372681e76:8b2958c45a1c8e1e190fc1f6a4292373$"
+}
+}

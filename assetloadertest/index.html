@@ -1,0 +1,55 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Make a sprite from a texture atlas</title>
+<body>
+<script src="pixi.js"></script>
+<script>
+
+//Aliases
+let Application = PIXI.Application,
+    Container = PIXI.Container,
+    loader = PIXI.loader,
+    resources = PIXI.loader.resources,
+    TextureCache = PIXI.utils.TextureCache,
+    Sprite = PIXI.Sprite,
+    Rectangle = PIXI.Rectangle;
+
+//Create a Pixi Application
+let app = new Application({
+    width: 1024,
+    height: 768,
+    antialiasing: true,
+    transparent: false,
+    resolution: 1
+});
+
+//Add the canvas that Pixi automatically created for you to the HTML document
+document.body.appendChild(app.view);
+
+//load a JSON file and run the `setup` function when it's done
+loader
+.add([
+    "images/slottemplate_common1.json",
+    "images/slottemplate_paytable1.json",
+    "images/slottemplate_slot1.json",
+    "images/slottemplate_slot2.json",
+    "images/slottemplate_slot3.json",
+    "images/slottemplate_slot4.json",
+    "images/slottemplate_slot5.json",
+    "images/slottemplate_slot6.json",
+    "images/slottemplate_slot7.json",
+])
+.load(setup);
+
+function setup() {
+
+    bg = PIXI.Sprite.fromFrame("bg_freespin");
+    app.stage.addChild(bg);
+
+    o = PIXI.Sprite.fromFrame("freespinreel_0_fm0");
+    app.stage.addChild(o);
+}
+</script>
+</body>
+
+
