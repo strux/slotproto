@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pixi Audio Test</title>
+</head>
+  <script src="pixi/pixi.min.js"></script>
+  <script src="pixi/pixi-sound.js"></script>
+<body>
+  
+  <button dispatch='LOOP'>Loop</button>
+  <button dispatch='SFX'>SFX</button>
+  <button dispatch='FADE_IN'>Fade IN</button>
+  <button dispatch='FADE_OUT'>Fade OUT</button>
+
+  <script type="text/javascript">
+    let type = "WebGL"
+    if(!PIXI.utils.isWebGLSupported()){
+      type = "canvas"
+    }
+
+    const btns = document.querySelectorAll('button');
+    btns.forEach(function(btn){
+      btn.addEventListener("mousedown", function(){
+        _dispatch(btn.attributes.dispatch.value);
+      });
+    });
+
+    function _dispatch(id) {
+      switch (id) {
+        case "LOOP":
+          _loop();
+          break;
+        case "SFX":
+          _playSFX();
+          break;
+        case "FADE_IN":
+          _fadeIn();
+          break;
+        case "FADE_OUT":
+          _fadeOut();
+          break;
+        default:
+          // statements_def
+          break;
+      }
+    }
+    function _loop() {
+      console.log('Looping Sound');
+      const sound = PIXI.sound.Sound.from('resources/loop.mp3');
+      sound.play({
+        loop: true,
+        singleInstance: true
+      });
+    }
+
+    function _playSFX() {
+      console.log('Playing SFX');
+      const sound = PIXI.sound.Sound.from('resources/sfx.mp3');
+      sound.play();
+    }
+
+    function _fadeIn() {
+      console.log('Fading In');
+    }
+
+    function _fadeOut() {
+      console.log('Fading Out');
+    }
+  </script>
+
+</body>
+</html>
