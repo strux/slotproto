@@ -1,7 +1,7 @@
 export default class Button extends PIXI.Sprite {
 
     constructor(frameId, action) {
-        super(PIXI.TextureCache[frameId]);
+        super(PIXI.utils.TextureCache[frameId]);
         this.action = action;
         this.interactive = true;
         this.buttonMode = true;
