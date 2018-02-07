@@ -30,7 +30,10 @@ PIXI.loader
 
 function setup() {
 
-    let bg = PIXI.Sprite.fromFrame("bg_slot");
+    let bg = PIXI.Sprite.fromFrame("bg_freespin");
     app.stage.addChild(bg);
+
+    var name = "Babel";
+    console.log(`This should indicate that ${name} is working.`)
 
 }
