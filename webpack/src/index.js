@@ -33,7 +33,13 @@ function setup() {
     let bg = PIXI.Sprite.fromFrame("bg_freespin");
     app.stage.addChild(bg);
 
-    var name = "Babel";
+    let name = "Babel";
     console.log(`This should indicate that ${name} is working.`)
 
+    let onClick = () => console.log('The button works!');
+    let btnTest = PIXI.Sprite.fromFrame("btn_spin");
+    btnTest.interactive = true;
+    btnTest.buttonMode = true;
+    btnTest.on('pointerup', onClick);
+    app.stage.addChild(btnTest);
 }
