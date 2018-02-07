@@ -1,5 +1,6 @@
 import * as PIXI from 'pixi.js';
 import './style.css';
+import Button from './components/button.js';
 
 //Create a Pixi Application
 let app = new PIXI.Application({
@@ -36,10 +37,6 @@ function setup() {
     let name = "Babel";
     console.log(`This should indicate that ${name} is working.`)
 
-    let onClick = () => console.log('The button works!');
-    let btnTest = PIXI.Sprite.fromFrame("btn_spin");
-    btnTest.interactive = true;
-    btnTest.buttonMode = true;
-    btnTest.on('pointerup', onClick);
+    let btnTest = new Button('btn_spin', 'The button class works!');
     app.stage.addChild(btnTest);
 }
