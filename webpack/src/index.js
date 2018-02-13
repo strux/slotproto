@@ -1,10 +1,12 @@
 import * as PIXI from 'pixi.js';
 import './style.css';
-import { Button, StoreConnected2 } from './components/button.js';
+import { Button, connectedComponent } from './components/button.js';
+import { SlotControls } from './components/slotControls.js';
 
 import { createStore } from 'redux';
 import counter from './reducers/counter.js';
 const counterStore = createStore(counter);
+export { counterStore };
 
 
 
@@ -43,10 +45,12 @@ function setup() {
     let name = "Babel";
     console.log(`This should indicate that ${name} is working.`)
 
-
-
     let btnTest = new Button('btn_spin', 'INCREMENT');
 
-    btnTest = StoreConnected2(btnTest, counterStore);
+    //btnTest = connectedComponent(btnTest, counterStore);
     app.stage.addChild(btnTest);
+
+    let controls = new SlotControls(counterStore);
+    controls.y = app.stage.height - controls.height;
+    app.stage.addChild(controls);
 }

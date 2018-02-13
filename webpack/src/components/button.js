@@ -1,6 +1,6 @@
 let StoreConnected = (superclass) => class extends superclass {
 
-    constructor(frameId, action) {
+    constructor(frameId) {
         super();
         console.log('connected');
         //counterStore.subscribe(this.update);
@@ -15,22 +15,42 @@ let StoreConnected = (superclass) => class extends superclass {
 //class Button extends StoreConnected(PIXI.Sprite) {
 class Button extends PIXI.Sprite {
 
-    constructor(frameId, action) {
-        console.log('button');
+    constructor(frameId, onUpCallback) {
         super(PIXI.utils.TextureCache[frameId]);
-        this.action = action;
+        this._diabled = false;
         this.interactive = true;
         this.buttonMode = true;
-        this.on('pointerup', this.onClick);
+        this.onUpCallback = onUpCallback;
+        this.on('pointerdown', this.onDown);
+        this.on('pointerup', this.onUp);
     }
 
-    onClick() {
-        this.getStore().dispatch({ type: this.action });
+    onDown() {
+        this.scale.set(1.2);
     }
 
-    update(state) {
-        console.log(state);
-        setTimeout(function() { this.x += 200; }.bind(this), 2000);
+    onUp() {
+        this.scale.set(1);
+        if (this.onUpCallback) {
+            this.onUpCallback()
+        }
+    }
+
+    get disabled() {
+        return this._disabled;
+    }
+
+    set disabled(disabled=true) {
+        this._disabled = disabled;
+        if (disabled) {
+            this.alpha = 0.3;
+            this.interactive = false;
+            this.buttonMode = false;
+        } else {
+            this.alpha = 1;
+            this.interactive = true;
+            this.buttonMode = true;
+        }
     }
 }
 export { Button };
@@ -50,4 +70,4 @@ const connectedComponent = (Component, store) => {
 
     return Component
 }
-export { StoreConnected2 };
+export { connectedComponent };
