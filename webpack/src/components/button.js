@@ -1,18 +1,3 @@
-let StoreConnected = (superclass) => class extends superclass {
-
-    constructor(frameId) {
-        super();
-        console.log('connected');
-        //counterStore.subscribe(this.update);
-    }
-
-    update() {
-        console.log(counterStore.getState());
-    }
-}
-
-//@connectToStore(counterStore)
-//class Button extends StoreConnected(PIXI.Sprite) {
 class Button extends PIXI.Sprite {
 
     constructor(frameId, onUpCallback) {
@@ -54,20 +39,3 @@ class Button extends PIXI.Sprite {
     }
 }
 export { Button };
-
-
-const connectedComponent = (Component, store) => {
-
-    Component.getStore = () => {
-        return store;
-    }
-
-    let update = () => {
-        Component.update(store.getState());
-    }
-
-    store.subscribe(update);
-
-    return Component
-}
-export { connectedComponent };

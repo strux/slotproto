@@ -1,4 +1,3 @@
-import { counterStore } from '../index.js';
 import { Button } from './button.js';
 
 class SlotControls extends PIXI.Container {
@@ -24,13 +23,13 @@ class SlotControls extends PIXI.Container {
     render() {
         let state = this.store.getState();
 
-        this.btnTest.disabled = state > 2;
+        this.btnTest.disabled = state.spinRequested;
     }
 
 
     onSpinClick() {
         console.log('dispatching');
-        this.store.dispatch({ type: 'INCREMENT' });
+        this.store.dispatch({ type: 'SPIN_REQESTED' });
     }
 
 }

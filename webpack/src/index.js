@@ -4,9 +4,9 @@ import { Button, connectedComponent } from './components/button.js';
 import { SlotControls } from './components/slotControls.js';
 
 import { createStore } from 'redux';
-import counter from './reducers/counter.js';
-const counterStore = createStore(counter);
-export { counterStore };
+import uiReducer from './reducers/ui.js';
+const uiStore = createStore(uiReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+export { uiStore };
 
 
 
@@ -47,10 +47,10 @@ function setup() {
 
     let btnTest = new Button('btn_spin', 'INCREMENT');
 
-    //btnTest = connectedComponent(btnTest, counterStore);
+    //btnTest = connectedComponent(btnTest, uiState);
     app.stage.addChild(btnTest);
 
-    let controls = new SlotControls(counterStore);
+    let controls = new SlotControls(uiStore);
     controls.y = app.stage.height - controls.height;
     app.stage.addChild(controls);
 }
