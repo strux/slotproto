@@ -1,6 +1,22 @@
-export default class Button extends PIXI.Sprite {
+let StoreConnected = (superclass) => class extends superclass {
 
     constructor(frameId, action) {
+        super();
+        console.log('connected');
+        //counterStore.subscribe(this.update);
+    }
+
+    update() {
+        console.log(counterStore.getState());
+    }
+}
+
+//@connectToStore(counterStore)
+//class Button extends StoreConnected(PIXI.Sprite) {
+class Button extends PIXI.Sprite {
+
+    constructor(frameId, action) {
+        console.log('button');
         super(PIXI.utils.TextureCache[frameId]);
         this.action = action;
         this.interactive = true;
@@ -9,7 +25,29 @@ export default class Button extends PIXI.Sprite {
     }
 
     onClick() {
-        console.log(this.action);
+        this.getStore().dispatch({ type: this.action });
     }
 
+    update(state) {
+        console.log(state);
+        setTimeout(function() { this.x += 200; }.bind(this), 2000);
+    }
 }
+export { Button };
+
+
+const connectedComponent = (Component, store) => {
+
+    Component.getStore = () => {
+        return store;
+    }
+
+    let update = () => {
+        Component.update(store.getState());
+    }
+
+    store.subscribe(update);
+
+    return Component
+}
+export { StoreConnected2 };

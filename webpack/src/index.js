@@ -1,9 +1,15 @@
 import * as PIXI from 'pixi.js';
 import './style.css';
-import Button from './components/button.js';
+import { Button, StoreConnected2 } from './components/button.js';
+
+import { createStore } from 'redux';
+import counter from './reducers/counter.js';
+const counterStore = createStore(counter);
+
+
 
 //Create a Pixi Application
-let app = new PIXI.Application({
+const app = new PIXI.Application({
     width: 1024,
     height: 768,
     antialiasing: true,
@@ -17,7 +23,7 @@ document.body.appendChild(app.view);
 //load a JSON file and run the `setup` function when it's done
 PIXI.loader
 .add([
-    './images/slottemplate_slot1.json',
+    "./images/slottemplate_slot1.json",
     "./images/slottemplate_slot2.json",
     "./images/slottemplate_slot3.json",
     "./images/slottemplate_slot4.json",
@@ -37,6 +43,10 @@ function setup() {
     let name = "Babel";
     console.log(`This should indicate that ${name} is working.`)
 
-    let btnTest = new Button('btn_spin', 'The button class works!');
+
+
+    let btnTest = new Button('btn_spin', 'INCREMENT');
+
+    btnTest = StoreConnected2(btnTest, counterStore);
     app.stage.addChild(btnTest);
 }
