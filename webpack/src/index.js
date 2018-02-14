@@ -2,11 +2,12 @@ import * as PIXI from 'pixi.js';
 import './style.css';
 import { Button, connectedComponent } from './components/button.js';
 import { SlotControls } from './components/slotControls.js';
+import { ReelController } from './components/ReelController.js';
 
 import { createStore } from 'redux';
-import uiReducer from './reducers/ui.js';
-const uiStore = createStore(uiReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-export { uiStore };
+import reducer from './reducers/index.js';
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+export { store };
 
 
 
@@ -45,7 +46,13 @@ function setup() {
     let name = "Babel";
     console.log(`This should indicate that ${name} is working.`)
 
-    let controls = new SlotControls('bottom_bar', uiStore);
+    let reelController = new ReelController('slotface', store);
+    reelController.anchor.set(0.5);
+    reelController.x = app.stage.width / 2;
+    reelController.y = (app.stage.height / 2) - 40;
+    app.stage.addChild(reelController);
+
+    let controls = new SlotControls('bottom_bar', store);
     controls.y = app.stage.height - controls.height;
     app.stage.addChild(controls);
 }

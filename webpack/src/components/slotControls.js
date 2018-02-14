@@ -19,7 +19,7 @@ class SlotControls extends PIXI.Sprite {
 
     render() {
         let state = this.store.getState();
-        this.btnTest.disabled = state.spinRequested;
+        this.btnTest.disabled = state.ui.spinRequested;
     }
 
 

@@ -1,0 +1,932 @@
+[
+  {
+    "cash": 2249433271,
+    "responseBody": null,
+    "responseObject": {
+      "TransactionId": "A01M@-15182051254297",
+      "PatternSliderInput": {
+        "PatternsBet": "40",
+        "BetPerPattern": "20000"
+      },
+      "PopulationOutcome": [
+        {
+          "Entry": [
+            {
+              "Cell": "spins,5,trigger,FreeSpin",
+              "stripIndex": "0",
+              "name": "L0C0R0"
+            },
+            {
+              "Cell": "spins,200,trigger,HotRoulette",
+              "stripIndex": "1",
+              "name": "L0C1R0"
+            }
+          ],
+          "name": "BonusPicker.Picks",
+          "stage": "BonusPicker"
+        },
+        {
+          "Entry": [
+            {
+              "Cell": [
+                "F6",
+                "F9",
+                "M4",
+                "F9"
+              ],
+              "stripIndex": "9",
+              "name": "Reel0"
+            },
+            {
+              "Cell": [
+                "F7",
+                "F6",
+                "M3",
+                "F9"
+              ],
+              "stripIndex": "3",
+              "name": "Reel1"
+            },
+            {
+              "Cell": [
+                "M3",
+                "F5",
+                "M4",
+                "F8"
+              ],
+              "stripIndex": "10",
+              "name": "Reel2"
+            },
+            {
+              "Cell": [
+                "M1",
+                "F7",
+                "M4",
+                "SC"
+              ],
+              "stripIndex": "27",
+              "name": "Reel3"
+            },
+            {
+              "Cell": [
+                "F5",
+                "M2",
+                "F0",
+                "M2"
+              ],
+              "stripIndex": "17",
+              "name": "Reel4"
+            }
+          ],
+          "name": "BaseGame.Reels",
+          "stage": "BaseGame"
+        },
+        {
+          "Entry": [
+            {
+              "Cell": [
+                "M3",
+                "F5",
+                "F8",
+                "M3"
+              ],
+              "stripIndex": "83",
+              "name": "Reel0"
+            },
+            {
+              "Cell": [
+                "M3",
+                "WW",
+                "WW",
+                "WW"
+              ],
+              "stripIndex": "32",
+              "name": "Reel1"
+            },
+            {
+              "Cell": [
+                "F9",
+                "F7",
+                "M1",
+                "F6"
+              ],
+              "stripIndex": "91",
+              "name": "Reel2"
+            },
+            {
+              "Cell": [
+                "M2",
+                "F0",
+                "F9",
+                "SC"
+              ],
+              "stripIndex": "55",
+              "name": "Reel3"
+            },
+            {
+              "Cell": [
+                "WW",
+                "WW",
+                "WW",
+                "WW"
+              ],
+              "stripIndex": "35",
+              "name": "Reel4"
+            }
+          ],
+          "name": "FreeSpin.Reels",
+          "stage": "FreeSpin"
+        }
+      ],
+      "AwardCapOutcome": {
+        "AwardCapExceeded": "false",
+        "name": "AwardCap"
+      },
+      "OutcomeDetail": {
+        "TransactionId": "A01M@-15182051254343",
+        "Payout": "0",
+        "GameStatus": "Start",
+        "Settled": "800000",
+        "NextStage": "BaseGame",
+        "Stage": "BaseGame",
+        "Pending": "0",
+        "Balance": "2249433271"
+      },
+      "Balances": {
+        "totalBalance": "2249433271"
+      },
+      "PickerSummaryOutcome": {
+        "Awarded": "0",
+        "PickCount": "0",
+        "name": "BonusPicker",
+        "InitAwarded": "0",
+        "MaxPicksAwarded": "false",
+        "CurrentLayer": {
+          "index": "0",
+          "name": "layer0"
+        },
+        "IncrementTriggered": "false",
+        "PicksRemaining": "0"
+      },
+      "ActionInput": {
+        "Action": "play"
+      },
+      "HighlightOutcome": [
+        {
+          "name": "BaseGame.Scatter",
+          "type": "",
+          "Highlight": []
+        },
+        {
+          "name": "BaseGame.Lines",
+          "type": "",
+          "Highlight": []
+        }
+      ],
+      "PrizeOutcome": [
+        {
+          "name": "BaseGame.Scatter",
+          "pay": "0",
+          "type": "Pattern",
+          "stage": "",
+          "multiplier": "1",
+          "totalPay": "0"
+        },
+        {
+          "name": "BaseGame.Lines",
+          "pay": "0",
+          "type": "Pattern",
+          "stage": "",
+          "multiplier": "1",
+          "totalPay": "0"
+        },
+        {
+          "Prize": {
+            "position": "0",
+            "symbolCount": "0",
+            "betMultiplier": "1",
+            "payName": "",
+            "name": "Total",
+            "pay": "0",
+            "multiplier": "1",
+            "ways": "0",
+            "totalPay": "0"
+          },
+          "name": "Game.Total",
+          "pay": "0",
+          "type": "",
+          "stage": "",
+          "multiplier": "1",
+          "totalPay": "0"
+        }
+      ]
+    },
+    "gameName": "hotRouletteWolfRun",
+    "needsBuyIn": false
+  },
+  {
+    "cash": 2211933271,
+    "responseBody": null,
+    "responseObject": {
+      "TransactionId": "A01M@-15182051254343",
+      "PatternSliderInput": {
+        "PatternsBet": "40",
+        "BetPerPattern": "20000"
+      },
+      "PopulationOutcome": [
+        {
+          "Entry": [
+            {
+              "Cell": "spins,5,trigger,FreeSpin",
+              "stripIndex": "0",
+              "name": "L0C0R0"
+            },
+            {
+              "Cell": "spins,200,trigger,HotRoulette",
+              "stripIndex": "1",
+              "name": "L0C1R0"
+            }
+          ],
+          "name": "BonusPicker.Picks",
+          "stage": "BonusPicker"
+        },
+        {
+          "Entry": [
+            {
+              "Cell": [
+                "F6",
+                "F5",
+                "M2",
+                "F6"
+              ],
+              "stripIndex": "6",
+              "name": "Reel0"
+            },
+            {
+              "Cell": [
+                "F8",
+                "F0",
+                "M2",
+                "F9"
+              ],
+              "stripIndex": "20",
+              "name": "Reel1"
+            },
+            {
+              "Cell": [
+                "WW",
+                "WW",
+                "M1",
+                "F8"
+              ],
+              "stripIndex": "46",
+              "name": "Reel2"
+            },
+            {
+              "Cell": [
+                "F7",
+                "SC",
+                "F7",
+                "M2"
+              ],
+              "stripIndex": "18",
+              "name": "Reel3"
+            },
+            {
+              "Cell": [
+                "F9",
+                "F5",
+                "M4",
+                "F5"
+              ],
+              "stripIndex": "26",
+              "name": "Reel4"
+            }
+          ],
+          "name": "BaseGame.Reels",
+          "stage": "BaseGame"
+        },
+        {
+          "Entry": [
+            {
+              "Cell": [
+                "M3",
+                "F5",
+                "F8",
+                "M3"
+              ],
+              "stripIndex": "83",
+              "name": "Reel0"
+            },
+            {
+              "Cell": [
+                "M3",
+                "WW",
+                "WW",
+                "WW"
+              ],
+              "stripIndex": "32",
+              "name": "Reel1"
+            },
+            {
+              "Cell": [
+                "F9",
+                "F7",
+                "M1",
+                "F6"
+              ],
+              "stripIndex": "91",
+              "name": "Reel2"
+            },
+            {
+              "Cell": [
+                "M2",
+                "F0",
+                "F9",
+                "SC"
+              ],
+              "stripIndex": "55",
+              "name": "Reel3"
+            },
+            {
+              "Cell": [
+                "WW",
+                "WW",
+                "WW",
+                "WW"
+              ],
+              "stripIndex": "35",
+              "name": "Reel4"
+            }
+          ],
+          "name": "FreeSpin.Reels",
+          "stage": "FreeSpin"
+        }
+      ],
+      "AwardCapOutcome": {
+        "AwardCapExceeded": "false",
+        "name": "AwardCap"
+      },
+      "OutcomeDetail": {
+        "TransactionId": "A01M@-15182051254362",
+        "Payout": "500000",
+        "GameStatus": "Start",
+        "Settled": "800000",
+        "NextStage": "BaseGame",
+        "Stage": "BaseGame",
+        "Pending": "0",
+        "Balance": "2211933271"
+      },
+      "Balances": {
+        "totalBalance": "2211933271"
+      },
+      "PickerSummaryOutcome": {
+        "Awarded": "0",
+        "PickCount": "0",
+        "name": "BonusPicker",
+        "InitAwarded": "0",
+        "MaxPicksAwarded": "false",
+        "CurrentLayer": {
+          "index": "0",
+          "name": "layer0"
+        },
+        "IncrementTriggered": "false",
+        "PicksRemaining": "0"
+      },
+      "ActionInput": {
+        "Action": "play"
+      },
+      "HighlightOutcome": [
+        {
+          "name": "BaseGame.Scatter",
+          "type": "",
+          "Highlight": []
+        },
+        {
+          "name": "BaseGame.Lines",
+          "Highlight": [
+            {
+              "Cell": [
+                {
+                  "name": "L0C0R2",
+                  "type": ""
+                },
+                {
+                  "name": "L0C1R2",
+                  "type": ""
+                },
+                {
+                  "name": "L0C2R1",
+                  "type": ""
+                }
+              ],
+              "name": "Line 22",
+              "type": ""
+            }
+          ],
+          "type": ""
+        }
+      ],
+      "PrizeOutcome": [
+        {
+          "name": "BaseGame.Scatter",
+          "pay": "0",
+          "type": "Pattern",
+          "stage": "",
+          "multiplier": "1",
+          "totalPay": "0"
+        },
+        {
+          "Prize": {
+            "position": "0",
+            "symbolCount": "3",
+            "betMultiplier": "20000",
+            "payName": "3 W2",
+            "name": "Line 22",
+            "pay": "25",
+            "multiplier": "1",
+            "ways": "0",
+            "totalPay": "500000"
+          },
+          "name": "BaseGame.Lines",
+          "pay": "500000",
+          "type": "Pattern",
+          "stage": "",
+          "multiplier": "1",
+          "totalPay": "500000"
+        },
+        {
+          "Prize": {
+            "position": "0",
+            "symbolCount": "0",
+            "betMultiplier": "1",
+            "payName": "",
+            "name": "Total",
+            "pay": "500000",
+            "multiplier": "1",
+            "ways": "0",
+            "totalPay": "500000"
+          },
+          "name": "Game.Total",
+          "pay": "500000",
+          "type": "",
+          "stage": "",
+          "multiplier": "1",
+          "totalPay": "500000"
+        }
+      ]
+    },
+    "gameName": "hotRouletteWolfRun",
+    "needsBuyIn": false
+  },
+  {
+    "cash": 2111933271,
+    "responseBody": null,
+    "responseObject": {
+      "TransactionId": "A01M@-15182051254362",
+      "PatternSliderInput": {
+        "PatternsBet": "40",
+        "BetPerPattern": "20000"
+      },
+      "PopulationOutcome": [
+        {
+          "Entry": [
+            {
+              "Cell": "spins,5,trigger,FreeSpin",
+              "stripIndex": "0",
+              "name": "L0C0R0"
+            },
+            {
+              "Cell": "spins,200,trigger,HotRoulette",
+              "stripIndex": "1",
+              "name": "L0C1R0"
+            }
+          ],
+          "name": "BonusPicker.Picks",
+          "stage": "BonusPicker"
+        },
+        {
+          "Entry": [
+            {
+              "Cell": [
+                "F5",
+                "F0",
+                "WW",
+                "WW"
+              ],
+              "stripIndex": "31",
+              "name": "Reel0"
+            },
+            {
+              "Cell": [
+                "F9",
+                "M4",
+                "F7",
+                "SC"
+              ],
+              "stripIndex": "23",
+              "name": "Reel1"
+            },
+            {
+              "Cell": [
+                "SC",
+                "F8",
+                "M1",
+                "F5"
+              ],
+              "stripIndex": "25",
+              "name": "Reel2"
+            },
+            {
+              "Cell": [
+                "F8",
+                "M1",
+                "F9",
+                "F6"
+              ],
+              "stripIndex": "11",
+              "name": "Reel3"
+            },
+            {
+              "Cell": [
+                "F5",
+                "M4",
+                "F5",
+                "F8"
+              ],
+              "stripIndex": "27",
+              "name": "Reel4"
+            }
+          ],
+          "name": "BaseGame.Reels",
+          "stage": "BaseGame"
+        },
+        {
+          "Entry": [
+            {
+              "Cell": [
+                "M3",
+                "F5",
+                "F8",
+                "M3"
+              ],
+              "stripIndex": "83",
+              "name": "Reel0"
+            },
+            {
+              "Cell": [
+                "M3",
+                "WW",
+                "WW",
+                "WW"
+              ],
+              "stripIndex": "32",
+              "name": "Reel1"
+            },
+            {
+              "Cell": [
+                "F9",
+                "F7",
+                "M1",
+                "F6"
+              ],
+              "stripIndex": "91",
+              "name": "Reel2"
+            },
+            {
+              "Cell": [
+                "M2",
+                "F0",
+                "F9",
+                "SC"
+              ],
+              "stripIndex": "55",
+              "name": "Reel3"
+            },
+            {
+              "Cell": [
+                "WW",
+                "WW",
+                "WW",
+                "WW"
+              ],
+              "stripIndex": "35",
+              "name": "Reel4"
+            }
+          ],
+          "name": "FreeSpin.Reels",
+          "stage": "FreeSpin"
+        }
+      ],
+      "AwardCapOutcome": {
+        "AwardCapExceeded": "false",
+        "name": "AwardCap"
+      },
+      "OutcomeDetail": {
+        "TransactionId": "A01M@-15182051254366",
+        "Payout": "0",
+        "GameStatus": "Start",
+        "Settled": "800000",
+        "NextStage": "BaseGame",
+        "Stage": "BaseGame",
+        "Pending": "0",
+        "Balance": "2111933271"
+      },
+      "Balances": {
+        "totalBalance": "2111933271"
+      },
+      "PickerSummaryOutcome": {
+        "Awarded": "0",
+        "PickCount": "0",
+        "name": "BonusPicker",
+        "InitAwarded": "0",
+        "MaxPicksAwarded": "false",
+        "CurrentLayer": {
+          "index": "0",
+          "name": "layer0"
+        },
+        "IncrementTriggered": "false",
+        "PicksRemaining": "0"
+      },
+      "ActionInput": {
+        "Action": "play"
+      },
+      "HighlightOutcome": [
+        {
+          "name": "BaseGame.Scatter",
+          "type": "",
+          "Highlight": []
+        },
+        {
+          "name": "BaseGame.Lines",
+          "type": "",
+          "Highlight": []
+        }
+      ],
+      "PrizeOutcome": [
+        {
+          "name": "BaseGame.Scatter",
+          "pay": "0",
+          "type": "Pattern",
+          "stage": "",
+          "multiplier": "1",
+          "totalPay": "0"
+        },
+        {
+          "name": "BaseGame.Lines",
+          "pay": "0",
+          "type": "Pattern",
+          "stage": "",
+          "multiplier": "1",
+          "totalPay": "0"
+        },
+        {
+          "Prize": {
+            "position": "0",
+            "symbolCount": "0",
+            "betMultiplier": "1",
+            "payName": "",
+            "name": "Total",
+            "pay": "0",
+            "multiplier": "1",
+            "ways": "0",
+            "totalPay": "0"
+          },
+          "name": "Game.Total",
+          "pay": "0",
+          "type": "",
+          "stage": "",
+          "multiplier": "1",
+          "totalPay": "0"
+        }
+      ]
+    },
+    "gameName": "hotRouletteWolfRun",
+    "needsBuyIn": false
+  },
+  {
+    "cash": 2111923271,
+    "responseBody": null,
+    "responseObject": {
+      "TransactionId": "A01M@-15182051254366",
+      "PatternSliderInput": {
+        "PatternsBet": "40",
+        "BetPerPattern": "2"
+      },
+      "PopulationOutcome": [
+        {
+          "Entry": [
+            {
+              "Cell": "spins,5,trigger,FreeSpin",
+              "stripIndex": "0",
+              "name": "L0C0R0"
+            },
+            {
+              "Cell": "spins,200,trigger,HotRoulette",
+              "stripIndex": "1",
+              "name": "L0C1R0"
+            }
+          ],
+          "name": "BonusPicker.Picks",
+          "stage": "BonusPicker"
+        },
+        {
+          "Entry": [
+            {
+              "Cell": [
+                "F0",
+                "M4",
+                "F9",
+                "F0"
+              ],
+              "stripIndex": "58",
+              "name": "Reel0"
+            },
+            {
+              "Cell": [
+                "M1",
+                "F9",
+                "SC",
+                "F7"
+              ],
+              "stripIndex": "8",
+              "name": "Reel1"
+            },
+            {
+              "Cell": [
+                "M1",
+                "F8",
+                "M2",
+                "F9"
+              ],
+              "stripIndex": "48",
+              "name": "Reel2"
+            },
+            {
+              "Cell": [
+                "WW",
+                "F5",
+                "M2",
+                "F8"
+              ],
+              "stripIndex": "51",
+              "name": "Reel3"
+            },
+            {
+              "Cell": [
+                "F0",
+                "F7",
+                "M3",
+                "F6"
+              ],
+              "stripIndex": "9",
+              "name": "Reel4"
+            }
+          ],
+          "name": "BaseGame.Reels",
+          "stage": "BaseGame"
+        },
+        {
+          "Entry": [
+            {
+              "Cell": [
+                "M3",
+                "F5",
+                "F8",
+                "M3"
+              ],
+              "stripIndex": "83",
+              "name": "Reel0"
+            },
+            {
+              "Cell": [
+                "M3",
+                "WW",
+                "WW",
+                "WW"
+              ],
+              "stripIndex": "32",
+              "name": "Reel1"
+            },
+            {
+              "Cell": [
+                "F9",
+                "F7",
+                "M1",
+                "F6"
+              ],
+              "stripIndex": "91",
+              "name": "Reel2"
+            },
+            {
+              "Cell": [
+                "M2",
+                "F0",
+                "F9",
+                "SC"
+              ],
+              "stripIndex": "55",
+              "name": "Reel3"
+            },
+            {
+              "Cell": [
+                "WW",
+                "WW",
+                "WW",
+                "WW"
+              ],
+              "stripIndex": "35",
+              "name": "Reel4"
+            }
+          ],
+          "name": "FreeSpin.Reels",
+          "stage": "FreeSpin"
+        }
+      ],
+      "AwardCapOutcome": {
+        "AwardCapExceeded": "false",
+        "name": "AwardCap"
+      },
+      "OutcomeDetail": {
+        "TransactionId": "A01M@-15182051254375",
+        "Payout": "0",
+        "GameStatus": "Start",
+        "Settled": "80",
+        "NextStage": "BaseGame",
+        "Stage": "BaseGame",
+        "Pending": "0",
+        "Balance": "2111923271"
+      },
+      "Balances": {
+        "totalBalance": "2111923271"
+      },
+      "PickerSummaryOutcome": {
+        "Awarded": "0",
+        "PickCount": "0",
+        "name": "BonusPicker",
+        "InitAwarded": "0",
+        "MaxPicksAwarded": "false",
+        "CurrentLayer": {
+          "index": "0",
+          "name": "layer0"
+        },
+        "IncrementTriggered": "false",
+        "PicksRemaining": "0"
+      },
+      "ActionInput": {
+        "Action": "play"
+      },
+      "HighlightOutcome": [
+        {
+          "name": "BaseGame.Scatter",
+          "type": "",
+          "Highlight": []
+        },
+        {
+          "name": "BaseGame.Lines",
+          "type": "",
+          "Highlight": []
+        }
+      ],
+      "PrizeOutcome": [
+        {
+          "name": "BaseGame.Scatter",
+          "pay": "0",
+          "type": "Pattern",
+          "stage": "",
+          "multiplier": "1",
+          "totalPay": "0"
+        },
+        {
+          "name": "BaseGame.Lines",
+          "pay": "0",
+          "type": "Pattern",
+          "stage": "",
+          "multiplier": "1",
+          "totalPay": "0"
+        },
+        {
+          "Prize": {
+            "position": "0",
+            "symbolCount": "0",
+            "betMultiplier": "1",
+            "payName": "",
+            "name": "Total",
+            "pay": "0",
+            "multiplier": "1",
+            "ways": "0",
+            "totalPay": "0"
+          },
+          "name": "Game.Total",
+          "pay": "0",
+          "type": "",
+          "stage": "",
+          "multiplier": "1",
+          "totalPay": "0"
+        }
+      ]
+    },
+    "gameName": "hotRouletteWolfRun",
+    "needsBuyIn": false
+  }
+]
