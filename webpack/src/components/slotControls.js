@@ -1,19 +1,16 @@
 import { Button } from './button.js';
 
-class SlotControls extends PIXI.Container {
+class SlotControls extends PIXI.Sprite {
 
-    constructor(store) {
-        super();
+    constructor(frameId, store) {
+        super(PIXI.utils.TextureCache[frameId]);
 
         this.store = store;
 
-        let bottomBar = PIXI.Sprite.from('bottom_bar');
         this.btnTest = new Button('btn_spin', this.onSpinClick.bind(this));
-        this.addChild(bottomBar);
-
-        this.btnTest.anchor.set(0, 1);
-        this.btnTest.x = this.width - this.btnTest.width;
-        this.btnTest.y = this.btnTest.height;
+        this.btnTest.anchor.set(1,1);
+        this.btnTest.x = this.width - 10;
+        this.btnTest.y = this.height - 6;
         this.addChild(this.btnTest);
 
         this.render();

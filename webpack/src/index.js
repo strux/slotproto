@@ -45,7 +45,7 @@ function setup() {
     let name = "Babel";
     console.log(`This should indicate that ${name} is working.`)
 
-    let controls = new SlotControls(uiStore);
+    let controls = new SlotControls('bottom_bar', uiStore);
     controls.y = app.stage.height - controls.height;
     app.stage.addChild(controls);
 }
