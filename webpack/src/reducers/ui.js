@@ -1,12 +1,11 @@
 const defaultState = {
     'spinRequested': false,
-    'spinReceived': false,
     'bigWinPlaying': false,
 }
 
 const ui = (state = defaultState, action) => {
     switch (action.type) {
-        case 'SPIN_REQESTED':
+        case 'SPIN_REQUESTED':
             return {
                 ...state,
                 spinRequested: true,
@@ -15,7 +14,6 @@ const ui = (state = defaultState, action) => {
             return {
                 ...state,
                 spinRequested: false,
-                spinReceived: true,
             }
         default:
             return state

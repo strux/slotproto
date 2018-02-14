@@ -1,5 +1,7 @@
 const spinResult = (state = defaultState, action) => {
     switch (action.type) {
+        case 'SPIN_RECEIVED':
+            return action.payload
         default:
             return state
     }
