@@ -45,11 +45,6 @@ function setup() {
     let name = "Babel";
     console.log(`This should indicate that ${name} is working.`)
 
-    let btnTest = new Button('btn_spin', 'INCREMENT');
-
-    //btnTest = connectedComponent(btnTest, uiState);
-    app.stage.addChild(btnTest);
-
     let controls = new SlotControls(uiStore);
     controls.y = app.stage.height - controls.height;
     app.stage.addChild(controls);

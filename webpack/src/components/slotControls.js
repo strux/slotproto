@@ -22,13 +22,11 @@ class SlotControls extends PIXI.Container {
 
     render() {
         let state = this.store.getState();
-
         this.btnTest.disabled = state.spinRequested;
     }
 
 
     onSpinClick() {
-        console.log('dispatching');
         this.store.dispatch({ type: 'SPIN_REQESTED' });
         setTimeout(() => this.store.dispatch({ type: 'SPIN_RECEIVED' }), 2000);
     }
