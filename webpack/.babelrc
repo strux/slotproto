@@ -1,4 +1,4 @@
 {
   "presets": ["env", "stage-2"],
-  "plugins": ["babel-preset-stage-2", "transform-decorators-legacy"]
+  "plugins": []
 }

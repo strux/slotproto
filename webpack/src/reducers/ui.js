@@ -1,5 +1,6 @@
 const defaultState = {
     'spinRequested': false,
+    'spinReceived': false,
     'bigWinPlaying': false,
 }
 
@@ -9,6 +10,12 @@ const ui = (state = defaultState, action) => {
             return {
                 ...state,
                 spinRequested: true,
+            }
+        case 'SPIN_RECEIVED':
+            return {
+                ...state,
+                spinRequested: false,
+                spinReceived: true,
             }
         default:
             return state
