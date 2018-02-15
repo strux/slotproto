@@ -4,7 +4,7 @@ let index = 0;
 const fetchSpin = (dispatch) => {
     dispatch({ type: 'SPIN_REQUESTED' });
     // stand in for async api calls
-    setTimeout(() => dispatch({ type: 'SPIN_RECEIVED', payload: mockSpinResponses[index++] }), 2000);
+    setTimeout(() => dispatch({ type: 'SPIN_RECEIVED', payload: mockSpinResponses[index++] }), 1000);
 }
 
 export { fetchSpin }

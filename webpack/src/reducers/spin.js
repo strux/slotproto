@@ -1,3 +1,5 @@
+const jp = require('jsonpath');
+
 const spinResult = (state = defaultState, action) => {
     switch (action.type) {
         case 'SPIN_RECEIVED':
@@ -6,9 +8,20 @@ const spinResult = (state = defaultState, action) => {
             return state
     }
 }
-
 export default spinResult
 
+const getReelOutcomes = (state) => {
+    let reels = jp.query(state, '$..PopulationOutcome[?(@.name=="BaseGame.Reels")].Entry.*');
+    return reels;
+}
+export { getReelOutcomes }
+
+
+
+
+
+
+// Large default spin state object
 const defaultState = {
     "cash": 2249433271,
     "responseBody": null,
