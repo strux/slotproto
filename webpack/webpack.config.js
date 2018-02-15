@@ -14,7 +14,7 @@ module.exports = {
       title: 'Slot Prototype'
     }),
     new CopyWebpackPlugin([
-      { from: 'src/assets' }
+      { from: 'src/assets/spritesheets' }
     ]),
     //new CleanWebpackPlugin(['dist']),
   ],

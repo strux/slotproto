@@ -1,0 +1,92 @@
+{"frames": {
+
+"anticipation_fm0.png":
+{
+	"frame": {"x":845,"y":0,"w":143,"h":352},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":143,"h":352},
+	"sourceSize": {"w":146,"h":356}
+},
+"anticipation_fm1.png":
+{
+	"frame": {"x":845,"y":354,"w":143,"h":352},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":143,"h":352},
+	"sourceSize": {"w":146,"h":356}
+},
+"btn_arrow_down.png":
+{
+	"frame": {"x":961,"y":776,"w":56,"h":78},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":56,"h":78},
+	"sourceSize": {"w":56,"h":78}
+},
+"btn_arrow_up.png":
+{
+	"frame": {"x":961,"y":856,"w":56,"h":78},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":56,"h":78},
+	"sourceSize": {"w":56,"h":78}
+},
+"btn_autospin.png":
+{
+	"frame": {"x":845,"y":708,"w":143,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":143,"h":66},
+	"sourceSize": {"w":143,"h":66}
+},
+"btn_skip.png":
+{
+	"frame": {"x":845,"y":776,"w":114,"h":114},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":114,"h":114},
+	"sourceSize": {"w":114,"h":114}
+},
+"btn_spin.png":
+{
+	"frame": {"x":845,"y":892,"w":114,"h":114},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":114,"h":114},
+	"sourceSize": {"w":114,"h":114}
+},
+"coin_fm02.png":
+{
+	"frame": {"x":961,"y":936,"w":53,"h":61},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":2,"w":53,"h":61},
+	"sourceSize": {"w":64,"h":64}
+},
+"slotface.png":
+{
+	"frame": {"x":0,"y":0,"w":843,"h":497},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":843,"h":497},
+	"sourceSize": {"w":843,"h":497}
+},
+"slotface_freespin.png":
+{
+	"frame": {"x":0,"y":499,"w":843,"h":497},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":843,"h":497},
+	"sourceSize": {"w":843,"h":497}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "spritesheet_slot4.png",
+	"format": "RGBA8888",
+	"size": {"w":1017,"h":1006},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:7367705fa71f1077d000fe65bbba80f8:2953e2b510796dff394fd6d477283bfc:cbe7035a922767da7f3db25d1a88e840$"
+}
+}

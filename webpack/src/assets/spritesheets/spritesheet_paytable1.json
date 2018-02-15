@@ -1,0 +1,20 @@
+{"frames": {
+
+"bg_paytable.png":
+{
+	"frame": {"x":0,"y":0,"w":1024,"h":768},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1024,"h":768},
+	"sourceSize": {"w":1024,"h":768}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "spritesheet_paytable1.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":768},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:ac758a41a5a3e453a730d57506825af2:dd9e4cf49479249ff66e899372681e76:bbcd02f463fa2b438c3b2bb43080e9ca$"
+}
+}
