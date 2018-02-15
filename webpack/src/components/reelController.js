@@ -20,8 +20,8 @@ class ReelController extends PIXI.Sprite {
         reelOutcomes.forEach((outcome, i) => {
             if (!this._reels[i]) {
                 this._reels[i] = new Reel();
-                this._reels[i].x = (138 * i) - this.width / 2;
-                this._reels[i].y = -this.height / 2;
+                this._reels[i].x = (150 * i) - (this.width / 2) + (i * 10) + 27;
+                this._reels[i].y = (-this.height / 2) + 23;
                 this.addChild(this._reels[i]);
             }
             this._reels[i].render(outcome);
