@@ -1,5 +1,6 @@
 import { Button } from './button.js';
 import { fetchSpin } from '../actions/spin.js';
+import { spinReels } from '../actions/spinReels.js';
 
 class SlotControls extends PIXI.Sprite {
 
@@ -26,6 +27,7 @@ class SlotControls extends PIXI.Sprite {
 
     onSpinClick() {
         fetchSpin(this.store.dispatch);
+        spinReels(this.store.dispatch);
     }
 
 }

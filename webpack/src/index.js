@@ -19,6 +19,7 @@ const app = new PIXI.Application({
     transparent: false,
     resolution: 1
 });
+export { app };
 
 //Add the canvas that Pixi automatically created for you to the HTML document
 document.body.appendChild(app.view);
@@ -53,6 +54,6 @@ function setup() {
     app.stage.addChild(reelController);
 
     let controls = new SlotControls('bottom_bar', store);
-    controls.y = app.stage.height - controls.height;
+    controls.y = 768 - controls.height;
     app.stage.addChild(controls);
 }
