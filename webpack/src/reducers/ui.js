@@ -2,11 +2,11 @@ const defaultState = {
     'spinRequested': false,
     'bigWinPlaying': false,
     'reels': [
-        { spinning: false },
-        { spinning: false },
-        { spinning: false },
-        { spinning: false },
-        { spinning: false },
+        { state: 'stopped' },
+        { state: 'stopped' },
+        { state: 'stopped' },
+        { state: 'stopped' },
+        { state: 'stopped' },
     ],
 }
 
@@ -29,7 +29,7 @@ const ui = (state = defaultState, action) => {
                     if (index === action.index) {
                         return {
                             ...item,
-                            spinning: true,
+                            state: 'spinning',
                         }
                     } else {
                         return item;
@@ -43,7 +43,7 @@ const ui = (state = defaultState, action) => {
                     if (index === action.index) {
                         return {
                             ...item,
-                            spinning: false,
+                            state: 'stopped',
                         }
                     } else {
                         return item;
@@ -58,6 +58,6 @@ const ui = (state = defaultState, action) => {
 export default ui
 
 const reelsSpinning = (state) => {
-    return state.ui.reels.reduce((prev, curr) => prev || curr.spinning, false);
+    return state.ui.reels.reduce((prev, curr) => prev || curr.state === 'spinning', false);
 }
 export { reelsSpinning }

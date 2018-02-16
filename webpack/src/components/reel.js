@@ -7,7 +7,7 @@ class Reel extends PIXI.Container {
         this._isSpinning = false;
     }
 
-    render(spinning, stripInfo, outcome) {
+    render(state, stripInfo, outcome) {
 
         if (!this.visibleSymbols) {
             this.createVisibleSymbols(outcome);
@@ -17,10 +17,10 @@ class Reel extends PIXI.Container {
             this.createStrip(stripInfo);
         }
 
-        if (spinning) {
+        if (state === 'spinning') {
             this.spin();
         }
-        if (!spinning) {
+        if (state === 'stopped') {
             this.reset();
         }
     }
