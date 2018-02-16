@@ -22,14 +22,19 @@ class ReelController extends PIXI.Sprite {
         let reelOutcomes = getReelOutcomes(state);
         let stripInfo = getStripInfo(state);
 
+        if (this._reels.length === 0) this.createReels(stripInfo);
+
+        this._reels.forEach((reel, i) => {
+            reel.render(state.ui.reels[i].spinning, stripInfo[i], reelOutcomes[i]);
+        }, this);
+    }
+
+    createReels(stripInfo) {
         stripInfo.forEach((strip, i) => {
-            if (!this._reels[i]) {
-                this._reels[i] = new Reel();
-                this._reels[i].x = (150 * i) - (this.width / 2) + (i * 10) + 27;
-                this._reels[i].y = (-this.height / 2) + 23;
-                this.addChild(this._reels[i]);
-            }
-            this._reels[i].render(state.ui.reels[i].spinning, strip, reelOutcomes[i]);
+            this._reels[i] = new Reel();
+            this._reels[i].x = (150 * i) - (this.width / 2) + (i * 10) + 27;
+            this._reels[i].y = (-this.height / 2) + 23;
+            this.addChild(this._reels[i]);
         }, this);
     }
 }

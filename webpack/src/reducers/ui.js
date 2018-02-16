@@ -23,11 +23,32 @@ const ui = (state = defaultState, action) => {
                 spinRequested: false,
             }
         case 'SPIN_REEL':
-            let reels = Object.assign([], state.reels);
-            reels[action.index].spinning = true;
             return {
                 ...state,
-                reels: reels,
+                reels: state.reels.map((item, index) => {
+                    if (index === action.index) {
+                        return {
+                            ...item,
+                            spinning: true,
+                        }
+                    } else {
+                        return item;
+                    }
+                }),
+            }
+        case 'STOP_REEL':
+            return {
+                ...state,
+                reels: state.reels.map((item, index) => {
+                    if (index === action.index) {
+                        return {
+                            ...item,
+                            spinning: false,
+                        }
+                    } else {
+                        return item;
+                    }
+                }),
             }
         default:
             return state

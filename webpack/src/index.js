@@ -44,9 +44,6 @@ function setup() {
     let bg = PIXI.Sprite.fromFrame("bg_freespin");
     app.stage.addChild(bg);
 
-    let name = "Babel";
-    console.log(`This should indicate that ${name} is working.`)
-
     let reelController = new ReelController('slotface', store);
     reelController.anchor.set(0.5);
     reelController.x = app.stage.width / 2;

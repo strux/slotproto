@@ -1,6 +1,7 @@
 import { Button } from './button.js';
 import { fetchSpin } from '../actions/spin.js';
 import { spinReels } from '../actions/spinReels.js';
+import { reelsSpinning } from '../reducers/ui.js';
 
 class SlotControls extends PIXI.Sprite {
 
@@ -21,14 +22,12 @@ class SlotControls extends PIXI.Sprite {
 
     render() {
         let state = this.store.getState();
-        this.btnTest.disabled = state.ui.spinRequested;
+        this.btnTest.disabled = reelsSpinning(state);
     }
-
 
     onSpinClick() {
-        fetchSpin(this.store.dispatch);
         spinReels(this.store.dispatch);
+        fetchSpin(this.store.dispatch);
     }
-
 }
 export { SlotControls }

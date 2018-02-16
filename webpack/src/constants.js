@@ -4,6 +4,6 @@ const CONFIG = {
     reelCells: 4,
     cellWidth: 150,
     cellHeight: 112,
-    reelSpeed: 5,
+    reelSpeed: 10,
 }
 export { CONFIG }

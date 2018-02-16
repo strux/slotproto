@@ -17,7 +17,7 @@ class Reel extends PIXI.Container {
             this.createStrip(stripInfo);
         }
 
-        if (spinning && !this._isSpinning) {
+        if (spinning) {
             this.spin();
         }
         if (!spinning) {
@@ -26,23 +26,20 @@ class Reel extends PIXI.Container {
     }
 
     spin() {
-        app.ticker.add(this._spin.bind(this));
+        if (this._isSpinning) return;
+        app.ticker.add(this._spin, this);
         this._isSpinning = true;
-    }
-
-    reset() {
-        app.ticker.remove(this._spin);
-        this._isSpinning = false;
-        this.stripSprite.tilePosition.y = 0;
-    }
-
-    stop() {
-        app.ticker.remove(this._spin);
-        this._isSpinning = false;
     }
 
     _spin() {
         this.stripSprite.tilePosition.y += CONFIG.reelSpeed;
+    }
+
+    reset() {
+        if (!this._isSpinning) return;
+        app.ticker.remove(this._spin, this);
+        this._isSpinning = false;
+        this.stripSprite.tilePosition.y = 0;
     }
 
     createVisibleSymbols(outcome) {
