@@ -1,6 +1,7 @@
 import { app } from '../index.js';
 import { getReelOutcomes } from '../reducers/spin.js';
 import { getStripInfo } from '../reducers/paytable.js';
+import { reelsSpinning } from '../reducers/ui.js';
 import { Reel } from '../components/reel.js';
 import { spinReels } from '../actions/spinReels.js';
 
@@ -25,7 +26,12 @@ class ReelController extends PIXI.Sprite {
 
         this._reels.forEach((reel, i) => {
             reel.render(state.ui.reels[i].state, stripInfo[i], reelOutcomes[i]);
+            reel.reelStopped = this.reelStoppedFactory(i);
         }, this);
+    }
+
+    reelStoppedFactory(index) {
+        return () => this.store.dispatch({ type: 'REEL_STOPPED', index: index });
     }
 
     createReels(stripInfo) {

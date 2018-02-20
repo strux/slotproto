@@ -5,6 +5,7 @@ class Reel extends PIXI.Container {
     constructor() {
         super();
         this._isSpinning = false;
+        this._beginStop = false;
     }
 
     render(state, stripInfo, outcome) {
@@ -15,13 +16,18 @@ class Reel extends PIXI.Container {
 
         if (!this.stripSprite) {
             this.createStrip(stripInfo);
+            this.addChild(this.stripSprite);
+            this.addChild(this.visibleSymbols);
         }
 
         if (state === 'spinning') {
             this.spin();
         }
+        if (state === 'stopping') {
+            this.stop(outcome);
+        }
         if (state === 'stopped') {
-            this.reset();
+            this.stopped();
         }
     }
 
@@ -32,7 +38,39 @@ class Reel extends PIXI.Container {
     }
 
     _spin() {
+        if (!this._isStopping && this.visibleSymbols.y < this.visibleSymbols.height) {
+            this.visibleSymbols.y += CONFIG.reelSpeed;
+        }
         this.stripSprite.tilePosition.y += CONFIG.reelSpeed;
+    }
+
+    stop(outcome) {
+        if (this._isStopping) return;
+        app.ticker.add(this._stop, this);
+        this._isStopping = true;
+        this.updateVisibleSymbols(outcome);
+    }
+
+    _stop() {
+        if (!this._beginStop && this.stripSprite.tilePosition.y % CONFIG.cellHeight < 1) {
+            this._beginStop = true;
+        }
+        else if (this._beginStop) {
+            if (this.visibleSymbols.y >= 0) {
+                this.reelStopped();
+            } else {
+                this.visibleSymbols.y += CONFIG.reelSpeed;
+            }
+        }
+    }
+
+    stopped() {
+        app.ticker.remove(this._stop, this);
+        app.ticker.remove(this._spin, this);
+        this.visibleSymbols.y = 0;
+        this._beginStop = false;
+        this._isStopping = false;
+        this._isSpinning = false;
     }
 
     reset() {
@@ -52,10 +90,18 @@ class Reel extends PIXI.Container {
             cell.y = CONFIG.cellHeight * i;
             let frameId = `mainreel_${CONFIG.symbolMap.indexOf(symbol)}_fm0`;
             cell.texture = PIXI.Texture.fromFrame(frameId);
+            // debug tinting
+            cell.tint = 0.533 * 0xFFFFFF;
             this.visibleSymbols.addChild(cell);
         }, this);
-        this.visibleSymbols.y -= this.visibleSymbols.height;
-        this.addChild(this.visibleSymbols);
+    }
+
+    updateVisibleSymbols(outcome) {
+        outcome.Cell.forEach((symbol, i) => {
+            let frameId = `mainreel_${CONFIG.symbolMap.indexOf(symbol)}_fm0`;
+            this.visibleSymbols.children[i].texture = PIXI.Texture.fromFrame(frameId);
+        }, this);
+        this.visibleSymbols.y = -this.visibleSymbols.height;
     }
 
     createStrip(stripInfo) {
@@ -75,7 +121,6 @@ class Reel extends PIXI.Container {
         let texture = PIXI.RenderTexture.create(width, height);
         app.renderer.render(container, texture);
         this.stripSprite = new PIXI.extras.TilingSprite(texture, width, height);
-        this.addChild(this.stripSprite);
 
         var mask = new PIXI.Graphics()
         mask.beginFill(0xFFFFFF)

@@ -43,6 +43,20 @@ const ui = (state = defaultState, action) => {
                     if (index === action.index) {
                         return {
                             ...item,
+                            state: 'stopping',
+                        }
+                    } else {
+                        return item;
+                    }
+                }),
+            }
+        case 'REEL_STOPPED':
+            return {
+                ...state,
+                reels: state.reels.map((item, index) => {
+                    if (index === action.index) {
+                        return {
+                            ...item,
                             state: 'stopped',
                         }
                     } else {
