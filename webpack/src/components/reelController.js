@@ -25,7 +25,7 @@ class ReelController extends PIXI.Sprite {
         if (this._reels.length === 0) this.createReels(stripInfo);
 
         this._reels.forEach((reel, i) => {
-            reel.render(state.ui.reels[i].state, stripInfo[i], reelOutcomes[i]);
+            reel.render({ reelState: state.ui.reels[i].state, stripInfo: stripInfo[i], outcome: reelOutcomes[i]});
             reel.reelStopped = this.reelStoppedFactory(i);
         }, this);
     }

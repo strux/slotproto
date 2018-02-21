@@ -11,36 +11,26 @@ class Reel extends PIXI.Container {
 
     }
 
-    render(state, stripInfo, outcome) {
+    render(state) {
+        this.state = state;
 
         if (!this.visibleSymbols) {
-            this.createVisibleSymbols(outcome);
+            this.createVisibleSymbols();
         }
 
         if (!this.stripSprite) {
-            this.createStrip(stripInfo);
+            this.createStrip();
             this.addChild(this.stripSprite);
             this.addChild(this.visibleSymbols);
-
-
         }
 
-        this.state = state;
-        this.outcome = outcome;
-
-        if (state === 'spinning' && !this._isSpinning) {
+        if (this.state.reelState === 'spinning' && !this._isSpinning) {
             this.spin(this.stripSprite);
-        }
-        if (state === 'stopping') {
-            // this.stop(outcome);
-        }
-        if (state === 'stopped') {
-            // this.stopped();
         }
     }
 
     spin(stripSprite) {
-        if (this.state === 'stopping') {
+        if (this.state.reelState === 'stopping') {
             this.stop(stripSprite);
         } else {
             if (!this._isSpinning) {
@@ -69,10 +59,10 @@ class Reel extends PIXI.Container {
         });
     }
 
-    createVisibleSymbols(outcome) {
+    createVisibleSymbols() {
 
         this.visibleSymbols = new PIXI.Container();
-        outcome.Cell.forEach((symbol, i) => {
+        this.state.outcome.Cell.forEach((symbol, i) => {
             let cell = new PIXI.Sprite();
             cell.width = CONFIG.cellWidth;
             cell.height = CONFIG.cellHeight;
@@ -86,19 +76,18 @@ class Reel extends PIXI.Container {
     }
 
     updateVisibleSymbols() {
-        this.outcome.Cell.forEach((symbol, i) => {
+        this.state.outcome.Cell.forEach((symbol, i) => {
             let frameId = `mainreel_${CONFIG.symbolMap.indexOf(symbol)}_fm0`;
             this.visibleSymbols.children[i].texture = PIXI.Texture.fromFrame(frameId);
         }, this);
         this.visibleSymbols.y = -this.visibleSymbols.height;
     }
 
-    createStrip(stripInfo) {
-
+    createStrip() {
         let width = 150;
-        let height = stripInfo.length * 112;
+        let height = this.state.stripInfo.length * 112;
         let container = new PIXI.Container();
-        stripInfo.forEach((symbol, i) => {
+        this.state.stripInfo.forEach((symbol, i) => {
             let cell = new PIXI.Sprite();
             cell.width = 150;
             cell.height = 112;
