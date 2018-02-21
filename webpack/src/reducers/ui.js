@@ -71,9 +71,9 @@ const ui = (state = defaultState, action) => {
 export default ui
 
 export const reelsSpinning = (state) => {
-    return state.ui.reels.reduce((prev, curr) => prev || curr.state === 'spinning', false);
+    return state.ui.reels.some((r) => r.state === 'spinning');
 }
 
 export const reelsStopped = (state) => {
-    return state.ui.reels.reduce((prev, curr) => prev && curr.state === 'stopped', true);
+    return state.ui.reels.every((r) => r.state === 'stopped');
 }
