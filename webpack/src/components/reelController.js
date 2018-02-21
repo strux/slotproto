@@ -31,7 +31,7 @@ class ReelController extends PIXI.Sprite {
     }
 
     reelStoppedFactory(index) {
-        return () => this.store.dispatch({ type: 'REEL_STOPPED', index: index });
+        return () => { this.store.dispatch({ type: 'REEL_STOPPED', index: index }); }
     }
 
     createReels(stripInfo) {

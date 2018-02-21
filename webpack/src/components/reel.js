@@ -1,11 +1,14 @@
 import { CONFIG } from '../constants.js';
 import { app } from '../index.js';
+import { TimelineMax } from 'gsap';
+import { TweenLite } from 'gsap';
 
 class Reel extends PIXI.Container {
     constructor() {
         super();
         this._isSpinning = false;
         this._beginStop = false;
+
     }
 
     render(state, stripInfo, outcome) {
@@ -18,66 +21,52 @@ class Reel extends PIXI.Container {
             this.createStrip(stripInfo);
             this.addChild(this.stripSprite);
             this.addChild(this.visibleSymbols);
+
+
         }
 
-        if (state === 'spinning') {
-            this.spin();
+        this.state = state;
+        this.outcome = outcome;
+
+        if (state === 'spinning' && !this._isSpinning) {
+            this.spin(this.stripSprite);
         }
         if (state === 'stopping') {
-            this.stop(outcome);
+            // this.stop(outcome);
         }
         if (state === 'stopped') {
-            this.stopped();
+            // this.stopped();
         }
     }
 
-    spin() {
-        if (this._isSpinning) return;
-        app.ticker.add(this._spin, this);
-        this._isSpinning = true;
-    }
-
-    _spin() {
-        if (!this._isStopping && this.visibleSymbols.y < this.visibleSymbols.height) {
-            this.visibleSymbols.y += CONFIG.reelSpeed;
-        }
-        this.stripSprite.tilePosition.y += CONFIG.reelSpeed;
-    }
-
-    stop(outcome) {
-        if (this._isStopping) return;
-        app.ticker.add(this._stop, this);
-        this._isStopping = true;
-        this.updateVisibleSymbols(outcome);
-    }
-
-    _stop() {
-        if (!this._beginStop && this.stripSprite.tilePosition.y % CONFIG.cellHeight < 1) {
-            this._beginStop = true;
-        }
-        else if (this._beginStop) {
-            if (this.visibleSymbols.y >= 0) {
-                this.reelStopped();
-            } else {
-                this.visibleSymbols.y += CONFIG.reelSpeed;
+    spin(stripSprite) {
+        if (this.state === 'stopping') {
+            this.stop(stripSprite);
+        } else {
+            if (!this._isSpinning) {
+                TweenLite.to(this.visibleSymbols, (CONFIG.cellCount/CONFIG.cellsPerSecond), {
+                    y:`+=${CONFIG.cellHeight*CONFIG.cellCount}`,
+                    ease:Power0.easeNone,
+                });
             }
+            TweenLite.to(this.stripSprite.tilePosition, (1/CONFIG.cellsPerSecond), {
+                y:`+=${CONFIG.cellHeight}`,
+                ease:Power0.easeNone,
+                onComplete:this.spin.bind(this),
+                onCompleteParams:[this.stripSprite],
+            });
+            this._isSpinning = true;
         }
     }
 
-    stopped() {
-        app.ticker.remove(this._stop, this);
-        app.ticker.remove(this._spin, this);
-        this.visibleSymbols.y = 0;
-        this._beginStop = false;
-        this._isStopping = false;
+    stop(stripSprite) {
         this._isSpinning = false;
-    }
-
-    reset() {
-        if (!this._isSpinning) return;
-        app.ticker.remove(this._spin, this);
-        this._isSpinning = false;
-        this.stripSprite.tilePosition.y = 0;
+        this.updateVisibleSymbols();
+        TweenLite.to([this.stripSprite.tilePosition, this.visibleSymbols], (CONFIG.cellCount/CONFIG.cellsPerSecond), {
+            y:`+=${CONFIG.cellHeight*CONFIG.cellCount}`,
+            ease:Power0.easeNone,
+            onComplete:this.reelStopped.bind(this),
+        });
     }
 
     createVisibleSymbols(outcome) {
@@ -96,8 +85,8 @@ class Reel extends PIXI.Container {
         }, this);
     }
 
-    updateVisibleSymbols(outcome) {
-        outcome.Cell.forEach((symbol, i) => {
+    updateVisibleSymbols() {
+        this.outcome.Cell.forEach((symbol, i) => {
             let frameId = `mainreel_${CONFIG.symbolMap.indexOf(symbol)}_fm0`;
             this.visibleSymbols.children[i].texture = PIXI.Texture.fromFrame(frameId);
         }, this);
