@@ -11,7 +11,7 @@ const spinResult = (state = defaultState, action) => {
 export default spinResult
 
 const getReelOutcomes = (state) => {
-    let reels = jp.query(state, '$..PopulationOutcome[?(@.name=="BaseGame.Reels")].Entry.*');
+    let reels = jp.query(state, '$..PopulationOutcome[?(@.name=="BaseGame.Reels")].Entry.*').map((r) => r.Cell);
     return reels;
 }
 export { getReelOutcomes }

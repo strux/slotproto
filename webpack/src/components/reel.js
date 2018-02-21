@@ -60,9 +60,8 @@ class Reel extends PIXI.Container {
     }
 
     createVisibleSymbols() {
-
         this.visibleSymbols = new PIXI.Container();
-        this.state.outcome.Cell.forEach((symbol, i) => {
+        this.state.reelOutcome.forEach((symbol, i) => {
             let cell = new PIXI.Sprite();
             cell.width = CONFIG.cellWidth;
             cell.height = CONFIG.cellHeight;
@@ -73,10 +72,14 @@ class Reel extends PIXI.Container {
             cell.tint = 0.533 * 0xFFFFFF;
             this.visibleSymbols.addChild(cell);
         }, this);
+
+        let mask = this.createMask();
+        this.addChild(mask);
+        this.visibleSymbols.mask = mask;
     }
 
     updateVisibleSymbols() {
-        this.state.outcome.Cell.forEach((symbol, i) => {
+        this.state.reelOutcome.forEach((symbol, i) => {
             let frameId = `mainreel_${CONFIG.symbolMap.indexOf(symbol)}_fm0`;
             this.visibleSymbols.children[i].texture = PIXI.Texture.fromFrame(frameId);
         }, this);
@@ -100,13 +103,17 @@ class Reel extends PIXI.Container {
         app.renderer.render(container, texture);
         this.stripSprite = new PIXI.extras.TilingSprite(texture, width, height);
 
-        var mask = new PIXI.Graphics()
+        let mask = this.createMask();
+        this.addChild(mask);
+        this.stripSprite.mask = mask;
+    }
+
+    createMask() {
+        let mask = new PIXI.Graphics()
         mask.beginFill(0xFFFFFF)
         mask.drawRect(0, 0, this.visibleSymbols.width, this.visibleSymbols.height)
         mask.endFill()
-        this.addChild(mask);
-
-        this.stripSprite.mask = mask;
+        return mask;
     }
 }
 export { Reel }
