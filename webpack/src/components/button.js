@@ -1,11 +1,10 @@
 class Button extends PIXI.Sprite {
 
-    constructor(frameId, onUpCallback) {
+    constructor(frameId) {
         super(PIXI.utils.TextureCache[frameId]);
         this._diabled = false;
         this.interactive = true;
         this.buttonMode = true;
-        this.onUpCallback = onUpCallback;
         this.on('pointerdown', this.onDown);
         this.on('pointerup', this.onUp);
     }
@@ -14,11 +13,15 @@ class Button extends PIXI.Sprite {
         this.scale.set(1.2);
     }
 
-    onUp() {
+    onUp(callback=null) {
         this.scale.set(1);
         if (this.onUpCallback) {
-            this.onUpCallback()
+            this.onUpCallback();
         }
+    }
+
+    set onClick(callback) {
+        this.onUpCallback = callback;
     }
 
     get disabled() {

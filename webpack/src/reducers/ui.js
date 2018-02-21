@@ -68,10 +68,12 @@ const ui = (state = defaultState, action) => {
             return state
     }
 }
-
 export default ui
 
-const reelsSpinning = (state) => {
+export const reelsSpinning = (state) => {
     return state.ui.reels.reduce((prev, curr) => prev || curr.state === 'spinning', false);
 }
-export { reelsSpinning }
+
+export const reelsStopped = (state) => {
+    return state.ui.reels.reduce((prev, curr) => prev && curr.state === 'stopped', true);
+}
