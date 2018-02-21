@@ -41,7 +41,7 @@ class ReelController extends PIXI.Sprite {
 
     createReels(stripInfo) {
         stripInfo.forEach((strip, i) => {
-            this._reels[i] = new Reel();
+            this._reels[i] = new Reel(CONFIG.cellWidth, CONFIG.cellHeight);
             this._reels[i].x = (CONFIG.cellWidth * i) - (this.width / 2) + (i * 10) + 27;
             this._reels[i].y = (-this.height / 2) + 23;
             this.addChild(this._reels[i]);

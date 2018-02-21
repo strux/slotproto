@@ -3,8 +3,10 @@ import { app } from '../index.js';
 import { TweenLite } from 'gsap';
 
 class Reel extends PIXI.Container {
-    constructor(stoppedCallback) {
+    constructor(cellWidth, cellHeight) {
         super();
+        this._cellWidth = cellWidth;
+        this._cellHeight = cellHeight;
         this._isSpinning = false;
         this._beginStop = false;
         this.reelStoppedCallback = () => {};
@@ -34,12 +36,12 @@ class Reel extends PIXI.Container {
         } else {
             if (!this._isSpinning) {
                 TweenLite.to(this.visibleSymbols, (CONFIG.cellCount/CONFIG.cellsPerSecond), {
-                    y:`+=${CONFIG.cellHeight*CONFIG.cellCount}`,
+                    y:`+=${this._cellHeight*CONFIG.cellCount}`,
                     ease:Power0.easeNone,
                 });
             }
             TweenLite.to(this.stripSprite.tilePosition, (1/CONFIG.cellsPerSecond), {
-                y:`+=${CONFIG.cellHeight}`,
+                y:`+=${this._cellHeight}`,
                 ease:Power0.easeNone,
                 onComplete:this.spin.bind(this),
                 onCompleteParams:[this.stripSprite],
@@ -52,7 +54,7 @@ class Reel extends PIXI.Container {
         this._isSpinning = false;
         this.updateVisibleSymbols();
         TweenLite.to([this.stripSprite.tilePosition, this.visibleSymbols], (CONFIG.cellCount/CONFIG.cellsPerSecond), {
-            y:`+=${CONFIG.cellHeight*CONFIG.cellCount}`,
+            y:`+=${this._cellHeight*CONFIG.cellCount}`,
             ease:Power0.easeNone,
             onComplete:this.reelStoppedCallback.bind(this),
         });
@@ -62,8 +64,8 @@ class Reel extends PIXI.Container {
         this.visibleSymbols = new PIXI.Container();
         this.state.reelOutcome.forEach((symbol, i) => {
             let cell = new PIXI.Sprite();
-            cell.width = CONFIG.cellWidth;
-            cell.height = CONFIG.cellHeight;
+            cell.width = this._cellWidth;
+            cell.height = this._cellHeight;
             cell.y = CONFIG.cellHeight * i;
             let frameId = `mainreel_${CONFIG.symbolMap.indexOf(symbol)}_fm0`;
             cell.texture = PIXI.Texture.fromFrame(frameId);
@@ -86,14 +88,14 @@ class Reel extends PIXI.Container {
     }
 
     createStrip() {
-        let width = CONFIG.cellWidth;
-        let height = this.state.stripInfo.length * CONFIG.cellHeight;
+        let width = this._cellWidth;
+        let height = this.state.stripInfo.length * this._cellHeight;
         let container = new PIXI.Container();
         this.state.stripInfo.forEach((symbol, i) => {
             let cell = new PIXI.Sprite();
-            cell.width = CONFIG.cellWidth;
-            cell.height = CONFIG.cellHeight;
-            cell.y = CONFIG.cellHeight * i;
+            cell.width = this._cellWidth;
+            cell.height = this._cellHeight;
+            cell.y = this._cellHeight * i;
             container.addChild(cell);
             let frameId = `mainreel_${CONFIG.symbolMap.indexOf(symbol)}_fm0`;
             cell.texture = PIXI.Texture.fromFrame(frameId);
