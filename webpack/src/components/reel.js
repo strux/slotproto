@@ -1,14 +1,13 @@
 import { CONFIG } from '../constants.js';
 import { app } from '../index.js';
-import { TimelineMax } from 'gsap';
 import { TweenLite } from 'gsap';
 
 class Reel extends PIXI.Container {
-    constructor() {
+    constructor(stoppedCallback) {
         super();
         this._isSpinning = false;
         this._beginStop = false;
-
+        this.reelStoppedCallback = () => {};
     }
 
     render(state) {
@@ -21,8 +20,8 @@ class Reel extends PIXI.Container {
         if (!this.stripSprite) {
             this.createStrip();
             this.addChild(this.stripSprite);
-            this.addChild(this.visibleSymbols);
         }
+        this.addChild(this.visibleSymbols);
 
         if (this.state.reelState === 'spinning' && !this._isSpinning) {
             this.spin(this.stripSprite);
@@ -55,7 +54,7 @@ class Reel extends PIXI.Container {
         TweenLite.to([this.stripSprite.tilePosition, this.visibleSymbols], (CONFIG.cellCount/CONFIG.cellsPerSecond), {
             y:`+=${CONFIG.cellHeight*CONFIG.cellCount}`,
             ease:Power0.easeNone,
-            onComplete:this.reelStopped.bind(this),
+            onComplete:this.reelStoppedCallback.bind(this),
         });
     }
 
@@ -87,14 +86,14 @@ class Reel extends PIXI.Container {
     }
 
     createStrip() {
-        let width = 150;
-        let height = this.state.stripInfo.length * 112;
+        let width = CONFIG.cellWidth;
+        let height = this.state.stripInfo.length * CONFIG.cellHeight;
         let container = new PIXI.Container();
         this.state.stripInfo.forEach((symbol, i) => {
             let cell = new PIXI.Sprite();
-            cell.width = 150;
-            cell.height = 112;
-            cell.y = 112 * i;
+            cell.width = CONFIG.cellWidth;
+            cell.height = CONFIG.cellHeight;
+            cell.y = CONFIG.cellHeight * i;
             container.addChild(cell);
             let frameId = `mainreel_${CONFIG.symbolMap.indexOf(symbol)}_fm0`;
             cell.texture = PIXI.Texture.fromFrame(frameId);

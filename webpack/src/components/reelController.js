@@ -1,9 +1,10 @@
+import { CONFIG } from '../constants.js';
 import { app } from '../index.js';
+import { Reel } from '../components/reel.js';
+import { spinReels } from '../actions/spinReels.js';
 import { getReelOutcomes } from '../reducers/spin.js';
 import { getStripInfo } from '../reducers/paytable.js';
 import { reelsSpinning } from '../reducers/ui.js';
-import { Reel } from '../components/reel.js';
-import { spinReels } from '../actions/spinReels.js';
 
 class ReelController extends PIXI.Sprite {
 
@@ -30,7 +31,7 @@ class ReelController extends PIXI.Sprite {
                 reelOutcome: reelOutcomes[i],
                 stripInfo: stripInfo[i]
             });
-            reel.reelStopped = this.reelStoppedFactory(i);
+            reel.reelStoppedCallback = this.reelStoppedFactory(i);
         }, this);
     }
 
@@ -41,7 +42,7 @@ class ReelController extends PIXI.Sprite {
     createReels(stripInfo) {
         stripInfo.forEach((strip, i) => {
             this._reels[i] = new Reel();
-            this._reels[i].x = (150 * i) - (this.width / 2) + (i * 10) + 27;
+            this._reels[i].x = (CONFIG.cellWidth * i) - (this.width / 2) + (i * 10) + 27;
             this._reels[i].y = (-this.height / 2) + 23;
             this.addChild(this._reels[i]);
         }, this);
