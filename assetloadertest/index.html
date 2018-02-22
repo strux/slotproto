@@ -8,8 +8,8 @@
 //Aliases
 let Application = PIXI.Application,
     Container = PIXI.Container,
-    loader = PIXI.loader,
-    resources = PIXI.loader.resources,
+    loader = new PIXI.loaders.Loader(),
+    resources = loader.resources,
     TextureCache = PIXI.utils.TextureCache,
     Sprite = PIXI.Sprite,
     Rectangle = PIXI.Rectangle;
@@ -43,11 +43,15 @@ loader
 
 function setup() {
 
-    bg = PIXI.Sprite.fromFrame("bg_freespin");
-    app.stage.addChild(bg);
+    var scene = new PIXI.Container();
 
-    o = PIXI.Sprite.fromFrame("freespinreel_0_fm0");
-    app.stage.addChild(o);
+    var bg = PIXI.Sprite.fromFrame("bg_freespin");
+    var bg2 = PIXI.Sprite.fromFrame("bg_freespin");
+    bg2.destroy();
+    var o = PIXI.Sprite.fromFrame("freespinreel_0_fm0");
+    scene.addChild(bg);
+    scene.addChild(o);
+    app.stage.addChild(scene);
 }
 </script>
 </body>
