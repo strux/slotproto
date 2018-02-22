@@ -2,6 +2,7 @@ import * as PIXI from 'pixi.js';
 import './style.css';
 import { Button, connectedComponent } from './components/button.js';
 import { SlotControls } from './components/slotControls.js';
+import { REELS_CONFIG } from './constants.js';
 import { ReelController } from './components/ReelController.js';
 
 import { createStore } from 'redux';
@@ -44,7 +45,7 @@ function setup() {
     let bg = PIXI.Sprite.fromFrame("bg_freespin");
     app.stage.addChild(bg);
 
-    let reelController = new ReelController('slotface', store);
+    let reelController = new ReelController('slotface', store, REELS_CONFIG);
     reelController.anchor.set(0.5);
     reelController.x = app.stage.width / 2;
     reelController.y = (app.stage.height / 2) - 40;

@@ -1,8 +1,8 @@
 import { Button } from './button.js';
 import { fetchSpin } from '../actions/spin.js';
 import { spinReels } from '../actions/spinReels.js';
-import { reelsSpinning } from '../reducers/ui.js';
 import { reelsStopped } from '../reducers/ui.js';
+import { getSimplifiedStripInfo } from '../reducers/stripInfo.js';
 
 class SlotControls extends PIXI.Sprite {
 
@@ -28,8 +28,9 @@ class SlotControls extends PIXI.Sprite {
     }
 
     onSpinClick() {
-        spinReels(this.store.dispatch);
-        fetchSpin(this.store.dispatch);
+        let reelCount = getSimplifiedStripInfo(this.store.getState(), 'BaseGame').length;
+        spinReels(this.store.dispatch, reelCount);
+        fetchSpin(this.store.dispatch, reelCount);
     }
 }
 export { SlotControls }
