@@ -1,7 +1,7 @@
 import mockSpinResponses from '../mock_data/spin_responses.json';
 import { stopReels } from './spinReels.js'
 
-let index = 0;
+let index = 1;
 const fetchSpin = (dispatch) => {
     dispatch({ type: 'SPIN_REQUESTED' });
     // stand in for async api calls

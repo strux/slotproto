@@ -1,12 +1,13 @@
-import { CONFIG } from '../constants.js';
 import { app } from '../index.js';
 import { TweenLite } from 'gsap';
 
 class Reel extends PIXI.Container {
-    constructor(cellWidth, cellHeight) {
+    constructor(cellWidth, cellHeight, symbolMap, cellsPerSecond) {
         super();
         this._cellWidth = cellWidth;
         this._cellHeight = cellHeight;
+        this._symbolMap = symbolMap;
+        this._cellsPerSecond = cellsPerSecond;
         this._isSpinning = false;
         this._beginStop = false;
         this.reelStoppedCallback = () => {};
@@ -35,12 +36,12 @@ class Reel extends PIXI.Container {
             this.stop(stripSprite);
         } else {
             if (!this._isSpinning) {
-                TweenLite.to(this.visibleSymbols, (CONFIG.cellCount/CONFIG.cellsPerSecond), {
-                    y:`+=${this._cellHeight*CONFIG.cellCount}`,
+                TweenLite.to(this.visibleSymbols, (this.state.reelOutcome.length/this._cellsPerSecond), {
+                    y:`+=${this._cellHeight*this.state.reelOutcome.length}`,
                     ease:Power0.easeNone,
                 });
             }
-            TweenLite.to(this.stripSprite.tilePosition, (1/CONFIG.cellsPerSecond), {
+            TweenLite.to(this.stripSprite.tilePosition, (1/this._cellsPerSecond), {
                 y:`+=${this._cellHeight}`,
                 ease:Power0.easeNone,
                 onComplete:this.spin.bind(this),
@@ -53,8 +54,8 @@ class Reel extends PIXI.Container {
     stop(stripSprite) {
         this._isSpinning = false;
         this.updateVisibleSymbols();
-        TweenLite.to([this.stripSprite.tilePosition, this.visibleSymbols], (CONFIG.cellCount/CONFIG.cellsPerSecond), {
-            y:`+=${this._cellHeight*CONFIG.cellCount}`,
+        TweenLite.to([this.stripSprite.tilePosition, this.visibleSymbols], (this.state.reelOutcome.length/this._cellsPerSecond), {
+            y:`+=${this._cellHeight*this.state.reelOutcome.length}`,
             ease:Power0.easeNone,
             onComplete:this.reelStoppedCallback.bind(this),
         });
@@ -66,8 +67,8 @@ class Reel extends PIXI.Container {
             let cell = new PIXI.Sprite();
             cell.width = this._cellWidth;
             cell.height = this._cellHeight;
-            cell.y = CONFIG.cellHeight * i;
-            let frameId = `mainreel_${CONFIG.symbolMap.indexOf(symbol)}_fm0`;
+            cell.y = this._cellHeight * i;
+            let frameId = `mainreel_${this._symbolMap.indexOf(symbol)}_fm0`;
             cell.texture = PIXI.Texture.fromFrame(frameId);
             // debug tinting
             cell.tint = 0.533 * 0xFFFFFF;
@@ -81,7 +82,7 @@ class Reel extends PIXI.Container {
 
     updateVisibleSymbols() {
         this.state.reelOutcome.forEach((symbol, i) => {
-            let frameId = `mainreel_${CONFIG.symbolMap.indexOf(symbol)}_fm0`;
+            let frameId = `mainreel_${this._symbolMap.indexOf(symbol)}_fm0`;
             this.visibleSymbols.children[i].texture = PIXI.Texture.fromFrame(frameId);
         }, this);
         this.visibleSymbols.y = -this.visibleSymbols.height;
@@ -97,7 +98,7 @@ class Reel extends PIXI.Container {
             cell.height = this._cellHeight;
             cell.y = this._cellHeight * i;
             container.addChild(cell);
-            let frameId = `mainreel_${CONFIG.symbolMap.indexOf(symbol)}_fm0`;
+            let frameId = `mainreel_${this._symbolMap.indexOf(symbol)}_fm0`;
             cell.texture = PIXI.Texture.fromFrame(frameId);
         }, this);
         let texture = PIXI.RenderTexture.create(width, height);

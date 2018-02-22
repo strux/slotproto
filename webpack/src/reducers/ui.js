@@ -70,6 +70,14 @@ const ui = (state = defaultState, action) => {
 }
 export default ui
 
+export const reelCount = (state) => {
+    return state.ui.reels.length;
+}
+
+export const cellCounts = (state) => {
+    return state.ui.reels.map((r) => r.length);
+}
+
 export const reelsSpinning = (state) => {
     return state.ui.reels.some((r) => r.state === 'spinning');
 }

@@ -6,6 +6,8 @@ import { getReelOutcomes } from '../reducers/spin.js';
 import { getStripInfo } from '../reducers/paytable.js';
 import { reelsSpinning } from '../reducers/ui.js';
 
+import { getSimplifiedOutcome } from '../reducers/populationOutcomes.js';
+
 class ReelController extends PIXI.Sprite {
 
     constructor(frameId, store) {
@@ -20,7 +22,7 @@ class ReelController extends PIXI.Sprite {
 
     render() {
         let state = this.store.getState();
-        let reelOutcomes = getReelOutcomes(state);
+        let reelOutcomes = getSimplifiedOutcome(state, 'BaseGame.Reels');
         let stripInfo = getStripInfo(state);
 
         if (this._reels.length === 0) this.createReels(stripInfo);
@@ -41,7 +43,7 @@ class ReelController extends PIXI.Sprite {
 
     createReels(stripInfo) {
         stripInfo.forEach((strip, i) => {
-            this._reels[i] = new Reel(CONFIG.cellWidth, CONFIG.cellHeight);
+            this._reels[i] = new Reel(CONFIG.cellWidth, CONFIG.cellHeight, CONFIG.symbolMap, CONFIG.cellsPerSecond);
             this._reels[i].x = (CONFIG.cellWidth * i) - (this.width / 2) + (i * 10) + 27;
             this._reels[i].y = (-this.height / 2) + 23;
             this.addChild(this._reels[i]);
