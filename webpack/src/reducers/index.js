@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 import ui from './ui.js'
-import paytable from './paytable.js'
+import stripInfo from './stripInfo.js'
 import populationOutcomes from './populationOutcomes.js'
 
 const rootReducer = combineReducers({
     ui,
-    paytable,
+    stripInfo,
     populationOutcomes,
 });
 

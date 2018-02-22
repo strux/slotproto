@@ -1,10 +1,7 @@
-const jp = require('jsonpath');
 import mockSpinResponses from '../mock_data/spin_responses.json';
 
 const populationOutcomes = (state = defaultState, action) => {
     switch (action.type) {
-        case 'PAYTABLE_RECEIVED':
-            return state;
         case 'SPIN_RECEIVED':
             return parsePopulationOutcome(action.payload);
         default:
