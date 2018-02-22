@@ -2,7 +2,6 @@ import { CONFIG } from '../constants.js';
 import { app } from '../index.js';
 import { Reel } from '../components/reel.js';
 import { spinReels } from '../actions/spinReels.js';
-import { getReelOutcomes } from '../reducers/spin.js';
 import { getStripInfo } from '../reducers/paytable.js';
 import { reelsSpinning } from '../reducers/ui.js';
 
@@ -22,6 +21,7 @@ class ReelController extends PIXI.Sprite {
 
     render() {
         let state = this.store.getState();
+        // TODO: 'BaseGame.Reels' should come from the 'director'
         let reelOutcomes = getSimplifiedOutcome(state, 'BaseGame.Reels');
         let stripInfo = getStripInfo(state);
 
