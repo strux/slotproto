@@ -1,13 +1,19 @@
 import * as PIXI from 'pixi.js';
 import './style.css';
-import { Button, connectedComponent } from './components/button.js';
-import { SlotControls } from './components/slotControls.js';
 import { REELS_CONFIG } from './constants.js';
+import { SlotControls } from './components/slotControls.js';
 import { ReelController } from './components/ReelController.js';
+import { Anticipation } from './components/anticipation.js';
 
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import reducer from './reducers/index.js';
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+import { spinReelsMiddleware } from './middleware/spinReels.js';
+import { reelAnticipationMiddleware } from './middleware/reelAnticipation.js';
+
+const store = createStore(reducer,
+                          window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+                          applyMiddleware(spinReelsMiddleware, reelAnticipationMiddleware)
+                         );
 export { store };
 
 
@@ -50,6 +56,12 @@ function setup() {
     reelController.x = app.stage.width / 2;
     reelController.y = (app.stage.height / 2) - 40;
     app.stage.addChild(reelController);
+
+    let anticipation = new Anticipation('anticipation_fm0', store);
+    anticipation.anchor.set(0.5);
+    anticipation.x = app.stage.width / 2;
+    anticipation.y = (app.stage.height / 2) - 40;
+    app.stage.addChild(anticipation);
 
     let controls = new SlotControls('bottom_bar', store);
     controls.y = 768 - controls.height;

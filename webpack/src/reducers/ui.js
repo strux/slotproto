@@ -2,11 +2,11 @@ const defaultState = {
     'spinRequested': false,
     'bigWinPlaying': false,
     'reels': [
-        { state: 'stopped' },
-        { state: 'stopped' },
-        { state: 'stopped' },
-        { state: 'stopped' },
-        { state: 'stopped' },
+        { state: 'stopped', anticipating: false, willAnticipate: false },
+        { state: 'stopped', anticipating: false, willAnticipate: false },
+        { state: 'stopped', anticipating: false, willAnticipate: false },
+        { state: 'stopped', anticipating: false, willAnticipate: true },
+        { state: 'stopped', anticipating: false, willAnticipate: false },
     ],
 }
 
@@ -58,6 +58,20 @@ const ui = (state = defaultState, action) => {
                         return {
                             ...item,
                             state: 'stopped',
+                        }
+                    } else {
+                        return item;
+                    }
+                }),
+            }
+        case 'ANTICIPATE_REEL':
+            return {
+                ...state,
+                reels: state.reels.map((item, index) => {
+                    if (index === action.index) {
+                        return {
+                            ...item,
+                            anticipating: 'true',
                         }
                     } else {
                         return item;

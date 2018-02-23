@@ -1,6 +1,5 @@
 import { app } from '../index.js';
 import { Reel } from '../components/reel.js';
-import { spinReels } from '../actions/spinReels.js';
 import { reelsSpinning } from '../reducers/ui.js';
 
 import { getSimplifiedOutcome } from '../reducers/populationOutcomes.js';
