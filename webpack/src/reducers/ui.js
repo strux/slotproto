@@ -1,12 +1,19 @@
+import { getSimplifiedOutcome } from '../reducers/populationOutcomes.js';
+
+const defaultReelState =  {
+        state: 'stopped',
+        isAnticipating: false,
+};
+
 const defaultState = {
     'spinRequested': false,
     'bigWinPlaying': false,
     'reels': [
-        { state: 'stopped', anticipating: false, willAnticipate: false },
-        { state: 'stopped', anticipating: false, willAnticipate: false },
-        { state: 'stopped', anticipating: false, willAnticipate: false },
-        { state: 'stopped', anticipating: false, willAnticipate: true },
-        { state: 'stopped', anticipating: false, willAnticipate: false },
+        { ...defaultReelState },
+        { ...defaultReelState },
+        { ...defaultReelState },
+        { ...defaultReelState },
+        { ...defaultReelState },
     ],
 }
 
@@ -71,7 +78,21 @@ const ui = (state = defaultState, action) => {
                     if (index === action.index) {
                         return {
                             ...item,
-                            anticipating: 'true',
+                            isAnticipating: true,
+                        }
+                    } else {
+                        return item;
+                    }
+                }),
+            }
+        case 'STOP_REEL_ANTICIPATION':
+            return {
+                ...state,
+                reels: state.reels.map((item, index) => {
+                    if (index === action.index) {
+                        return {
+                            ...item,
+                            isAnticipating: false,
                         }
                     } else {
                         return item;
@@ -98,4 +119,9 @@ export const reelsSpinning = (state) => {
 
 export const reelsStopped = (state) => {
     return state.ui.reels.every((r) => r.state === 'stopped');
+}
+
+export const willAnticipate = (index) => {
+    return index === 2;
+    //return reels[1].some((c) => 'F8') && reels[2].some((c) => 'F8');
 }

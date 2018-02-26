@@ -7,12 +7,12 @@ import { Anticipation } from './components/anticipation.js';
 
 import { createStore, applyMiddleware } from 'redux';
 import reducer from './reducers/index.js';
+import { stageMiddleware } from './middleware/stage.js';
 import { spinReelsMiddleware } from './middleware/spinReels.js';
-import { reelAnticipationMiddleware } from './middleware/reelAnticipation.js';
 
 const store = createStore(reducer,
                           window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-                          applyMiddleware(spinReelsMiddleware, reelAnticipationMiddleware)
+                          applyMiddleware(stageMiddleware, spinReelsMiddleware)
                          );
 export { store };
 
@@ -48,6 +48,8 @@ PIXI.loader
 
 function setup() {
 
+    store.dispatch({ type: 'INITIALIZE_STAGE', stage: 'BaseGame'});
+
     let bg = PIXI.Sprite.fromFrame("bg_freespin");
     app.stage.addChild(bg);
 
@@ -59,8 +61,10 @@ function setup() {
 
     let anticipation = new Anticipation('anticipation_fm0', store);
     anticipation.anchor.set(0.5);
-    anticipation.x = app.stage.width / 2;
+    anticipation.x = (app.stage.width / 2) + 160;
     anticipation.y = (app.stage.height / 2) - 40;
+    anticipation.width = REELS_CONFIG.cellWidth + 45;
+    anticipation.height = (REELS_CONFIG.cellHeight * 4) + 40;
     app.stage.addChild(anticipation);
 
     let controls = new SlotControls('bottom_bar', store);

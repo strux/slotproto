@@ -19,9 +19,15 @@ class Anticipation extends PIXI.Sprite {
 
     render() {
         let state = this.store.getState();
-        if (state.ui.reels.some((r) => r.anticipating)) {
+        if (!this._isAnticipating && state.ui.reels.some((r) => r.isAnticipating)) {
+            this._isAnticipating = true;
             this.visible = true;
             this.anim.play();
+        }
+        if (this._isAnticipating && !state.ui.reels.some((r) => r.isAnticipating)) {
+            this._isAnticipating = false;
+            this.visible = false;
+            this.anim.stop();
         }
     }
 }

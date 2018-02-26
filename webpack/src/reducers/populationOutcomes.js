@@ -12,10 +12,12 @@ export default populationOutcomes
 
 const parsePopulationOutcome = (payload) => {
     return payload.responseObject.PopulationOutcome.reduce((map,obj) => {
-        obj.Entry = obj.Entry.reduce((map, obj) => {
-            map[obj.name] = obj;
-            return map;
-        }, {});
+        if (Array.isArray(obj.Entry)) {
+            obj.Entry = obj.Entry.reduce((map, obj) => {
+                map[obj.name] = obj;
+                return map;
+            }, {});
+        }
         map[obj.name] = obj;
         return map;
     } ,{});

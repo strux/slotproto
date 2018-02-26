@@ -1,4 +1,4 @@
-import mockSpinResponses from '../mock_data/paytable_response.json';
+import mockPaytableResponse from '../mock_data/paytable_response.json';
 
 const stripInfo = (state = defaultState, action) => {
     switch (action.type) {
@@ -33,4 +33,4 @@ export const getSimplifiedStripInfo = (state, stripName) => {
     return [];
 }
 
-const defaultState = parseStripInfo(mockSpinResponses);
+const defaultState = parseStripInfo(mockPaytableResponse);
