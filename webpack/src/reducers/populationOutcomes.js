@@ -30,4 +30,11 @@ export const getSimplifiedOutcome = (state, outcomeName) => {
     return [];
 }
 
+export const nextReelIndex = (state, index) => {
+    if (typeof state.ui.reels[++index] === 'undefined') {
+        return -1
+    }
+    return index;
+}
+
 const defaultState = parsePopulationOutcome(mockSpinResponses[0]);
