@@ -9,12 +9,11 @@ class SlotControls extends PIXI.Sprite {
 
         this.store = store;
 
-        this.btnTest = new Button('btn_spin');
-        this.btnTest.onClick = this.onSpinClick.bind(this);
-        this.btnTest.anchor.set(1,1);
-        this.btnTest.x = this.width - 10;
-        this.btnTest.y = this.height - 6;
-        this.addChild(this.btnTest);
+        this.spinBtn = this.createSpinButton();
+        this.addChild(this.spinBtn);
+
+        this.skipBtn = this.createSkipButton();
+        this.addChild(this.skipBtn);
 
         this.render();
         this.store.subscribe(this.render.bind(this));
@@ -22,14 +21,38 @@ class SlotControls extends PIXI.Sprite {
 
     render() {
         let state = this.store.getState();
-        this.btnTest.disabled = !reelsStopped(state);
+        this.spinBtn.disabled = !reelsStopped(state);
+        this.skipBtn.visible = state.ui.bigWinPlaying;
+    }
+
+    createSpinButton() {
+
+        let btn = new Button('btn_spin');
+        btn.onClick = this.onSpinClick.bind(this);
+        btn.anchor.set(1,1);
+        btn.x = this.width - 10;
+        btn.y = this.height - 6;
+        return btn;
+    }
+
+    createSkipButton() {
+
+        let btn = new Button('btn_skip');
+        btn.onClick = this.onSkipClick.bind(this);
+        btn.anchor.set(1,1);
+        btn.x = this.width - 10;
+        btn.y = this.height - 6;
+        btn.visible = false;
+        return btn;
     }
 
     onSpinClick() {
         let reelCount = getSimplifiedStripInfo(this.store.getState(), 'BaseGame').length;
-        //spinReels(this.store.dispatch, reelCount);
-        //fetchSpin(this.store.dispatch, reelCount);
         this.store.dispatch({ type: 'SPIN_MACHINE' });
+    }
+
+    onSkipClick() {
+        this.store.dispatch({ type: 'SKIP_REQUESTED' });
     }
 }
 export { SlotControls }

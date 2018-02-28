@@ -109,6 +109,11 @@ const ui = (state = defaultState, action) => {
                 ...state,
                 bigWinPlaying: false,
             }
+        case 'SKIP_REQUESTED':
+            return {
+                ...state,
+                bigWinPlaying: false,
+            }
         default:
             return state
     }
