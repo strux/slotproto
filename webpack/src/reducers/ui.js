@@ -99,6 +99,16 @@ const ui = (state = defaultState, action) => {
                     }
                 }),
             }
+        case 'START_BIG_WIN':
+            return {
+                ...state,
+                bigWinPlaying: true,
+            }
+        case 'STOP_BIG_WIN':
+            return {
+                ...state,
+                bigWinPlaying: false,
+            }
         default:
             return state
     }

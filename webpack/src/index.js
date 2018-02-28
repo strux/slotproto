@@ -4,15 +4,17 @@ import { REELS_CONFIG } from './constants.js';
 import { SlotControls } from './components/slotControls.js';
 import { ReelController } from './components/ReelController.js';
 import { Anticipation } from './components/anticipation.js';
+import { BigWin } from './components/bigWin.js';
 
 import { createStore, applyMiddleware } from 'redux';
 import reducer from './reducers/index.js';
 import { stageMiddleware } from './middleware/stage.js';
 import { spinReelsMiddleware } from './middleware/spinReels.js';
+import { bigWinMiddleware } from './middleware/bigWin.js';
 
 const store = createStore(reducer,
                           window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-                          applyMiddleware(stageMiddleware, spinReelsMiddleware)
+                          applyMiddleware(stageMiddleware, spinReelsMiddleware, bigWinMiddleware)
                          );
 export { store };
 
@@ -66,6 +68,12 @@ function setup() {
     anticipation.width = REELS_CONFIG.cellWidth + 45;
     anticipation.height = (REELS_CONFIG.cellHeight * 4) + 40;
     app.stage.addChild(anticipation);
+
+    let bigWin = new BigWin('bigwin_swirl', app.stage.width, app.stage.width, store);
+    bigWin.anchor.set(0.5);
+    bigWin.x = (app.stage.width / 2);
+    bigWin.y = (app.stage.height / 2);
+    app.stage.addChild(bigWin);
 
     let controls = new SlotControls('bottom_bar', store);
     controls.y = 768 - controls.height;

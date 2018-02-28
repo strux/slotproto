@@ -7,7 +7,7 @@ export const spinReelsMiddleware = store => next => action => {
 
     next(action);
     let state = store.getState();
-    const spinDelay = 300;
+    const stopDelay = 300;
     const anticipationDelay = 2000;
 
     if (action.type === 'SPIN_MACHINE') {
@@ -22,13 +22,13 @@ export const spinReelsMiddleware = store => next => action => {
         }, this);
     }
     if (action.type === 'SPIN_RECEIVED') {
-        setTimeout(() => store.dispatch({ type: 'STOP_REEL', index: 0 }), 300);
+        setTimeout(() => store.dispatch({ type: 'STOP_REEL', index: 0 }), stopDelay);
     }
     if (action.type === 'REEL_STOPPED') {
 
         let nextIndex = nextReelIndex(state, action.index);
         if (nextIndex > -1) {
-            let delay = spinDelay;
+            let delay = stopDelay;
             if (shouldAnticipate(state, nextIndex)) {
                 delay = anticipationDelay;
                 store.dispatch({ type: 'ANTICIPATE_REEL', index: nextIndex });
