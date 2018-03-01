@@ -1,6 +1,7 @@
 import * as PIXI from 'pixi.js';
 import './style.css';
 import { REELS_CONFIG } from './constants.js';
+import { Sprite } from './components/sprite.js';
 import { SlotControls } from './components/slotControls.js';
 import { ReelController } from './components/ReelController.js';
 import { Anticipation } from './components/anticipation.js';
@@ -8,9 +9,12 @@ import { BigWin } from './components/bigWin.js';
 
 import { createStore, applyMiddleware } from 'redux';
 import reducer from './reducers/index.js';
+import { layoutBuilder } from './util/layoutBuilder.js';
 import { stageMiddleware } from './middleware/stage.js';
 import { spinReelsMiddleware } from './middleware/spinReels.js';
 import { bigWinMiddleware } from './middleware/bigWin.js';
+
+import baseGameLayoutData from './layout/basegame.json';
 
 const store = createStore(reducer,
                           window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
@@ -52,30 +56,48 @@ function setup() {
 
     store.dispatch({ type: 'INITIALIZE_STAGE', stage: 'BaseGame'});
 
+    let baseGame = new PIXI.Container();
+    app.stage.addChild(baseGame);
+
+    // Quick test for layoutBuilder
+    //layoutBuilder(baseGameLayoutData, baseGame);
+
+    // Positioning test
+    let testBg = PIXI.Sprite.fromFrame("bg_freespin");
+    app.stage.addChild(testBg);
+    let positioningTest = new Sprite('slotface');
+    testBg.addChild(positioningTest);
+    positioningTest.originX = '50%';
+    positioningTest.originY = '100%';
+    positioningTest.x = '50%';
+    positioningTest.y = '100%';
+    testBg.visible = false;
+
+
     let bg = PIXI.Sprite.fromFrame("bg_freespin");
-    app.stage.addChild(bg);
+    baseGame.addChild(bg);
 
     let reelController = new ReelController('slotface', store, REELS_CONFIG);
     reelController.anchor.set(0.5);
-    reelController.x = app.stage.width / 2;
-    reelController.y = (app.stage.height / 2) - 40;
-    app.stage.addChild(reelController);
+    reelController.x = baseGame.width / 2;
+    reelController.y = (baseGame.height / 2) - 40;
+    baseGame.addChild(reelController);
 
     let anticipation = new Anticipation('anticipation_fm0', store);
     anticipation.anchor.set(0.5);
-    anticipation.x = (app.stage.width / 2) + 160;
-    anticipation.y = (app.stage.height / 2) - 40;
+    anticipation.x = (baseGame.width / 2) + 160;
+    anticipation.y = (baseGame.height / 2) - 40;
     anticipation.width = REELS_CONFIG.cellWidth + 45;
     anticipation.height = (REELS_CONFIG.cellHeight * 4) + 40;
-    app.stage.addChild(anticipation);
+    baseGame.addChild(anticipation);
 
-    let bigWin = new BigWin('bigwin_swirl', app.stage.width, app.stage.width, store);
+    let bigWin = new BigWin('bigwin_swirl', baseGame.width, baseGame.width, store);
     bigWin.anchor.set(0.5);
-    bigWin.x = (app.stage.width / 2);
-    bigWin.y = (app.stage.height / 2);
-    app.stage.addChild(bigWin);
+    bigWin.x = (baseGame.width / 2);
+    bigWin.y = (baseGame.height / 2);
+    baseGame.addChild(bigWin);
 
     let controls = new SlotControls('bottom_bar', store);
     controls.y = 768 - controls.height;
-    app.stage.addChild(controls);
+    baseGame.addChild(controls);
 }

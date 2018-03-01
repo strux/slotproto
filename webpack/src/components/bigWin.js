@@ -5,7 +5,6 @@ class BigWin extends PIXI.Sprite {
     constructor(frameId, width, height, store) {
         super(PIXI.utils.TextureCache[frameId]);
 
-        this._isPlaying = false;
         this.visible = true;
 
         this.width = width;
@@ -20,7 +19,7 @@ class BigWin extends PIXI.Sprite {
 
     createTimeline(width, height) {
 
-        this.mainTl = new TimelineMax();
+        this.mainTl = new TimelineMax({ onComplete: this.bigWinEnd.bind(this) });
 
         this.introTl = new TimelineMax()
         .set(this, { width: 0, height: 0 }, 0)
@@ -45,15 +44,17 @@ class BigWin extends PIXI.Sprite {
         this.mainTl.pause();
     }
 
+    bigWinEnd() {
+        this.store.dispatch({ type: 'STOP_BIG_WIN' });
+    }
+
     render() {
         let state = this.store.getState();
-        if (!this._isPlaying && state.ui.bigWinPlaying) {
-            this._isPlaying = true;
+        if (!this.mainTl.isActive() && state.ui.bigWinPlaying) {
             this.visible = true;
-            this.mainTl.play();
+            this.mainTl.restart();
         }
-        if (this._isPlaying && !state.ui.bigWinPlaying) {
-            this._isPlaying = false;
+        if (this.mainTl.isActive() && !state.ui.bigWinPlaying) {
             this.visible = false;
             this.mainTl.stop();
         }
