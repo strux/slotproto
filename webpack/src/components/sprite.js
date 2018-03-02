@@ -36,12 +36,27 @@ export class Sprite extends PIXI.Sprite {
         this.updateY();
     }
 
+    /*
+    set width(value) {
+        let width = this.parseValue(value, this.parent.width);
+        super.width = width;
+    }
+
+    get width() {
+        return super.width
+    }
+   */
+
     parseValue(value, dimension) {
         if (typeof value === 'string') {
             if (value.slice(-1) === '%') {
                 let multiplier = parseInt(value) * 0.01;
                 value = dimension * multiplier;
-            } else {
+            }
+            else if (value.slice(-1) === 'R') {
+                value = dimension + parseInt(value);
+            }
+            else {
                 value = -parseInt(value);
             }
         }

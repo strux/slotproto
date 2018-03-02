@@ -1,17 +1,40 @@
 {
-    "bg_freespin": {
-        "name": "freeSpinBg",
+    "freespinBg": {
+        "frame": "bg_freespin",
         "x": 0,
         "y": 0,
         "originX": 0,
         "originY": 0,
         "children": {
-            "slotface": {
+            "slotFace": {
                 "frame": "slotface",
                 "x": "50%",
-                "y": 0,
+                "y": "45%",
                 "originX": "50%",
-                "originY": 0
+                "originY": "50%"
+            }
+        }
+    },
+    "bigWin": {
+        "frame": "bigwin_swirl",
+        "x": "50%",
+        "y": "50%",
+        "originX": "50%",
+        "originY": "50%"
+    },
+    "slotControls": {
+        "frame": "bottom_bar",
+        "x": "50%",
+        "y": "100%",
+        "originX": "50%",
+        "originY": "100%",
+        "children": {
+            "spinButton": {
+                "frame": "btn_spin",
+                "x": "-10R",
+                "y": "-10R",
+                "originX": "100%",
+                "originY": "100%"
             }
         }
     }

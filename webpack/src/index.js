@@ -59,20 +59,10 @@ function setup() {
     let baseGame = new PIXI.Container();
     app.stage.addChild(baseGame);
 
-    // Quick test for layoutBuilder
-    //layoutBuilder(baseGameLayoutData, baseGame);
-
-    // Positioning test
-    let testBg = PIXI.Sprite.fromFrame("bg_freespin");
-    app.stage.addChild(testBg);
-    let positioningTest = new Sprite('slotface');
-    testBg.addChild(positioningTest);
-    positioningTest.originX = '50%';
-    positioningTest.originY = '100%';
-    positioningTest.x = '50%';
-    positioningTest.y = '100%';
-    testBg.visible = false;
-
+    /*
+    const spriteById = layoutBuilder(baseGameLayoutData, baseGame);
+    return
+    */
 
     let bg = PIXI.Sprite.fromFrame("bg_freespin");
     baseGame.addChild(bg);
