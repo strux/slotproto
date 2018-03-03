@@ -1,0 +1,257 @@
+
+bigwin_skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: MipMapLinearNearest,MipMapLinearNearest
+repeat: none
+big_win
+  rotate: false
+  xy: 445, 682
+  size: 374, 146
+  orig: 440, 442
+  offset: 35, 288
+  index: -1
+dialog_big_win
+  rotate: true
+  xy: 2, 505
+  size: 440, 441
+  orig: 440, 442
+  offset: 0, 1
+  index: -1
+her_fm2
+  rotate: true
+  xy: 718, 2
+  size: 188, 192
+  orig: 260, 252
+  offset: 36, 0
+  index: -1
+her_fm3
+  rotate: false
+  xy: 788, 192
+  size: 212, 252
+  orig: 260, 252
+  offset: 47, 0
+  index: -1
+her_fm4
+  rotate: true
+  xy: 255, 43
+  size: 214, 234
+  orig: 260, 252
+  offset: 44, 0
+  index: -1
+her_fm5
+  rotate: true
+  xy: 2, 7
+  size: 197, 223
+  orig: 260, 252
+  offset: 62, 0
+  index: -1
+her_fm6
+  rotate: true
+  xy: 491, 19
+  size: 191, 225
+  orig: 260, 252
+  offset: 66, 0
+  index: -1
+him_fm0
+  rotate: false
+  xy: 2, 206
+  size: 251, 95
+  orig: 356, 264
+  offset: 104, 0
+  index: -1
+him_fm1
+  rotate: true
+  xy: 832, 680
+  size: 265, 156
+  orig: 356, 264
+  offset: 82, 0
+  index: -1
+him_fm2
+  rotate: true
+  xy: 2, 303
+  size: 200, 260
+  orig: 356, 264
+  offset: 59, 0
+  index: -1
+him_fm3
+  rotate: true
+  xy: 445, 492
+  size: 188, 264
+  orig: 356, 264
+  offset: 39, 0
+  index: -1
+him_fm4
+  rotate: true
+  xy: 264, 259
+  size: 231, 260
+  orig: 356, 264
+  offset: 0, 0
+  index: -1
+him_fm5
+  rotate: true
+  xy: 526, 212
+  size: 232, 260
+  orig: 356, 264
+  offset: 1, 0
+  index: -1
+him_fm6
+  rotate: true
+  xy: 711, 446
+  size: 232, 260
+  orig: 356, 264
+  offset: 1, 0
+  index: -1
+panel_winnings
+  rotate: false
+  xy: 445, 830
+  size: 385, 115
+  orig: 386, 115
+  offset: 1, 0
+  index: -1
+
+bigwin_skeleton2.png
+size: 1024,256
+format: RGBA8888
+filter: MipMapLinearNearest,MipMapLinearNearest
+repeat: none
+her_fm0
+  rotate: false
+  xy: 193, 116
+  size: 184, 134
+  orig: 260, 252
+  offset: 2, 0
+  index: -1
+her_fm1
+  rotate: false
+  xy: 2, 96
+  size: 189, 154
+  orig: 260, 252
+  offset: 17, 0
+  index: -1
+her_fm7
+  rotate: false
+  xy: 2, 55
+  size: 117, 39
+  orig: 260, 252
+  offset: 79, 103
+  index: -1
+her_fm8
+  rotate: false
+  xy: 2, 14
+  size: 117, 39
+  orig: 260, 252
+  offset: 79, 103
+  index: -1
+left_star_large
+  rotate: false
+  xy: 413, 9
+  size: 111, 109
+  orig: 286, 148
+  offset: 64, 23
+  index: -1
+left_star_medium
+  rotate: true
+  xy: 629, 32
+  size: 92, 84
+  orig: 286, 148
+  offset: 0, 64
+  index: -1
+left_star_small
+  rotate: false
+  xy: 121, 29
+  size: 68, 65
+  orig: 286, 148
+  offset: 36, 0
+  index: -1
+right_star_large
+  rotate: false
+  xy: 193, 5
+  size: 112, 109
+  orig: 274, 186
+  offset: 111, 40
+  index: -1
+right_star_medium
+  rotate: true
+  xy: 935, 157
+  size: 93, 84
+  orig: 274, 186
+  offset: 180, 101
+  index: -1
+right_star_small
+  rotate: false
+  xy: 935, 89
+  size: 68, 66
+  orig: 274, 186
+  offset: 196, 32
+  index: -1
+sprinkleburst_fm0
+  rotate: false
+  xy: 796, 45
+  size: 22, 21
+  orig: 160, 160
+  offset: 70, 70
+  index: -1
+sprinkleburst_fm1
+  rotate: false
+  xy: 857, 95
+  size: 41, 38
+  orig: 160, 160
+  offset: 62, 62
+  index: -1
+sprinkleburst_fm2
+  rotate: false
+  xy: 796, 68
+  size: 59, 59
+  orig: 160, 160
+  offset: 52, 52
+  index: -1
+sprinkleburst_fm3
+  rotate: false
+  xy: 715, 44
+  size: 79, 83
+  orig: 160, 160
+  offset: 41, 40
+  index: -1
+sprinkleburst_fm4
+  rotate: true
+  xy: 528, 31
+  size: 93, 99
+  orig: 160, 160
+  offset: 35, 32
+  index: -1
+sprinkleburst_fm5
+  rotate: false
+  xy: 307, 2
+  size: 104, 112
+  orig: 160, 160
+  offset: 30, 25
+  index: -1
+sprinkleburst_fm6
+  rotate: true
+  xy: 807, 135
+  size: 115, 126
+  orig: 160, 160
+  offset: 24, 18
+  index: -1
+sprinkleburst_fm7
+  rotate: true
+  xy: 671, 129
+  size: 121, 134
+  orig: 160, 160
+  offset: 20, 14
+  index: -1
+sprinkleburst_fm8
+  rotate: true
+  xy: 528, 126
+  size: 124, 141
+  orig: 160, 160
+  offset: 18, 11
+  index: -1
+sprinkleburst_fm9
+  rotate: true
+  xy: 379, 120
+  size: 130, 147
+  orig: 160, 160
+  offset: 15, 8
+  index: -1

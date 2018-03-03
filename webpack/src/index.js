@@ -1,4 +1,5 @@
 import * as PIXI from 'pixi.js';
+import 'pixi-spine';
 import './style.css';
 import { REELS_CONFIG } from './constants.js';
 import { Sprite } from './components/sprite.js';
@@ -6,6 +7,7 @@ import { SlotControls } from './components/slotControls.js';
 import { ReelController } from './components/ReelController.js';
 import { Anticipation } from './components/anticipation.js';
 import { BigWin } from './components/bigWin.js';
+import { BigWinSpine } from './components/bigWinSpine.js';
 
 import { createStore, applyMiddleware } from 'redux';
 import reducer from './reducers/index.js';
@@ -26,6 +28,7 @@ export { store };
 
 //Create a Pixi Application
 const app = new PIXI.Application({
+    //forceCavas: true,
     width: 1024,
     height: 768,
     antialiasing: true,
@@ -50,9 +53,10 @@ PIXI.loader
     "./images/slottemplate_common1.json",
     "./images/slottemplate_paytable1.json",
 ])
+.add('bigWin', './bigwin_skeleton.json')
 .load(setup);
 
-function setup() {
+function setup(loader, res) {
 
     store.dispatch({ type: 'INITIALIZE_STAGE', stage: 'BaseGame'});
 
@@ -81,13 +85,22 @@ function setup() {
     anticipation.height = (REELS_CONFIG.cellHeight * 4) + 40;
     baseGame.addChild(anticipation);
 
+    /*
     let bigWin = new BigWin('bigwin_swirl', baseGame.width, baseGame.width, store);
     bigWin.anchor.set(0.5);
     bigWin.x = (baseGame.width / 2);
     bigWin.y = (baseGame.height / 2);
     baseGame.addChild(bigWin);
+    */
 
     let controls = new SlotControls('bottom_bar', store);
     controls.y = 768 - controls.height;
     baseGame.addChild(controls);
+
+    let spineAnim = new PIXI.spine.Spine(res.bigWin.spineData);
+    spineAnim.x = (baseGame.width / 2);
+    spineAnim.y = (baseGame.height / 2);
+    baseGame.addChild(spineAnim);
+    spineAnim.visible = false;
+    let bigWin = new BigWinSpine(spineAnim, store);
 }
