@@ -7,7 +7,7 @@ const defaultReelState =  {
 
 const defaultState = {
     'spinRequested': false,
-    'bigWinPlaying': false,
+    'bigWinStatus': 'idle',
     'reels': [
         { ...defaultReelState },
         { ...defaultReelState },
@@ -102,17 +102,22 @@ const ui = (state = defaultState, action) => {
         case 'START_BIG_WIN':
             return {
                 ...state,
-                bigWinPlaying: true,
+                bigWinStatus: 'running',
             }
         case 'STOP_BIG_WIN':
             return {
                 ...state,
-                bigWinPlaying: false,
+                bigWinStatus: 'stopping',
+            }
+        case 'BIG_WIN_IDLE':
+            return {
+                ...state,
+                bigWinStatus: 'idle',
             }
         case 'SKIP_REQUESTED':
             return {
                 ...state,
-                bigWinPlaying: false,
+                bigWinStatus: 'stopping',
             }
         default:
             return state

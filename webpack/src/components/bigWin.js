@@ -45,7 +45,7 @@ class BigWin extends PIXI.Sprite {
     }
 
     bigWinEnd() {
-        this.store.dispatch({ type: 'STOP_BIG_WIN' });
+        this.store.dispatch({ type: 'BIG_WIN_IDLE' });
     }
 
     render() {

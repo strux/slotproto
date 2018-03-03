@@ -22,7 +22,9 @@ class SlotControls extends PIXI.Sprite {
     render() {
         let state = this.store.getState();
         this.spinBtn.disabled = !reelsStopped(state);
-        this.skipBtn.visible = state.ui.bigWinPlaying;
+        this.skipBtn.visible = state.ui.bigWinStatus !== 'idle';
+        this.skipBtn.disabled = state.ui.bigWinStatus !== 'running';
+        this.spinBtn.visible = !this.skipBtn.visible;
     }
 
     createSpinButton() {
