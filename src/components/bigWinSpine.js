@@ -5,12 +5,14 @@ class BigWinSpine {
     constructor(anim, store) {
 
         this.anim = anim;
-        this.track = this.anim.state.setAnimation(0, 'bigwin');
-        this.listeners = { complete: this.bigWinEnd.bind(this) };
+        this.track = this.anim.state.setAnimation(0, 'animation');
+        this.listeners = { complete: this.stopBigWin.bind(this) };
         this.anim.state.addListener(this.listeners);
         this.track.timeScale = 0;
         this.track.trackTime = 0;
-        this.anim.visible = true;
+
+        // NOTE: visibility has strange effects on playback.
+        // Should be done in a wrapper node perhaps?
 
         this.store = store;
         this.render();
@@ -34,7 +36,6 @@ class BigWinSpine {
     render() {
         let state = this.store.getState();
         if (this.track.timeScale === 0 && state.ui.bigWinStatus === 'running') {
-            this.anim.visible = true;
             this.anim.alpha = 1;
             this.track.trackTime = 0;
             this.track.timeScale = 1;
@@ -43,6 +44,10 @@ class BigWinSpine {
             if (this.track.trackTime > 0) {
                 this.bigWinEnd();
             }
+        }
+        if (state.ui.bigWinStatus === 'idle') {
+            this.track.timeScale = 0;
+            this.track.trackTime = 0;
         }
     }
 }
