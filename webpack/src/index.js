@@ -53,7 +53,7 @@ PIXI.loader
     "./images/slottemplate_common1.json",
     "./images/slottemplate_paytable1.json",
 ])
-.add('bigWin', './bigwin_skeleton.json')
+.add('bigWin', './bigwin.json')
 .load(setup);
 
 function setup(loader, res) {
@@ -98,8 +98,8 @@ function setup(loader, res) {
     baseGame.addChild(controls);
 
     let spineAnim = new PIXI.spine.Spine(res.bigWin.spineData);
-    spineAnim.x = (baseGame.width / 2);
-    spineAnim.y = (baseGame.height / 2);
+    spineAnim.x = 0; //(baseGame.width / 2);
+    spineAnim.y = 0; //(baseGame.height / 2);
     baseGame.addChild(spineAnim);
     let bigWin = new BigWinSpine(spineAnim, store);
 }

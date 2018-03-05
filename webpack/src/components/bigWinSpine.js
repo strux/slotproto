@@ -5,7 +5,7 @@ class BigWinSpine {
     constructor(anim, store) {
 
         this.anim = anim;
-        this.track = this.anim.state.setAnimation(0, 'bigwin');
+        this.track = this.anim.state.setAnimation(0, 'animation');
         this.listeners = { complete: this.stopBigWin.bind(this) };
         this.anim.state.addListener(this.listeners);
         this.track.timeScale = 0;
