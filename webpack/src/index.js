@@ -101,6 +101,5 @@ function setup(loader, res) {
     spineAnim.x = (baseGame.width / 2);
     spineAnim.y = (baseGame.height / 2);
     baseGame.addChild(spineAnim);
-    spineAnim.visible = false;
     let bigWin = new BigWinSpine(spineAnim, store);
 }

@@ -114,11 +114,6 @@ const ui = (state = defaultState, action) => {
                 ...state,
                 bigWinStatus: 'idle',
             }
-        case 'SKIP_REQUESTED':
-            return {
-                ...state,
-                bigWinStatus: 'stopping',
-            }
         default:
             return state
     }
