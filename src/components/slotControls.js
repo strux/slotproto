@@ -1,19 +1,19 @@
 import { Button } from './button.js';
 import { reelsStopped } from '../reducers/ui.js';
 import { getSimplifiedStripInfo } from '../reducers/stripInfo.js';
+import { findFirstChildWithName } from '../util/spriteUtil.js';
+class SlotControls {
 
-class SlotControls extends PIXI.Sprite {
-
-    constructor(frameId, store) {
-        super(PIXI.utils.TextureCache[frameId]);
+    constructor(sprite, store) {
+        this.sprite = sprite
 
         this.store = store;
 
         this.spinBtn = this.createSpinButton();
-        this.addChild(this.spinBtn);
+        // this.sprite.addChild(this.spinBtn);
 
-        this.skipBtn = this.createSkipButton();
-        this.addChild(this.skipBtn);
+        // this.skipBtn = this.createSkipButton();
+        // this.sprite.addChild(this.skipBtn);
 
         this.render();
         this.store.subscribe(this.render.bind(this));
@@ -21,19 +21,17 @@ class SlotControls extends PIXI.Sprite {
 
     render() {
         let state = this.store.getState();
-        this.skipBtn.visible = state.ui.bigWinStatus !== 'idle';
-        this.skipBtn.disabled = state.ui.bigWinStatus !== 'running';
+        // this.skipBtn.visible = state.ui.bigWinStatus !== 'idle';
+        // this.skipBtn.disabled = state.ui.bigWinStatus !== 'running';
         this.spinBtn.disabled = !reelsStopped(state);
-        this.spinBtn.visible = !this.skipBtn.visible;
+        //this.spinBtn.visible = !this.skipBtn.visible;
+        
     }
 
     createSpinButton() {
 
-        let btn = new Button('btn_spin');
+        let btn = new Button(findFirstChildWithName(this.sprite, 'spinButton'));
         btn.onClick = this.onSpinClick.bind(this);
-        btn.anchor.set(1,1);
-        btn.x = this.width - 10;
-        btn.y = this.height - 6;
         return btn;
     }
 

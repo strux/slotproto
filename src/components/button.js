@@ -1,20 +1,20 @@
-class Button extends PIXI.Sprite {
+class Button {
 
-    constructor(frameId) {
-        super(PIXI.utils.TextureCache[frameId]);
+    constructor(sprite) {
+        this.sprite = sprite;
         this._diabled = false;
         this.interactive = true;
         this.buttonMode = true;
-        this.on('pointerdown', this.onDown);
-        this.on('pointerup', this.onUp);
+        this.sprite.on('pointerdown', this.onDown, this);
+        this.sprite.on('pointerup', this.onUp, this);
     }
 
     onDown() {
-        this.scale.set(1.2);
+        this.sprite.scale.set(1.2);
     }
 
     onUp(callback=null) {
-        this.scale.set(1);
+        this.sprite.scale.set(1);
         if (this.onUpCallback) {
             this.onUpCallback();
         }
@@ -31,13 +31,13 @@ class Button extends PIXI.Sprite {
     set disabled(disabled=true) {
         this._disabled = disabled;
         if (disabled) {
-            this.alpha = 0.3;
-            this.interactive = false;
-            this.buttonMode = false;
+            this.sprite.alpha = 0.3;
+            this.sprite.interactive = false;
+            this.sprite.buttonMode = false;
         } else {
-            this.alpha = 1;
-            this.interactive = true;
-            this.buttonMode = true;
+            this.sprite.alpha = 1;
+            this.sprite.interactive = true;
+            this.sprite.buttonMode = true;
         }
     }
 }

@@ -2,10 +2,10 @@ import { Tweenlite } from 'gsap';
 
 class BigWinSpine {
 
-    constructor(anim, store) {
+    constructor(anim, animID, store) {
 
         this.anim = anim;
-        this.track = this.anim.state.setAnimation(0, 'animation');
+        this.track = this.anim.state.setAnimation(0, animID);
         this.listeners = { complete: this.stopBigWin.bind(this) };
         this.anim.state.addListener(this.listeners);
         this.track.timeScale = 0;

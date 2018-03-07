@@ -5,11 +5,10 @@ import { reelsSpinning } from '../reducers/ui.js';
 import { getSimplifiedOutcome } from '../reducers/populationOutcomes.js';
 import { getSimplifiedStripInfo } from '../reducers/stripInfo.js';
 
-class ReelController extends PIXI.Sprite {
+class ReelController {
 
-    constructor(frameId, store, config) {
-        super(PIXI.utils.TextureCache[frameId]);
-
+    constructor(sprite, store, config) {
+        this.sprite = sprite;
         this.store = store;
         this.config = config;
         this._reels = [];
@@ -45,7 +44,7 @@ class ReelController extends PIXI.Sprite {
             this._reels[i] = new Reel(this.config.cellWidth, this.config.cellHeight, this.config.symbolMap, this.config.cellsPerSecond);
             this._reels[i].x = (this.config.cellWidth * i) - (this.width / 2) + (i * 10) + 27;
             this._reels[i].y = (-this.height / 2) + 23;
-            this.addChild(this._reels[i]);
+            this.sprite.addChild(this._reels[i]);
         }, this);
     }
 }

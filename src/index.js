@@ -24,8 +24,6 @@ const store = createStore(reducer,
                          );
 export { store };
 
-
-
 //Create a Pixi Application
 const app = new PIXI.Application({
     //forceCavas: true,
@@ -55,46 +53,23 @@ function setup(loader, res) {
 
     store.dispatch({ type: 'INITIALIZE_STAGE', stage: 'BaseGame'});
 
-    let baseGame = new PIXI.Container();
-    app.stage.addChild(baseGame);
+    const spriteById = layoutBuilder(baseGameLayoutData, app.stage.addChild(new PIXI.Container()));
 
-    /*
-    const spriteById = layoutBuilder(baseGameLayoutData, baseGame);
-    return
-    */
+    new ReelController(spriteById.slotFace, store, REELS_CONFIG);
 
-    let bg = PIXI.Sprite.fromFrame("bg_freespin");
-    baseGame.addChild(bg);
-
-    let reelController = new ReelController('slotface', store, REELS_CONFIG);
-    reelController.anchor.set(0.5);
-    reelController.x = baseGame.width / 2;
-    reelController.y = (baseGame.height / 2) - 40;
-    baseGame.addChild(reelController);
-
-    let anticipation = new Anticipation('anticipation_fm0', store);
+    let anticipation = spriteById.anticipation;
     anticipation.anchor.set(0.5);
-    anticipation.x = (baseGame.width / 2) + 160;
-    anticipation.y = (baseGame.height / 2) - 40;
+    anticipation.x = (app.stage.width / 2) + 160;
+    anticipation.y = (app.stage.height / 2) - 40;
     anticipation.width = REELS_CONFIG.cellWidth + 45;
     anticipation.height = (REELS_CONFIG.cellHeight * 4) + 40;
-    baseGame.addChild(anticipation);
+    
+    new Anticipation(anticipation, store);
 
-    /*
-    let bigWin = new BigWin('bigwin_swirl', baseGame.width, baseGame.width, store);
-    bigWin.anchor.set(0.5);
-    bigWin.x = (baseGame.width / 2);
-    bigWin.y = (baseGame.height / 2);
-    baseGame.addChild(bigWin);
-    */
-
-    let controls = new SlotControls('bottom_bar', store);
-    controls.y = 768 - controls.height;
-    baseGame.addChild(controls);
+    new SlotControls(spriteById.slotControls, store);
 
     let spineAnim = new PIXI.spine.Spine(res.bigWin.spineData);
-    spineAnim.x = 0; //(baseGame.width / 2);
-    spineAnim.y = 0; //(baseGame.height / 2);
-    baseGame.addChild(spineAnim);
-    let bigWin = new BigWinSpine(spineAnim, store);
+    spriteById.bigWin.addChild(spineAnim);
+    
+    //let bigWin = new BigWinSpine(spineAnim, 'bigWin', store);
 }
