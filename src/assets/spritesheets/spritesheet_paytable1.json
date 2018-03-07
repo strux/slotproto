@@ -1,8 +1,8 @@
 {"frames": {
 
-"bg_paytable.png":
+"bg_paytable":
 {
-	"frame": {"x":0,"y":0,"w":1024,"h":768},
+	"frame": {"x":1,"y":1,"w":1024,"h":768},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":1024,"h":768},
@@ -13,8 +13,8 @@
 	"version": "1.0",
 	"image": "spritesheet_paytable1.png",
 	"format": "RGBA8888",
-	"size": {"w":1024,"h":768},
+	"size": {"w":1026,"h":770},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:ac758a41a5a3e453a730d57506825af2:dd9e4cf49479249ff66e899372681e76:bbcd02f463fa2b438c3b2bb43080e9ca$"
+	"smartupdate": "$TexturePacker:SmartUpdate:5fd7cda4d76a412a527f382b9bbee096:dd9e4cf49479249ff66e899372681e76:bbcd02f463fa2b438c3b2bb43080e9ca$"
 }
 }

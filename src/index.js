@@ -43,15 +43,10 @@ document.body.appendChild(app.view);
 //load a JSON file and run the `setup` function when it's done
 PIXI.loader
 .add([
-    "./images/slottemplate_slot1.json",
-    "./images/slottemplate_slot2.json",
-    "./images/slottemplate_slot3.json",
-    "./images/slottemplate_slot4.json",
-    "./images/slottemplate_slot5.json",
-    "./images/slottemplate_slot6.json",
-    "./images/slottemplate_slot7.json",
-    "./images/slottemplate_common1.json",
-    "./images/slottemplate_paytable1.json",
+    "./images/spritesheet_slot1.json",
+    "./images/spritesheet_slot2.json",
+    "./images/spritesheet_common1.json",
+    "./images/spritesheet_paytable1.json",
 ])
 .add('bigWin', './bigwin.json')
 .load(setup);

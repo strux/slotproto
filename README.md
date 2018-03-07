@@ -1,7 +1,8 @@
 # SlotFrameworkPrototype
 
-To launch the test suite:  
-1) Install http-server : npm install http-server -g  
-2) Launch server: sh startserver.sh  
-3) Go to localhost:8080  
+Run:
+npm install
+npm run build-sprite-sheets
+npm run build
+npm start
 
