@@ -8,6 +8,7 @@ import { ReelController } from './components/ReelController.js';
 import { Anticipation } from './components/anticipation.js';
 import { BigWin } from './components/bigWin.js';
 import { BigWinSpine } from './components/bigWinSpine.js';
+import { Rollup } from './components/rollup.js';
 
 import { createStore, applyMiddleware } from 'redux';
 import reducer from './reducers/index.js';
@@ -63,13 +64,37 @@ function setup(loader, res) {
     anticipation.y = (app.stage.height / 2) - 40;
     anticipation.width = REELS_CONFIG.cellWidth + 45;
     anticipation.height = (REELS_CONFIG.cellHeight * 4) + 40;
-    
+
     new Anticipation(anticipation, store);
 
     new SlotControls(spriteById.slotControls, store);
 
     let spineAnim = new PIXI.spine.Spine(res.bigWin.spineData);
     spriteById.bigWin.addChild(spineAnim);
-    
-    //let bigWin = new BigWinSpine(spineAnim, 'bigWin', store);
+
+    spineAnim.x = 0; //(baseGame.width / 2);
+    spineAnim.y = 0; //(baseGame.height / 2);
+    //baseGame.addChild(spineAnim);
+
+    var style = new PIXI.TextStyle({
+      align: 'center',
+      fontFamily: 'Arial',
+      fontSize: 40,
+      fontStyle: 'italic',
+      fontWeight: 'bold',
+      fill: ['#ffffff', '#3AE8BD'], // gradient
+      stroke: '#4a1850',
+      strokeThickness: 5,
+      dropShadow: true,
+      dropShadowColor: '#000000',
+      dropShadowBlur: 4,
+      dropShadowAngle: Math.PI / 6,
+      dropShadowDistance: 6,
+      wordWrap: true,
+      wordWrapWidth: 440
+    });
+    var rollup = new Rollup('0', style);
+    app.stage.addChild(rollup);
+
+    //let bigWin = new BigWinSpine(spineAnim, rollup, store);
 }
