@@ -1,0 +1,97 @@
+
+totemSymbol.png
+size: 1024,256
+format: RGBA8888
+filter: MipMapLinearNearest,MipMapLinearNearest
+repeat: none
+(wolfRunSymbols)-assets/freespinreel_2_front
+  rotate: true
+  xy: 801, 132
+  size: 108, 118
+  orig: 108, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreel_2_mid
+  rotate: false
+  xy: 2, 122
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreel_3_front
+  rotate: false
+  xy: 572, 3
+  size: 104, 117
+  orig: 106, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreel_3_mid
+  rotate: false
+  xy: 2, 3
+  size: 166, 117
+  orig: 166, 117
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreel_2_front
+  rotate: false
+  xy: 678, 10
+  size: 106, 117
+  orig: 106, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreel_2_mid
+  rotate: false
+  xy: 662, 129
+  size: 137, 111
+  orig: 138, 112
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreel_3_front
+  rotate: false
+  xy: 921, 128
+  size: 101, 112
+  orig: 102, 112
+  offset: 1, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreel_3_mid
+  rotate: false
+  xy: 170, 7
+  size: 139, 113
+  orig: 140, 114
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/reelanim_particle_fm0
+  rotate: false
+  xy: 448, 7
+  size: 122, 113
+  orig: 166, 118
+  offset: 23, 5
+  index: -1
+(wolfRunSymbols)-assets/reelanim_particle_fm1
+  rotate: false
+  xy: 311, 2
+  size: 135, 118
+  orig: 166, 118
+  offset: 22, 0
+  index: -1
+(wolfRunSymbols)-assets/reelanim_particle_fm2
+  rotate: false
+  xy: 504, 122
+  size: 156, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/reelanim_particle_fm3
+  rotate: false
+  xy: 170, 122
+  size: 165, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/reelanim_particle_fm4
+  rotate: false
+  xy: 337, 122
+  size: 165, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1

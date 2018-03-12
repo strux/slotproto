@@ -1,0 +1,202 @@
+
+wolfSymbol.png
+size: 1024,512
+format: RGBA8888
+filter: MipMapLinearNearest,MipMapLinearNearest
+repeat: none
+(wolfRunSymbols)-assets/freespinreelanim_0_fm0
+  rotate: false
+  xy: 2, 238
+  size: 163, 116
+  orig: 166, 118
+  offset: 0, 2
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_0_fm1
+  rotate: false
+  xy: 167, 238
+  size: 163, 116
+  orig: 166, 118
+  offset: 0, 2
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_0_fm2
+  rotate: false
+  xy: 332, 238
+  size: 163, 116
+  orig: 166, 118
+  offset: 0, 2
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_0_fm3
+  rotate: false
+  xy: 497, 238
+  size: 163, 116
+  orig: 166, 118
+  offset: 0, 2
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_0_fm4
+  rotate: false
+  xy: 662, 238
+  size: 163, 116
+  orig: 166, 118
+  offset: 0, 2
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_0_fm5
+  rotate: false
+  xy: 827, 238
+  size: 163, 116
+  orig: 166, 118
+  offset: 0, 2
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_0_fm6
+  rotate: false
+  xy: 2, 120
+  size: 163, 116
+  orig: 166, 118
+  offset: 0, 2
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_1_fm0
+  rotate: false
+  xy: 2, 356
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_1_fm1
+  rotate: false
+  xy: 170, 356
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_1_fm2
+  rotate: false
+  xy: 338, 356
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_1_fm3
+  rotate: false
+  xy: 506, 356
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_1_fm4
+  rotate: false
+  xy: 674, 356
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_1_fm5
+  rotate: false
+  xy: 842, 356
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_1_fm6
+  rotate: false
+  xy: 842, 356
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_0_fm0
+  rotate: false
+  xy: 167, 120
+  size: 160, 116
+  orig: 166, 118
+  offset: 3, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_0_fm1
+  rotate: false
+  xy: 329, 120
+  size: 160, 116
+  orig: 166, 118
+  offset: 3, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_0_fm2
+  rotate: false
+  xy: 491, 120
+  size: 160, 116
+  orig: 166, 118
+  offset: 3, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_0_fm3
+  rotate: false
+  xy: 491, 120
+  size: 160, 116
+  orig: 166, 118
+  offset: 3, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_0_fm4
+  rotate: false
+  xy: 653, 120
+  size: 160, 116
+  orig: 166, 118
+  offset: 3, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_0_fm5
+  rotate: false
+  xy: 815, 120
+  size: 160, 116
+  orig: 166, 118
+  offset: 3, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_0_fm6
+  rotate: false
+  xy: 2, 2
+  size: 160, 116
+  orig: 166, 118
+  offset: 3, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_1_fm0
+  rotate: false
+  xy: 164, 4
+  size: 160, 114
+  orig: 166, 118
+  offset: 3, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_1_fm1
+  rotate: false
+  xy: 326, 4
+  size: 160, 114
+  orig: 166, 118
+  offset: 3, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_1_fm2
+  rotate: false
+  xy: 488, 4
+  size: 160, 114
+  orig: 166, 118
+  offset: 3, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_1_fm3
+  rotate: false
+  xy: 488, 4
+  size: 160, 114
+  orig: 166, 118
+  offset: 3, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_1_fm4
+  rotate: false
+  xy: 650, 4
+  size: 160, 114
+  orig: 166, 118
+  offset: 3, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_1_fm5
+  rotate: false
+  xy: 812, 4
+  size: 160, 114
+  orig: 166, 118
+  offset: 3, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_1_fm6
+  rotate: false
+  xy: 812, 4
+  size: 160, 114
+  orig: 166, 118
+  offset: 3, 2
+  index: -1

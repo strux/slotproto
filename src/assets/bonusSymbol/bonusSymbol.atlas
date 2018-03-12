@@ -1,0 +1,300 @@
+
+bonusSymbol.png
+size: 1024,1024
+format: RGBA8888
+filter: MipMapLinearNearest,MipMapLinearNearest
+repeat: none
+(wolfRunSymbols)-assets/freespinreelanim_11_fm0
+  rotate: false
+  xy: 2, 758
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_11_fm1
+  rotate: false
+  xy: 2, 638
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_11_fm10
+  rotate: false
+  xy: 2, 160
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_11_fm11
+  rotate: false
+  xy: 338, 398
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_11_fm12
+  rotate: false
+  xy: 674, 638
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_11_fm2
+  rotate: false
+  xy: 338, 878
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_11_fm3
+  rotate: false
+  xy: 170, 638
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_11_fm4
+  rotate: false
+  xy: 506, 878
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_11_fm5
+  rotate: false
+  xy: 170, 518
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_11_fm6
+  rotate: false
+  xy: 506, 758
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_11_fm7
+  rotate: false
+  xy: 2, 280
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_11_fm8
+  rotate: false
+  xy: 338, 518
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreelanim_11_fm9
+  rotate: false
+  xy: 674, 758
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_11_fm0
+  rotate: false
+  xy: 2, 878
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_11_fm1
+  rotate: false
+  xy: 170, 878
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_11_fm10
+  rotate: false
+  xy: 842, 878
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_11_fm11
+  rotate: false
+  xy: 170, 278
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_11_fm12
+  rotate: false
+  xy: 506, 518
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_11_fm2
+  rotate: false
+  xy: 170, 758
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_11_fm3
+  rotate: false
+  xy: 2, 520
+  size: 166, 116
+  orig: 166, 116
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_11_fm4
+  rotate: false
+  xy: 338, 758
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_11_fm5
+  rotate: false
+  xy: 2, 400
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_11_fm6
+  rotate: false
+  xy: 338, 638
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_11_fm7
+  rotate: false
+  xy: 674, 878
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_11_fm8
+  rotate: false
+  xy: 170, 398
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreelanim_11_fm9
+  rotate: false
+  xy: 506, 638
+  size: 166, 118
+  orig: 166, 118
+  offset: 0, 0
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonus_fm0
+  rotate: false
+  xy: 2, 2
+  size: 150, 65
+  orig: 152, 74
+  offset: 2, 9
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonus_fm1
+  rotate: false
+  xy: 170, 191
+  size: 150, 29
+  orig: 152, 74
+  offset: 2, 27
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonus_fm2
+  rotate: false
+  xy: 338, 334
+  size: 150, 6
+  orig: 152, 74
+  offset: 2, 39
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonus_fm3
+  rotate: false
+  xy: 674, 604
+  size: 150, 29
+  orig: 152, 74
+  offset: 2, 29
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonus_fm4
+  rotate: false
+  xy: 842, 740
+  size: 150, 61
+  orig: 152, 74
+  offset: 2, 13
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonusglow
+  rotate: false
+  xy: 842, 806
+  size: 158, 70
+  orig: 158, 82
+  offset: 0, 12
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonusinitiated_fm0
+  rotate: false
+  xy: 842, 652
+  size: 150, 86
+  orig: 152, 98
+  offset: 2, 0
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonusinitiated_fm1
+  rotate: false
+  xy: 338, 287
+  size: 150, 45
+  orig: 152, 98
+  offset: 2, 20
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonusinitiated_fm2
+  rotate: false
+  xy: 674, 635
+  size: 151, 1
+  orig: 152, 98
+  offset: 0, 55
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonusinitiated_fm3
+  rotate: false
+  xy: 674, 565
+  size: 150, 37
+  orig: 152, 98
+  offset: 2, 24
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonusinitiated_fm4
+  rotate: false
+  xy: 674, 482
+  size: 150, 81
+  orig: 152, 98
+  offset: 2, 5
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonusretriggered_fm0
+  rotate: false
+  xy: 2, 69
+  size: 152, 89
+  orig: 156, 106
+  offset: 4, 0
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonusretriggered_fm1
+  rotate: false
+  xy: 170, 222
+  size: 152, 54
+  orig: 156, 106
+  offset: 4, 16
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonusretriggered_fm2
+  rotate: false
+  xy: 842, 803
+  size: 151, 1
+  orig: 156, 106
+  offset: 4, 46
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonusretriggered_fm3
+  rotate: false
+  xy: 338, 342
+  size: 152, 54
+  orig: 156, 106
+  offset: 4, 20
+  index: -1
+(wolfRunSymbols)-assets/reelanim_bonusretriggered_fm4
+  rotate: false
+  xy: 506, 427
+  size: 152, 89
+  orig: 156, 106
+  offset: 4, 0
+  index: -1

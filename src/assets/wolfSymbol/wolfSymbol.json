@@ -1,0 +1,220 @@
+{
+"skeleton": { "hash": "Ca0st/hz082xsreosjfW5hxw45o", "spine": "3.7.13-beta", "width": 0, "height": 0, "images": "", "audio": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "base", "parent": "root" }
+],
+"slots": [
+	{ "name": "base", "bone": "base", "attachment": "fm0" }
+],
+"skins": {
+	"default": {},
+	"M1_free": {
+		"base": {
+			"fm0": {
+				"name": "wolfSymbol-assets/freespinreelanim_0_fm0",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_0_fm0",
+				"width": 166,
+				"height": 118
+			},
+			"fm1": {
+				"name": "wolfSymbol-assets/freespinreelanim_0_fm1",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_0_fm1",
+				"width": 166,
+				"height": 118
+			},
+			"fm2": {
+				"name": "wolfSymbol-assets/freespinreelanim_0_fm2",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_0_fm2",
+				"width": 166,
+				"height": 118
+			},
+			"fm3": {
+				"name": "wolfSymbol-assets/freespinreelanim_0_fm3",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_0_fm3",
+				"width": 166,
+				"height": 118
+			},
+			"fm4": {
+				"name": "wolfSymbol-assets/freespinreelanim_0_fm4",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_0_fm4",
+				"width": 166,
+				"height": 118
+			},
+			"fm5": {
+				"name": "wolfSymbol-assets/freespinreelanim_0_fm5",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_0_fm5",
+				"width": 166,
+				"height": 118
+			},
+			"fm6": {
+				"name": "wolfSymbol-assets/freespinreelanim_0_fm6",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_0_fm6",
+				"width": 166,
+				"height": 118
+			}
+		}
+	},
+	"M1_main": {
+		"base": {
+			"fm0": {
+				"name": "wolfSymbol-assets/mainreelanim_0_fm0",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_0_fm0",
+				"width": 166,
+				"height": 118
+			},
+			"fm1": {
+				"name": "wolfSymbol-assets/mainreelanim_0_fm1",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_0_fm1",
+				"width": 166,
+				"height": 118
+			},
+			"fm2": {
+				"name": "wolfSymbol-assets/mainreelanim_0_fm2",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_0_fm2",
+				"width": 166,
+				"height": 118
+			},
+			"fm3": {
+				"name": "wolfSymbol-assets/mainreelanim_0_fm3",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_0_fm3",
+				"width": 166,
+				"height": 118
+			},
+			"fm4": {
+				"name": "wolfSymbol-assets/mainreelanim_0_fm4",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_0_fm4",
+				"width": 166,
+				"height": 118
+			},
+			"fm5": {
+				"name": "wolfSymbol-assets/mainreelanim_0_fm5",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_0_fm5",
+				"width": 166,
+				"height": 118
+			},
+			"fm6": {
+				"name": "wolfSymbol-assets/mainreelanim_0_fm6",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_0_fm6",
+				"width": 166,
+				"height": 118
+			}
+		}
+	},
+	"M2_free": {
+		"base": {
+			"fm0": {
+				"name": "wolfSymbol-assets/freespinreelanim_1_fm0",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_1_fm0",
+				"width": 166,
+				"height": 118
+			},
+			"fm1": {
+				"name": "wolfSymbol-assets/freespinreelanim_1_fm1",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_1_fm1",
+				"width": 166,
+				"height": 118
+			},
+			"fm2": {
+				"name": "wolfSymbol-assets/freespinreelanim_1_fm2",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_1_fm2",
+				"width": 166,
+				"height": 118
+			},
+			"fm3": {
+				"name": "wolfSymbol-assets/freespinreelanim_1_fm3",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_1_fm3",
+				"width": 166,
+				"height": 118
+			},
+			"fm4": {
+				"name": "wolfSymbol-assets/freespinreelanim_1_fm4",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_1_fm4",
+				"width": 166,
+				"height": 118
+			},
+			"fm5": {
+				"name": "wolfSymbol-assets/freespinreelanim_1_fm5",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_1_fm5",
+				"width": 166,
+				"height": 118
+			},
+			"fm6": {
+				"name": "wolfSymbol-assets/freespinreelanim_1_fm6",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_1_fm6",
+				"width": 166,
+				"height": 118
+			}
+		}
+	},
+	"M2_main": {
+		"base": {
+			"fm0": {
+				"name": "wolfSymbol-assets/mainreelanim_1_fm0",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_1_fm0",
+				"width": 166,
+				"height": 118
+			},
+			"fm1": {
+				"name": "wolfSymbol-assets/mainreelanim_1_fm1",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_1_fm1",
+				"width": 166,
+				"height": 118
+			},
+			"fm2": {
+				"name": "wolfSymbol-assets/mainreelanim_1_fm2",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_1_fm2",
+				"width": 166,
+				"height": 118
+			},
+			"fm3": {
+				"name": "wolfSymbol-assets/mainreelanim_1_fm3",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_1_fm3",
+				"width": 166,
+				"height": 118
+			},
+			"fm4": {
+				"name": "wolfSymbol-assets/mainreelanim_1_fm4",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_1_fm4",
+				"width": 166,
+				"height": 118
+			},
+			"fm5": {
+				"name": "wolfSymbol-assets/mainreelanim_1_fm5",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_1_fm5",
+				"width": 166,
+				"height": 118
+			},
+			"fm6": {
+				"name": "wolfSymbol-assets/mainreelanim_1_fm6",
+				"path": "(wolfRunSymbols)-assets/mainreelanim_1_fm6",
+				"width": 166,
+				"height": 118
+			}
+		}
+	}
+},
+"animations": {
+	"wolfWin": {
+		"slots": {
+			"base": {
+				"attachment": [
+					{ "time": 0.1, "name": "fm1" },
+					{ "time": 0.2, "name": "fm2" },
+					{ "time": 0.3, "name": "fm3" },
+					{ "time": 0.4, "name": "fm4" },
+					{ "time": 0.5, "name": "fm5" },
+					{ "time": 0.6, "name": "fm6" },
+					{ "time": 0.7, "name": "fm2" },
+					{ "time": 0.8, "name": "fm3" },
+					{ "time": 0.9, "name": "fm4" },
+					{ "time": 1, "name": "fm5" },
+					{ "time": 1.1, "name": "fm6" },
+					{ "time": 1.2, "name": "fm1" },
+					{ "time": 1.3, "name": "fm0" }
+				]
+			}
+		}
+	}
+}
+}

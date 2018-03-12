@@ -1,0 +1,245 @@
+{
+"skeleton": { "hash": "+gWqMK6Xy4dO3iYE5fDlgxPnRqs", "spine": "3.7.13-beta", "width": 0, "height": 0, "images": "", "audio": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "base", "parent": "root" },
+	{ "name": "bonusText", "parent": "root" },
+	{ "name": "bonusGlow", "parent": "bonusText" },
+	{ "name": "changeText", "parent": "root", "scaleX": 0.001, "scaleY": 0.001 }
+],
+"slots": [
+	{ "name": "base", "bone": "base", "attachment": "anim_11_fm0" },
+	{ "name": "bonusText", "bone": "bonusText", "attachment": "reelanim_bonus_fm0" },
+	{ "name": "changeText", "bone": "changeText", "color": "ffffff00" },
+	{ "name": "bonusGlow", "bone": "bonusGlow", "color": "ffffff00", "attachment": "reelanim_bonusglow" }
+],
+"skins": {
+	"default": {},
+	"SC_free": {
+		"base": {
+			"anim_11_fm0": {
+				"name": "(wolfRunSymbols)-assets/mainreelanim_11_fm0",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_11_fm0",
+				"width": 166,
+				"height": 118
+			},
+			"anim_11_fm1": {
+				"name": "(wolfRunSymbols)-assets/mainreelanim_11_fm1",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_11_fm1",
+				"width": 166,
+				"height": 118
+			},
+			"anim_11_fm2": {
+				"name": "(wolfRunSymbols)-assets/mainreelanim_11_fm2",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_11_fm2",
+				"width": 166,
+				"height": 118
+			},
+			"anim_11_fm3": {
+				"name": "(wolfRunSymbols)-assets/mainreelanim_11_fm3",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_11_fm3",
+				"width": 166,
+				"height": 118
+			},
+			"anim_11_fm4": {
+				"name": "(wolfRunSymbols)-assets/mainreelanim_11_fm4",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_11_fm4",
+				"width": 166,
+				"height": 118
+			},
+			"anim_11_fm5": {
+				"name": "(wolfRunSymbols)-assets/mainreelanim_11_fm5",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_11_fm5",
+				"width": 166,
+				"height": 118
+			},
+			"anim_11_fm6": {
+				"name": "(wolfRunSymbols)-assets/mainreelanim_11_fm6",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_11_fm6",
+				"width": 166,
+				"height": 118
+			},
+			"anim_11_fm7": {
+				"name": "(wolfRunSymbols)-assets/mainreelanim_11_fm7",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_11_fm7",
+				"width": 166,
+				"height": 118
+			},
+			"anim_11_fm8": {
+				"name": "(wolfRunSymbols)-assets/mainreelanim_11_fm8",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_11_fm8",
+				"width": 166,
+				"height": 118
+			},
+			"anim_11_fm9": {
+				"name": "(wolfRunSymbols)-assets/mainreelanim_11_fm9",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_11_fm9",
+				"width": 166,
+				"height": 118
+			},
+			"anim_11_fm10": {
+				"name": "(wolfRunSymbols)-assets/mainreelanim_11_fm10",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_11_fm10",
+				"width": 166,
+				"height": 118
+			},
+			"anim_11_fm11": {
+				"name": "(wolfRunSymbols)-assets/mainreelanim_11_fm11",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_11_fm11",
+				"width": 166,
+				"height": 118
+			},
+			"anim_11_fm12": {
+				"name": "(wolfRunSymbols)-assets/mainreelanim_11_fm12",
+				"path": "(wolfRunSymbols)-assets/freespinreelanim_11_fm12",
+				"width": 166,
+				"height": 118
+			}
+		},
+		"bonusGlow": {
+			"reelanim_bonusglow": { "name": "(wolfRunSymbols)-assets/reelanim_bonusglow", "width": 158, "height": 82 }
+		},
+		"bonusText": {
+			"reelanim_bonus_fm0": { "name": "(wolfRunSymbols)-assets/reelanim_bonus_fm0", "width": 152, "height": 74 },
+			"reelanim_bonus_fm1": { "name": "(wolfRunSymbols)-assets/reelanim_bonus_fm1", "width": 152, "height": 74 },
+			"reelanim_bonus_fm2": { "name": "(wolfRunSymbols)-assets/reelanim_bonus_fm2", "width": 152, "height": 74 },
+			"reelanim_bonus_fm3": { "name": "(wolfRunSymbols)-assets/reelanim_bonus_fm3", "width": 152, "height": 74 },
+			"reelanim_bonus_fm4": { "name": "(wolfRunSymbols)-assets/reelanim_bonus_fm4", "width": 152, "height": 74 }
+		},
+		"changeText": {
+			"reelanim_change_fm0": { "name": "(wolfRunSymbols)-assets/reelanim_bonusretriggered_fm0", "width": 156, "height": 106 },
+			"reelanim_change_fm1": { "name": "(wolfRunSymbols)-assets/reelanim_bonusretriggered_fm1", "width": 156, "height": 106 },
+			"reelanim_change_fm2": { "name": "(wolfRunSymbols)-assets/reelanim_bonusretriggered_fm2", "width": 156, "height": 106 },
+			"reelanim_change_fm3": { "name": "(wolfRunSymbols)-assets/reelanim_bonusretriggered_fm3", "width": 156, "height": 106 },
+			"reelanim_change_fm4": { "name": "(wolfRunSymbols)-assets/reelanim_bonusretriggered_fm4", "width": 156, "height": 106 }
+		}
+	},
+	"SC_main": {
+		"base": {
+			"anim_11_fm0": { "name": "(wolfRunSymbols)-assets/mainreelanim_11_fm0", "width": 166, "height": 118 },
+			"anim_11_fm1": { "name": "(wolfRunSymbols)-assets/mainreelanim_11_fm1", "width": 166, "height": 118 },
+			"anim_11_fm2": { "name": "(wolfRunSymbols)-assets/mainreelanim_11_fm2", "width": 166, "height": 118 },
+			"anim_11_fm3": { "name": "(wolfRunSymbols)-assets/mainreelanim_11_fm3", "width": 166, "height": 116 },
+			"anim_11_fm4": { "name": "(wolfRunSymbols)-assets/mainreelanim_11_fm4", "width": 166, "height": 118 },
+			"anim_11_fm5": { "name": "(wolfRunSymbols)-assets/mainreelanim_11_fm5", "width": 166, "height": 118 },
+			"anim_11_fm6": { "name": "(wolfRunSymbols)-assets/mainreelanim_11_fm6", "width": 166, "height": 118 },
+			"anim_11_fm7": { "name": "(wolfRunSymbols)-assets/mainreelanim_11_fm7", "width": 166, "height": 118 },
+			"anim_11_fm8": { "name": "(wolfRunSymbols)-assets/mainreelanim_11_fm8", "width": 166, "height": 118 },
+			"anim_11_fm9": { "name": "(wolfRunSymbols)-assets/mainreelanim_11_fm9", "width": 166, "height": 118 },
+			"anim_11_fm10": { "name": "(wolfRunSymbols)-assets/mainreelanim_11_fm10", "width": 166, "height": 118 },
+			"anim_11_fm11": { "name": "(wolfRunSymbols)-assets/mainreelanim_11_fm11", "width": 166, "height": 118 },
+			"anim_11_fm12": { "name": "(wolfRunSymbols)-assets/mainreelanim_11_fm12", "width": 166, "height": 118 }
+		},
+		"bonusGlow": {
+			"reelanim_bonusglow": { "name": "(wolfRunSymbols)-assets/reelanim_bonusglow", "width": 158, "height": 82 }
+		},
+		"bonusText": {
+			"reelanim_bonus_fm0": { "name": "(wolfRunSymbols)-assets/reelanim_bonus_fm0", "width": 152, "height": 74 },
+			"reelanim_bonus_fm1": { "name": "(wolfRunSymbols)-assets/reelanim_bonus_fm1", "width": 152, "height": 74 },
+			"reelanim_bonus_fm2": { "name": "(wolfRunSymbols)-assets/reelanim_bonus_fm2", "width": 152, "height": 74 },
+			"reelanim_bonus_fm3": { "name": "(wolfRunSymbols)-assets/reelanim_bonus_fm3", "width": 152, "height": 74 },
+			"reelanim_bonus_fm4": { "name": "(wolfRunSymbols)-assets/reelanim_bonus_fm4", "width": 152, "height": 74 }
+		},
+		"changeText": {
+			"reelanim_change_fm0": { "name": "(wolfRunSymbols)-assets/reelanim_bonusinitiated_fm0", "width": 152, "height": 98 },
+			"reelanim_change_fm1": { "name": "(wolfRunSymbols)-assets/reelanim_bonusinitiated_fm1", "width": 152, "height": 98 },
+			"reelanim_change_fm2": { "name": "(wolfRunSymbols)-assets/reelanim_bonusinitiated_fm2", "width": 152, "height": 98 },
+			"reelanim_change_fm3": { "name": "(wolfRunSymbols)-assets/reelanim_bonusinitiated_fm3", "width": 152, "height": 98 },
+			"reelanim_change_fm4": { "name": "(wolfRunSymbols)-assets/reelanim_bonusinitiated_fm4", "width": 152, "height": 98 }
+		}
+	}
+},
+"animations": {
+	"bonusTrigger": {
+		"slots": {
+			"base": {
+				"attachment": [
+					{ "time": 0.0857, "name": "anim_11_fm1" },
+					{ "time": 0.1714, "name": "anim_11_fm10" },
+					{ "time": 0.2571, "name": "anim_11_fm11" },
+					{ "time": 0.3429, "name": "anim_11_fm12" },
+					{ "time": 0.4286, "name": "anim_11_fm2" },
+					{ "time": 0.5143, "name": "anim_11_fm3" },
+					{ "time": 0.6, "name": "anim_11_fm4" },
+					{ "time": 0.6857, "name": "anim_11_fm5" },
+					{ "time": 0.7714, "name": "anim_11_fm6" },
+					{ "time": 0.8571, "name": "anim_11_fm7" },
+					{ "time": 0.9429, "name": "anim_11_fm8" },
+					{ "time": 1.0286, "name": "anim_11_fm9" },
+					{ "time": 1.2071, "name": "anim_11_fm8" },
+					{ "time": 1.2143, "name": "anim_11_fm7" },
+					{ "time": 1.2214, "name": "anim_11_fm6" },
+					{ "time": 1.2286, "name": "anim_11_fm5" },
+					{ "time": 1.2357, "name": "anim_11_fm4" },
+					{ "time": 1.2429, "name": "anim_11_fm3" },
+					{ "time": 1.25, "name": "anim_11_fm2" },
+					{ "time": 1.2571, "name": "anim_11_fm12" },
+					{ "time": 1.2643, "name": "anim_11_fm11" },
+					{ "time": 1.2714, "name": "anim_11_fm10" },
+					{ "time": 1.2786, "name": "anim_11_fm1" },
+					{ "time": 1.2857, "name": "anim_11_fm0" }
+				]
+			},
+			"bonusGlow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.1667, "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00" },
+					{ "time": 0.5, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.5333, "color": "ffffff00" }
+				]
+			},
+			"bonusText": {
+				"color": [
+					{ "time": 0.5, "color": "ffffffff" },
+					{ "time": 1.1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "reelanim_bonus_fm0" },
+					{ "time": 0.5, "name": "reelanim_bonus_fm1" },
+					{ "time": 0.5667, "name": "reelanim_bonus_fm2" },
+					{ "time": 0.6333, "name": "reelanim_bonus_fm3" },
+					{ "time": 0.7, "name": "reelanim_bonus_fm4" },
+					{ "time": 0.7667, "name": "reelanim_bonus_fm3" },
+					{ "time": 0.8333, "name": "reelanim_bonus_fm2" },
+					{ "time": 0.9, "name": "reelanim_bonus_fm1" },
+					{ "time": 0.9667, "name": "reelanim_bonus_fm0" }
+				]
+			},
+			"changeText": {
+				"color": [
+					{ "time": 0.8333, "color": "ffffff00" },
+					{ "time": 1.6333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.8333, "name": "reelanim_change_fm0" },
+					{ "time": 0.9, "name": "reelanim_change_fm1" },
+					{ "time": 0.9667, "name": "reelanim_change_fm2" },
+					{ "time": 1.0333, "name": "reelanim_change_fm3" },
+					{ "time": 1.1, "name": "reelanim_change_fm4" },
+					{ "time": 1.3, "name": "reelanim_change_fm3" },
+					{ "time": 1.3667, "name": "reelanim_change_fm2" },
+					{ "time": 1.4333, "name": "reelanim_change_fm1" },
+					{ "time": 1.5, "name": "reelanim_change_fm0" }
+				]
+			}
+		},
+		"bones": {
+			"bonusText": {
+				"scale": [
+					{ "time": 0.5, "x": 1, "y": 1 },
+					{ "time": 1, "x": 1.5, "y": 1.5 }
+				]
+			},
+			"changeText": {
+				"scale": [
+					{ "time": 0.8333, "x": 0, "y": 0 },
+					{ "time": 1.6333, "x": 1150, "y": 1150 },
+					{ "time": 1.8333, "x": 1000, "y": 1000 }
+				]
+			}
+		}
+	}
+}
+}

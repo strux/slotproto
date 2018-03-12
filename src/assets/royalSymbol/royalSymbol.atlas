@@ -1,0 +1,90 @@
+
+royalSymbol.png
+size: 1024,256
+format: RGBA8888
+filter: MipMapLinearNearest,MipMapLinearNearest
+repeat: none
+(wolfRunSymbols)-assets/freespinreel_4_fm0
+  rotate: true
+  xy: 252, 125
+  size: 109, 118
+  orig: 166, 118
+  offset: 28, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreel_5_fm0
+  rotate: true
+  xy: 492, 125
+  size: 109, 118
+  orig: 166, 118
+  offset: 28, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreel_6_fm0
+  rotate: true
+  xy: 612, 127
+  size: 107, 118
+  orig: 166, 118
+  offset: 29, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreel_7_fm0
+  rotate: true
+  xy: 372, 133
+  size: 101, 118
+  orig: 166, 118
+  offset: 28, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreel_8_fm0
+  rotate: false
+  xy: 2, 2
+  size: 124, 118
+  orig: 166, 118
+  offset: 15, 0
+  index: -1
+(wolfRunSymbols)-assets/freespinreel_9_fm0
+  rotate: true
+  xy: 132, 132
+  size: 102, 118
+  orig: 166, 118
+  offset: 32, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreel_4_fm0
+  rotate: true
+  xy: 732, 41
+  size: 99, 114
+  orig: 166, 118
+  offset: 35, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreel_5_fm0
+  rotate: true
+  xy: 848, 34
+  size: 100, 114
+  orig: 166, 118
+  offset: 34, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreel_6_fm0
+  rotate: true
+  xy: 849, 136
+  size: 98, 115
+  orig: 166, 118
+  offset: 35, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreel_7_fm0
+  rotate: true
+  xy: 132, 38
+  size: 92, 113
+  orig: 166, 118
+  offset: 33, 0
+  index: -1
+(wolfRunSymbols)-assets/mainreel_8_fm0
+  rotate: false
+  xy: 2, 122
+  size: 128, 112
+  orig: 166, 118
+  offset: 16, 2
+  index: -1
+(wolfRunSymbols)-assets/mainreel_9_fm0
+  rotate: true
+  xy: 732, 142
+  size: 92, 115
+  orig: 166, 118
+  offset: 38, 1
+  index: -1

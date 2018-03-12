@@ -1,0 +1,164 @@
+{
+"skeleton": { "hash": "9fktMUcHXyf+S6m5gI/hBEgXb8w", "spine": "3.7.13-beta", "width": 0, "height": 0, "images": "", "audio": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "backer", "parent": "root" },
+	{ "name": "burst", "parent": "root" },
+	{ "name": "totem", "parent": "root" }
+],
+"slots": [
+	{ "name": "backer", "bone": "backer", "attachment": "backer" },
+	{ "name": "burst", "bone": "burst", "color": "ffffff00" },
+	{ "name": "totem", "bone": "totem", "attachment": "totem" }
+],
+"skins": {
+	"default": {},
+	"M3_free": {
+		"backer": {
+			"backer": {
+				"name": "totemSymbol-assets/freespinreel_2_mid",
+				"path": "(wolfRunSymbols)-assets/freespinreel_2_mid",
+				"width": 166,
+				"height": 118
+			}
+		},
+		"burst": {
+			"totemSymbol-assets/reelanim_particle_fm0": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm0", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm1": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm1", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm2": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm2", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm3": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm3", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm4": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm4", "width": 166, "height": 118 }
+		},
+		"totem": {
+			"totem": {
+				"name": "totemSymbol-assets/freespinreel_2_front",
+				"path": "(wolfRunSymbols)-assets/freespinreel_2_front",
+				"width": 108,
+				"height": 118
+			}
+		}
+	},
+	"M3_main": {
+		"backer": {
+			"backer": { "name": "totemSymbol-assets/mainreel_2_mid", "path": "(wolfRunSymbols)-assets/mainreel_2_mid", "width": 138, "height": 112 }
+		},
+		"burst": {
+			"totemSymbol-assets/reelanim_particle_fm0": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm0", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm1": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm1", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm2": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm2", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm3": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm3", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm4": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm4", "width": 166, "height": 118 }
+		},
+		"totem": {
+			"totem": { "name": "totemSymbol-assets/mainreel_2_front", "path": "(wolfRunSymbols)-assets/mainreel_2_front", "width": 106, "height": 118 }
+		}
+	},
+	"M4_free": {
+		"backer": {
+			"backer": {
+				"name": "totemSymbol-assets/freespinreel_3_mid",
+				"path": "(wolfRunSymbols)-assets/freespinreel_3_mid",
+				"width": 166,
+				"height": 117
+			}
+		},
+		"burst": {
+			"totemSymbol-assets/reelanim_particle_fm0": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm0", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm1": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm1", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm2": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm2", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm3": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm3", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm4": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm4", "width": 166, "height": 118 }
+		},
+		"totem": {
+			"totem": {
+				"name": "totemSymbol-assets/freespinreel_3_front",
+				"path": "(wolfRunSymbols)-assets/freespinreel_3_front",
+				"width": 106,
+				"height": 118
+			}
+		}
+	},
+	"M4_main": {
+		"backer": {
+			"backer": { "name": "totemSymbol-assets/mainreel_3_mid", "path": "(wolfRunSymbols)-assets/mainreel_3_mid", "width": 140, "height": 114 }
+		},
+		"burst": {
+			"totemSymbol-assets/reelanim_particle_fm0": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm0", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm1": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm1", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm2": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm2", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm3": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm3", "width": 166, "height": 118 },
+			"totemSymbol-assets/reelanim_particle_fm4": { "path": "(wolfRunSymbols)-assets/reelanim_particle_fm4", "width": 166, "height": 118 }
+		},
+		"totem": {
+			"totem": { "name": "totemSymbol-assets/mainreel_3_front", "path": "(wolfRunSymbols)-assets/mainreel_3_front", "width": 102, "height": 112 }
+		}
+	}
+},
+"animations": {
+	"totemWin": {
+		"slots": {
+			"burst": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.1667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.8333, "color": "ffffffff" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0333, "name": "totemSymbol-assets/reelanim_particle_fm1" },
+					{ "time": 0.16, "name": "totemSymbol-assets/reelanim_particle_fm2" },
+					{ "time": 0.22, "name": "totemSymbol-assets/reelanim_particle_fm3" },
+					{ "time": 0.28, "name": "totemSymbol-assets/reelanim_particle_fm4" },
+					{ "time": 0.42, "name": "totemSymbol-assets/reelanim_particle_fm3" },
+					{ "time": 0.44, "name": "totemSymbol-assets/reelanim_particle_fm2" },
+					{ "time": 0.46, "name": "totemSymbol-assets/reelanim_particle_fm1" },
+					{ "time": 0.56, "name": "totemSymbol-assets/reelanim_particle_fm2" },
+					{ "time": 0.62, "name": "totemSymbol-assets/reelanim_particle_fm3" },
+					{ "time": 0.68, "name": "totemSymbol-assets/reelanim_particle_fm4" },
+					{ "time": 0.82, "name": "totemSymbol-assets/reelanim_particle_fm3" },
+					{ "time": 0.84, "name": "totemSymbol-assets/reelanim_particle_fm2" },
+					{ "time": 0.86, "name": "totemSymbol-assets/reelanim_particle_fm1" },
+					{ "time": 0.96, "name": "totemSymbol-assets/reelanim_particle_fm2" },
+					{ "time": 1.02, "name": "totemSymbol-assets/reelanim_particle_fm3" },
+					{ "time": 1.08, "name": "totemSymbol-assets/reelanim_particle_fm4" },
+					{ "time": 1.225, "name": "totemSymbol-assets/reelanim_particle_fm3" },
+					{ "time": 1.25, "name": "totemSymbol-assets/reelanim_particle_fm2" },
+					{ "time": 1.35, "name": "totemSymbol-assets/reelanim_particle_fm3" },
+					{ "time": 1.4, "name": "totemSymbol-assets/reelanim_particle_fm4" },
+					{ "time": 1.525, "name": "totemSymbol-assets/reelanim_particle_fm3" },
+					{ "time": 1.55, "name": "totemSymbol-assets/reelanim_particle_fm2" },
+					{ "time": 1.65, "name": "totemSymbol-assets/reelanim_particle_fm3" },
+					{ "time": 1.7, "name": "totemSymbol-assets/reelanim_particle_fm4" },
+					{ "time": 1.82, "name": "totemSymbol-assets/reelanim_particle_fm3" },
+					{ "time": 1.84, "name": "totemSymbol-assets/reelanim_particle_fm2" },
+					{ "time": 1.86, "name": "totemSymbol-assets/reelanim_particle_fm1" }
+				]
+			}
+		},
+		"bones": {
+			"totem": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.1, "angle": -144 },
+					{ "time": 0.2, "angle": -288 },
+					{ "time": 0.3, "angle": -72 },
+					{ "time": 0.4, "angle": -216 },
+					{ "time": 0.5, "angle": 0, "curve": "stepped" },
+					{ "time": 0.8667, "angle": 0 },
+					{ "time": 0.9733, "angle": -216 },
+					{ "time": 1.08, "angle": -72 },
+					{ "time": 1.1867, "angle": -288 },
+					{ "time": 1.2933, "angle": -144 },
+					{ "time": 1.4, "angle": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.5, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.8667, "x": 0, "y": 0 },
+					{ "time": 1.4, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}
