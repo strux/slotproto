@@ -60,8 +60,8 @@ function setup(loader, res) {
 
     let anticipation = spriteById.anticipation;
     anticipation.anchor.set(0.5);
-    anticipation.x = (app.stage.width / 2) + 160;
-    anticipation.y = (app.stage.height / 2) - 40;
+    anticipation.x = (app.stage.width / 2) + 125;
+    anticipation.y = (app.stage.height / 2) - 130;
     anticipation.width = REELS_CONFIG.cellWidth + 45;
     anticipation.height = (REELS_CONFIG.cellHeight * 4) + 40;
 
