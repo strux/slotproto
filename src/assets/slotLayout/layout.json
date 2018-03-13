@@ -1,0 +1,66 @@
+{
+"skeleton": {
+	"hash": "JbZ+GTuHy4KVyaYkwKQ3x4bpZ24",
+	"spine": "3.7.13-beta",
+	"width": 1024,
+	"height": 768,
+	"images": "",
+	"audio": "C:/Users/popps/Documents/_production/test"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bottomUI", "parent": "root", "y": -384, "transform": "noScale" },
+	{ "name": "autospinButton", "parent": "bottomUI", "x": 275, "y": 51, "transform": "noScale" },
+	{ "name": "betPanel", "parent": "bottomUI", "x": -295, "y": 51, "transform": "noScale" },
+	{ "name": "betMinus", "parent": "betPanel", "x": -103 },
+	{ "name": "betPlus", "parent": "betPanel", "x": 103.9 },
+	{ "name": "paytableButton", "parent": "bottomUI", "x": -470, "y": 51, "transform": "noScale" },
+	{ "name": "spinButton", "parent": "bottomUI", "x": 512, "transform": "noScale" },
+	{ "name": "winPanel", "parent": "bottomUI", "y": 51, "transform": "noScale" }
+],
+"slots": [
+	{ "name": "background", "bone": "root", "attachment": "(bigwin)-assets/bg_slot" },
+	{ "name": "Bottom_tray", "bone": "bottomUI", "attachment": "(bigwin)-assets/bottom_bar" },
+	{ "name": "autospin", "bone": "autospinButton", "attachment": "(bigwin)-assets/btn_autospin" },
+	{ "name": "info", "bone": "paytableButton", "attachment": "(bigwin)-assets/btn_info" },
+	{ "name": "spin", "bone": "spinButton", "attachment": "(bigwin)-assets/btn_spin" },
+	{ "name": "bet", "bone": "betPanel", "attachment": "(bigwin)-assets/panel_bet" },
+	{ "name": "win", "bone": "winPanel", "attachment": "(bigwin)-assets/panel_win" },
+	{ "name": "minus", "bone": "betMinus", "attachment": "(bigwin)-assets/btn_linebet_minus" },
+	{ "name": "plus", "bone": "betPlus", "attachment": "(bigwin)-assets/btn_linebet_plus" }
+],
+"skins": {
+	"default": {
+		"Bottom_tray": {
+			"(bigwin)-assets/bottom_bar": { "y": 51, "width": 1024, "height": 102 }
+		},
+		"autospin": {
+			"(bigwin)-assets/btn_autospin": { "x": 10, "width": 145, "height": 80 }
+		},
+		"background": {
+			"(bigwin)-assets/bg_slot": { "width": 1024, "height": 768 }
+		},
+		"bet": {
+			"(bigwin)-assets/panel_bet": { "width": 262, "height": 80 }
+		},
+		"info": {
+			"(bigwin)-assets/btn_info": { "width": 80, "height": 82 }
+		},
+		"minus": {
+			"(bigwin)-assets/btn_linebet_minus": { "width": 52, "height": 76 }
+		},
+		"plus": {
+			"(bigwin)-assets/btn_linebet_plus": { "width": 52, "height": 76 }
+		},
+		"spin": {
+			"(bigwin)-assets/btn_spin": { "x": -71, "y": 55, "width": 142, "height": 110 }
+		},
+		"win": {
+			"(bigwin)-assets/panel_win": { "x": 20, "width": 356, "height": 100 }
+		}
+	}
+},
+"animations": {
+	"animation": {}
+}
+}
