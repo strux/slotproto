@@ -34,6 +34,13 @@
                 "y": "-10R",
                 "originX": "100%",
                 "originY": "100%"
+            },
+            "skipButton": {
+                "frame": "btn_skip",
+                "x": "-10R",
+                "y": "-10R",
+                "originX": "100%",
+                "originY": "100%"
             }
         }
     },

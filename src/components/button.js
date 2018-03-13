@@ -2,7 +2,6 @@ class Button {
 
     constructor(sprite) {
         this.sprite = sprite;
-        this._diabled = false;
         this.interactive = true;
         this.buttonMode = true;
         this.sprite.on('pointerdown', this.onDown, this);
@@ -39,6 +38,14 @@ class Button {
             this.sprite.interactive = true;
             this.sprite.buttonMode = true;
         }
+    }
+
+    get visible() {
+        return this.sprite.visible;
+    }
+
+    set visible(visible) {
+        return this.sprite.visible = visible;
     }
 }
 export { Button };
