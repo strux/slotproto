@@ -42,8 +42,8 @@ class ReelController {
     createReels(stripInfo) {
         stripInfo.forEach((strip, i) => {
             this._reels[i] = new Reel(this.config.cellWidth, this.config.cellHeight, this.config.symbolMap, this.config.cellsPerSecond);
-            this._reels[i].x = (this.config.cellWidth * i) - (this.width / 2) + (i * 10) + 27;
-            this._reels[i].y = (-this.height / 2) + 23;
+            this._reels[i].x = (this.config.cellWidth * i) + (i * 10) + 27;
+            this._reels[i].y = 23;
             this.sprite.addChild(this._reels[i]);
         }, this);
     }
