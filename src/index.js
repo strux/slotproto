@@ -70,11 +70,11 @@ function setup(loader, res) {
     new SlotControls(spriteById.slotControls, store);
 
     let spineAnim = new PIXI.spine.Spine(res.bigWin.spineData);
-    spriteById.bigWin.addChild(spineAnim);
+    //spriteById.bigWin.addChild(spineAnim);
 
-    spineAnim.x = 0; //(baseGame.width / 2);
-    spineAnim.y = 0; //(baseGame.height / 2);
-    //baseGame.addChild(spineAnim);
+    spineAnim.x = (app.stage.width / 2);
+    spineAnim.y = (app.stage.height / 2);
+    app.stage.addChild(spineAnim);
 
     var style = new PIXI.TextStyle({
       align: 'center',
@@ -93,8 +93,8 @@ function setup(loader, res) {
       wordWrap: true,
       wordWrapWidth: 440
     });
-    var rollup = new Rollup('0', style);
-    app.stage.addChild(rollup);
+    var rollup = new Rollup(style);
+    //app.stage.addChild(rollup);
 
-    //let bigWin = new BigWinSpine(spineAnim, rollup, store);
+    let bigWin = new BigWinSpine(spineAnim, rollup, store);
 }

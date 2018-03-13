@@ -7,7 +7,7 @@ class BigWinSpine {
 
         this.anim = anim;
         this.rollup = rollup;
-        this.track = this.anim.state.setAnimation(0, 'animation');
+        this.track = this.anim.state.setAnimation(0, 'bigwin');
         this.listeners = { complete: this.stopBigWin.bind(this) };
         this.anim.state.addListener(this.listeners);
         this.track.timeScale = 0;
@@ -15,10 +15,11 @@ class BigWinSpine {
 
         this.panelBone = this.anim.skeleton.bones.find((b) => b.data.name === 'panel_winnings');
 
-        this.rollup.visible = false;
-        this.rollup.x = this.panelBone.worldX;
-        this.rollup.y = this.panelBone.worldY;
         this.rollup.anchor.set(0.5);
+        this.anim.addChild(this.rollup);
+        this.rollup.x = this.panelBone.x;
+        this.rollup.y = this.panelBone.y;
+        this.rollup.visible = false;
 
         // NOTE: visibility has strange effects on playback.
         // Should be done in a wrapper node perhaps?
