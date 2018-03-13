@@ -100,9 +100,10 @@ function setup(loader, res) {
     let bigWin = new BigWinSpine(spineAnim, rollup, store);
 
 
-
+    /*
     let layout = new PIXI.spine.Spine(res.slotLayout.spineData);
     layout.x = (app.stage.width / 2);
     layout.y = (app.stage.height / 2);
     app.stage.addChild(layout);
+    */
 }
