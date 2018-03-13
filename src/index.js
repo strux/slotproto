@@ -47,7 +47,8 @@ PIXI.loader
     "./images/spritesheet_common1.json",
     "./images/spritesheet_paytable1.json",
 ])
-.add('bigWin', './bigwin.json')
+.add('bigWin', './spine/bigwin.json')
+.add('slotLayout', './spine/layout.json')
 .load(setup);
 
 function setup(loader, res) {
@@ -97,4 +98,11 @@ function setup(loader, res) {
     //app.stage.addChild(rollup);
 
     let bigWin = new BigWinSpine(spineAnim, rollup, store);
+
+
+
+    let layout = new PIXI.spine.Spine(res.slotLayout.spineData);
+    layout.x = (app.stage.width / 2);
+    layout.y = (app.stage.height / 2);
+    app.stage.addChild(layout);
 }
