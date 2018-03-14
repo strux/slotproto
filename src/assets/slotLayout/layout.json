@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "JbZ+GTuHy4KVyaYkwKQ3x4bpZ24",
+	"hash": "BLwhkv7JNunkfVJjlnn6tQq8zgU",
 	"spine": "3.7.13-beta",
 	"width": 1024,
 	"height": 768,
@@ -10,24 +10,26 @@
 "bones": [
 	{ "name": "root" },
 	{ "name": "bottomUI", "parent": "root", "y": -384, "transform": "noScale" },
-	{ "name": "autospinButton", "parent": "bottomUI", "x": 275, "y": 51, "transform": "noScale" },
+	{ "name": "winPanel", "parent": "bottomUI", "y": 51, "transform": "noScale" },
+	{ "name": "amount", "parent": "winPanel", "x": 20, "y": 30 },
+	{ "name": "autospinButton", "parent": "bottomUI", "x": 285, "y": 51, "transform": "noScale" },
 	{ "name": "betPanel", "parent": "bottomUI", "x": -295, "y": 51, "transform": "noScale" },
 	{ "name": "betMinus", "parent": "betPanel", "x": -103 },
 	{ "name": "betPlus", "parent": "betPanel", "x": 103.9 },
 	{ "name": "paytableButton", "parent": "bottomUI", "x": -470, "y": 51, "transform": "noScale" },
 	{ "name": "spinButton", "parent": "bottomUI", "x": 512, "transform": "noScale" },
-	{ "name": "winPanel", "parent": "bottomUI", "y": 51, "transform": "noScale" }
+	{ "name": "spinCenter", "parent": "spinButton", "x": -67, "y": 49 }
 ],
 "slots": [
 	{ "name": "background", "bone": "root", "attachment": "(bigwin)-assets/bg_slot" },
 	{ "name": "Bottom_tray", "bone": "bottomUI", "attachment": "(bigwin)-assets/bottom_bar" },
-	{ "name": "autospin", "bone": "autospinButton", "attachment": "(bigwin)-assets/btn_autospin" },
+	{ "name": "autospin", "bone": "autospinButton", "dark": "000000", "attachment": "(bigwin)-assets/btn_autospin" },
 	{ "name": "info", "bone": "paytableButton", "attachment": "(bigwin)-assets/btn_info" },
-	{ "name": "spin", "bone": "spinButton", "attachment": "(bigwin)-assets/btn_spin" },
+	{ "name": "spin", "bone": "spinCenter", "attachment": "(bigwin)-assets/btn_spin" },
 	{ "name": "bet", "bone": "betPanel", "attachment": "(bigwin)-assets/panel_bet" },
-	{ "name": "win", "bone": "winPanel", "attachment": "(bigwin)-assets/panel_win" },
 	{ "name": "minus", "bone": "betMinus", "attachment": "(bigwin)-assets/btn_linebet_minus" },
-	{ "name": "plus", "bone": "betPlus", "attachment": "(bigwin)-assets/btn_linebet_plus" }
+	{ "name": "plus", "bone": "betPlus", "attachment": "(bigwin)-assets/btn_linebet_plus" },
+	{ "name": "win", "bone": "winPanel", "attachment": "(bigwin)-assets/panel_win" }
 ],
 "skins": {
 	"default": {
@@ -35,7 +37,8 @@
 			"(bigwin)-assets/bottom_bar": { "y": 51, "width": 1024, "height": 102 }
 		},
 		"autospin": {
-			"(bigwin)-assets/btn_autospin": { "x": 10, "width": 145, "height": 80 }
+			"(bigwin)-assets/btn_autospin": { "width": 145, "height": 80 },
+			"(bigwin)-assets/btn_autostop": { "width": 145, "height": 80 }
 		},
 		"background": {
 			"(bigwin)-assets/bg_slot": { "width": 1024, "height": 768 }
@@ -53,14 +56,114 @@
 			"(bigwin)-assets/btn_linebet_plus": { "width": 52, "height": 76 }
 		},
 		"spin": {
-			"(bigwin)-assets/btn_spin": { "x": -71, "y": 55, "width": 142, "height": 110 }
+			"(bigwin)-assets/btn_skip": { "x": -4, "y": 6, "width": 142, "height": 110 },
+			"(bigwin)-assets/btn_spin": { "x": -4, "y": 6, "width": 142, "height": 110 }
 		},
 		"win": {
-			"(bigwin)-assets/panel_win": { "x": 20, "width": 356, "height": 100 }
+			"(bigwin)-assets/panel_win": { "x": 20, "y": 12, "width": 356, "height": 100 }
 		}
 	}
 },
+"events": {
+	"myTestEvent": {}
+},
 "animations": {
-	"animation": {}
+	"autospinOff": {
+		"slots": {
+			"autospin": {
+				"twoColor": [
+					{ "time": 0, "light": "ffffffff", "dark": "000000" },
+					{ "time": 0.1, "light": "bebebeff", "dark": "000000" },
+					{ "time": 0.2, "light": "ffffffff", "dark": "000000" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "(bigwin)-assets/btn_autostop" },
+					{ "time": 0.1, "name": "(bigwin)-assets/btn_autospin" }
+				]
+			}
+		},
+		"bones": {
+			"autospinButton": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.1, "x": 0.9, "y": 0.9 },
+					{ "time": 0.2, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"autospinOn": {
+		"slots": {
+			"autospin": {
+				"twoColor": [
+					{ "time": 0.0667, "light": "efc0ffff", "dark": "ff4c4c" },
+					{ "time": 0.3333, "light": "ffffffff", "dark": "000000" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "(bigwin)-assets/btn_autospin" },
+					{ "time": 0.3333, "name": "(bigwin)-assets/btn_autostop" }
+				]
+			}
+		},
+		"bones": {
+			"autospinButton": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{
+						"time": 0.0667,
+						"x": 1.1,
+						"y": 1.1,
+						"curve": [ 0.543, 0, 1, 0.8 ]
+					},
+					{
+						"time": 0.3333,
+						"x": 0.95,
+						"y": 0.95,
+						"curve": [ 0, 0.2, 0.621, 1 ]
+					},
+					{ "time": 0.4333, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"betPlus": {
+		"slots": {
+			"plus": {
+				"color": [
+					{ "time": 0, "color": "7f7f7fff" }
+				]
+			}
+		}
+	},
+	"infoButtonJiggle": {
+		"bones": {
+			"paytableButton": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.0667, "x": 0, "y": 8.68 },
+					{ "time": 0.1333, "x": 0, "y": -9.77 },
+					{ "time": 0.2, "x": 0, "y": 8.68 },
+					{ "time": 0.2667, "x": 0, "y": -9.77 },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"spin": {
+		"bones": {
+			"spinCenter": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.0667, "x": 1.1, "y": 1.1 },
+					{ "time": 0.1667, "x": 1, "y": 1 },
+					{ "time": 0.3, "x": 1.05, "y": 1.05 },
+					{ "time": 0.4667, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.2667, "name": "myTestEvent" }
+		]
+	}
 }
 }

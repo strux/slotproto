@@ -6,64 +6,84 @@ filter: MipMapLinearNearest,MipMapLinearNearest
 repeat: none
 (bigwin)-assets/bg_slot
   rotate: false
-  xy: 0, 241
+  xy: 0, 253
   size: 1024, 768
   orig: 1024, 768
   offset: 0, 0
   index: -1
 (bigwin)-assets/bottom_bar
   rotate: false
-  xy: 0, 137
+  xy: 0, 149
   size: 1024, 102
   orig: 1024, 102
   offset: 0, 0
   index: -1
 (bigwin)-assets/btn_autospin
-  rotate: false
-  xy: 617, 55
+  rotate: true
+  xy: 617, 2
   size: 145, 80
   orig: 145, 80
   offset: 0, 0
   index: -1
-(bigwin)-assets/btn_info
+(bigwin)-assets/btn_autostop
   rotate: true
-  xy: 903, 56
-  size: 79, 81
-  orig: 80, 82
-  offset: 0, 1
+  xy: 697, 2
+  size: 145, 80
+  orig: 145, 80
+  offset: 0, 0
   index: -1
-(bigwin)-assets/btn_linebet_minus
+(bigwin)-assets/btn_skip
   rotate: true
-  xy: 903, 2
-  size: 52, 74
-  orig: 52, 76
-  offset: 0, 2
-  index: -1
-(bigwin)-assets/btn_linebet_plus
-  rotate: true
-  xy: 355, 3
-  size: 50, 74
-  orig: 52, 76
-  offset: 0, 2
+  xy: 777, 5
+  size: 142, 110
+  orig: 142, 110
+  offset: 0, 0
   index: -1
 (bigwin)-assets/btn_spin
-  rotate: false
-  xy: 762, 25
+  rotate: true
+  xy: 887, 6
   size: 141, 110
   orig: 142, 110
   offset: 1, 0
   index: -1
 (bigwin)-assets/panel_bet
   rotate: false
-  xy: 355, 55
+  xy: 355, 67
   size: 262, 80
   orig: 262, 80
   offset: 0, 0
   index: -1
 (bigwin)-assets/panel_win
   rotate: false
-  xy: 0, 35
+  xy: 0, 47
   size: 355, 100
   orig: 356, 100
   offset: 0, 0
+  index: -1
+
+layout2.png
+size: 256,128
+format: RGBA8888
+filter: MipMapLinearNearest,MipMapLinearNearest
+repeat: none
+(bigwin)-assets/btn_info
+  rotate: true
+  xy: 0, 2
+  size: 79, 81
+  orig: 80, 82
+  offset: 0, 1
+  index: -1
+(bigwin)-assets/btn_linebet_minus
+  rotate: true
+  xy: 81, 29
+  size: 52, 74
+  orig: 52, 76
+  offset: 0, 2
+  index: -1
+(bigwin)-assets/btn_linebet_plus
+  rotate: true
+  xy: 155, 31
+  size: 50, 74
+  orig: 52, 76
+  offset: 0, 2
   index: -1
