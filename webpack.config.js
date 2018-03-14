@@ -15,7 +15,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: 'src/assets/spritesheets', to: 'images' },
-      { from: 'src/assets/bigwin' }
+      { from: 'src/assets/spine/bigwin', to: 'spine' },
+      { from: 'src/assets/spine/slotLayout', to: 'spine' }
     ]),
     //new CleanWebpackPlugin(['dist']),
   ],

@@ -47,7 +47,8 @@ PIXI.loader
     "./images/spritesheet_common1.json",
     "./images/spritesheet_paytable1.json",
 ])
-.add('bigWin', './bigwin.json')
+.add('bigWin', './spine/bigwin.json')
+.add('slotLayout', './spine/layout.json')
 .load(setup);
 
 function setup(loader, res) {
@@ -60,8 +61,8 @@ function setup(loader, res) {
 
     let anticipation = spriteById.anticipation;
     anticipation.anchor.set(0.5);
-    anticipation.x = (app.stage.width / 2) + 160;
-    anticipation.y = (app.stage.height / 2) - 40;
+    anticipation.x = (app.stage.width / 2) + 125;
+    anticipation.y = (app.stage.height / 2) - 130;
     anticipation.width = REELS_CONFIG.cellWidth + 45;
     anticipation.height = (REELS_CONFIG.cellHeight * 4) + 40;
 
@@ -70,11 +71,11 @@ function setup(loader, res) {
     new SlotControls(spriteById.slotControls, store);
 
     let spineAnim = new PIXI.spine.Spine(res.bigWin.spineData);
-    spriteById.bigWin.addChild(spineAnim);
+    //spriteById.bigWin.addChild(spineAnim);
 
-    spineAnim.x = 0; //(baseGame.width / 2);
-    spineAnim.y = 0; //(baseGame.height / 2);
-    //baseGame.addChild(spineAnim);
+    spineAnim.x = (app.stage.width / 2);
+    spineAnim.y = (app.stage.height / 2);
+    app.stage.addChild(spineAnim);
 
     var style = new PIXI.TextStyle({
       align: 'center',
@@ -93,8 +94,16 @@ function setup(loader, res) {
       wordWrap: true,
       wordWrapWidth: 440
     });
-    var rollup = new Rollup('0', style);
-    app.stage.addChild(rollup);
+    var rollup = new Rollup(style);
+    //app.stage.addChild(rollup);
 
-    //let bigWin = new BigWinSpine(spineAnim, rollup, store);
+    let bigWin = new BigWinSpine(spineAnim, rollup, store);
+
+
+    /*
+    let layout = new PIXI.spine.Spine(res.slotLayout.spineData);
+    layout.x = (app.stage.width / 2);
+    layout.y = (app.stage.height / 2);
+    app.stage.addChild(layout);
+    */
 }

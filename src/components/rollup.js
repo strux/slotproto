@@ -2,8 +2,8 @@ import { TweenMax } from 'gsap';
 
 class Rollup extends PIXI.Text {
 
-    constructor(initialValue = 0, textStyle) {
-        super(initialValue, textStyle);
+    constructor(textStyle) {
+        super('', textStyle);
     }
 
     rollup(start, end) {
