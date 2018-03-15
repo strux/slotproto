@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "z/+a1dl5NwgSV9bWeZufkiXdDwQ",
+	"hash": "yCaSUAQBUPEacliRif9LGkEZhMI",
 	"spine": "3.7.14-beta",
 	"width": 1024,
 	"height": 768,
@@ -25,7 +25,7 @@
 	{ "name": "Bottom_tray", "bone": "bottomUI", "attachment": "(bigwin)-assets/bottom_bar" },
 	{ "name": "autospin", "bone": "autospinButton", "dark": "000000", "attachment": "(bigwin)-assets/btn_autospin" },
 	{ "name": "info", "bone": "paytableButton", "attachment": "(bigwin)-assets/btn_info" },
-	{ "name": "spin", "bone": "spinCenter", "attachment": "img_spin" },
+	{ "name": "spin", "bone": "spinCenter", "attachment": "(bigwin)-assets/btn_spin" },
 	{ "name": "bet", "bone": "betPanel", "attachment": "(bigwin)-assets/panel_bet" },
 	{ "name": "minus", "bone": "betMinus", "attachment": "(bigwin)-assets/btn_linebet_minus" },
 	{ "name": "plus", "bone": "betPlus", "attachment": "(bigwin)-assets/btn_linebet_plus" },
@@ -56,8 +56,8 @@
 			"(bigwin)-assets/btn_linebet_plus": { "width": 52, "height": 76 }
 		},
 		"spin": {
-			"img_skip": { "path": "(bigwin)-assets/btn_skip.png", "x": -4, "y": 6, "width": 142, "height": 110 },
-			"img_spin": { "path": "(bigwin)-assets/btn_spin.png", "x": -4, "y": 6, "width": 142, "height": 110 }
+			"(bigwin)-assets/btn_skip": { "x": -4, "y": 6, "width": 142, "height": 110 },
+			"(bigwin)-assets/btn_spin": { "x": -4, "y": 6, "width": 142, "height": 110 }
 		},
 		"win": {
 			"(bigwin)-assets/panel_win": { "x": 20, "y": 12, "width": 356, "height": 100 }
@@ -153,7 +153,7 @@
 		"slots": {
 			"spin": {
 				"attachment": [
-					{ "time": 0, "name": "img_spin" }
+					{ "time": 0, "name": "(bigwin)-assets/btn_spin" }
 				]
 			}
 		}
@@ -188,7 +188,7 @@
 		"slots": {
 			"spin": {
 				"attachment": [
-					{ "time": 0, "name": "img_skip" }
+					{ "time": 0, "name": "(bigwin)-assets/btn_skip" }
 				]
 			}
 		}
