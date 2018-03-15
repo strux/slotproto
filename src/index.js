@@ -55,9 +55,28 @@ function setup(loader, res) {
 
     store.dispatch({ type: 'INITIALIZE_STAGE', stage: 'BaseGame'});
 
+    let layout = new PIXI.spine.Spine(res.slotLayout.spineData);
+    console.log(layout);
+    app.stage.addChild(layout);
+    layout.x = (app.stage.width / 2);
+    layout.y = (app.stage.height / 2);
+
+    let btn = layout.children[4];
+    btn.buttonMode = true;
+    btn.interactive = true;
+    btn.on('pointerdown', () => {
+        store.dispatch({ type: 'SPIN_MACHINE' });
+        layout.state.setAnimation(0, 'spinDim');
+        let listeners = { event: (entry, event) => {
+            if (event.data.name === 'myTestEvent') {
+                layout.state.setAnimation(1, 'infoButtonJiggle');
+            }
+        }};
+        layout.state.addListener(listeners);
+    });
+
     const spriteById = layoutBuilder(baseGameLayoutData, app.stage.addChild(new PIXI.Container()));
 
-    new ReelController(spriteById.slotFace, store, REELS_CONFIG);
 
     let anticipation = spriteById.anticipation;
     anticipation.anchor.set(0.5);
@@ -68,7 +87,9 @@ function setup(loader, res) {
 
     new Anticipation(anticipation, store);
 
+    /*
     new SlotControls(spriteById.slotControls, store);
+    */
 
     let spineAnim = new PIXI.spine.Spine(res.bigWin.spineData);
     //spriteById.bigWin.addChild(spineAnim);
@@ -100,10 +121,6 @@ function setup(loader, res) {
     let bigWin = new BigWinSpine(spineAnim, rollup, store);
 
 
-    /*
-    let layout = new PIXI.spine.Spine(res.slotLayout.spineData);
-    layout.x = (app.stage.width / 2);
-    layout.y = (app.stage.height / 2);
-    app.stage.addChild(layout);
-    */
+
+    new ReelController(spriteById.slotFace, store, REELS_CONFIG);
 }
