@@ -9,11 +9,11 @@ class Button {
     }
 
     onDown() {
-        this.sprite.scale.set(1.2);
+        this.sprite.scale.set(1.2, -1.2);
     }
 
     onUp(callback=null) {
-        this.sprite.scale.set(1);
+        this.sprite.scale.set(1, -1);
         if (this.onUpCallback) {
             this.onUpCallback();
         }
@@ -30,7 +30,7 @@ class Button {
     set disabled(disabled=true) {
         this._disabled = disabled;
         if (disabled) {
-            this.sprite.alpha = 0.3;
+            this.sprite.alpha = 0.7;
             this.sprite.interactive = false;
             this.sprite.buttonMode = false;
         } else {

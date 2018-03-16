@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "yCaSUAQBUPEacliRif9LGkEZhMI",
+	"hash": "nfeyrk054gp7sv8l+FEfy/xr+/8",
 	"spine": "3.7.14-beta",
 	"width": 1024,
 	"height": 768,
@@ -26,6 +26,7 @@
 	{ "name": "autospin", "bone": "autospinButton", "dark": "000000", "attachment": "(bigwin)-assets/btn_autospin" },
 	{ "name": "info", "bone": "paytableButton", "attachment": "(bigwin)-assets/btn_info" },
 	{ "name": "spin", "bone": "spinCenter", "attachment": "(bigwin)-assets/btn_spin" },
+	{ "name": "skip", "bone": "spinCenter", "attachment": "(bigwin)-assets/btn_skip" },
 	{ "name": "bet", "bone": "betPanel", "attachment": "(bigwin)-assets/panel_bet" },
 	{ "name": "minus", "bone": "betMinus", "attachment": "(bigwin)-assets/btn_linebet_minus" },
 	{ "name": "plus", "bone": "betPlus", "attachment": "(bigwin)-assets/btn_linebet_plus" },
@@ -55,8 +56,10 @@
 		"plus": {
 			"(bigwin)-assets/btn_linebet_plus": { "width": 52, "height": 76 }
 		},
+		"skip": {
+			"(bigwin)-assets/btn_skip": { "x": -4, "y": 6, "width": 142, "height": 110 }
+		},
 		"spin": {
-			"(bigwin)-assets/btn_skip": { "x": -4, "y": 6, "width": 142, "height": 110 },
 			"(bigwin)-assets/btn_spin": { "x": -4, "y": 6, "width": 142, "height": 110 }
 		},
 		"win": {
@@ -149,15 +152,6 @@
 			}
 		}
 	},
-	"skipToSpin": {
-		"slots": {
-			"spin": {
-				"attachment": [
-					{ "time": 0, "name": "(bigwin)-assets/btn_spin" }
-				]
-			}
-		}
-	},
 	"spin": {
 		"bones": {
 			"spinCenter": {
@@ -174,8 +168,14 @@
 			{ "time": 0.2667, "name": "myTestEvent" }
 		]
 	},
-	"spinDim": {
+	"spinDisabled": {
 		"slots": {
+			"skip": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.1667, "color": "7f7f7fff" }
+				]
+			},
 			"spin": {
 				"color": [
 					{ "time": 0, "color": "ffffffff" },
@@ -184,11 +184,30 @@
 			}
 		}
 	},
-	"spinToSkip": {
+	"spinHide": {
 		"slots": {
-			"spin": {
+			"skip": {
 				"attachment": [
 					{ "time": 0, "name": "(bigwin)-assets/btn_skip" }
+				]
+			},
+			"spin": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		}
+	},
+	"spinShow": {
+		"slots": {
+			"skip": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"spin": {
+				"attachment": [
+					{ "time": 0, "name": "(bigwin)-assets/btn_spin" }
 				]
 			}
 		}

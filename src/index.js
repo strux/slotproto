@@ -8,6 +8,7 @@ import { ReelController } from './components/ReelController.js';
 import { Anticipation } from './components/anticipation.js';
 import { BigWin } from './components/bigWin.js';
 import { BigWinSpine } from './components/bigWinSpine.js';
+import { ButtonSpine } from './components/buttonSpine.js';
 import { Rollup } from './components/rollup.js';
 
 import { createStore, applyMiddleware } from 'redux';
@@ -61,22 +62,14 @@ function setup(loader, res) {
     layout.x = (app.stage.width / 2);
     layout.y = (app.stage.height / 2);
 
-    let btn = layout.children[4];
-    btn.buttonMode = true;
-    btn.interactive = true;
-    btn.on('pointerdown', () => {
-        store.dispatch({ type: 'SPIN_MACHINE' });
-        layout.state.setAnimation(0, 'spinDim');
-        let listeners = { event: (entry, event) => {
-            if (event.data.name === 'myTestEvent') {
-                layout.state.setAnimation(1, 'infoButtonJiggle');
-            }
-        }};
-        layout.state.addListener(listeners);
-    });
+    /*
+    let btn = new ButtonSpine(layout.skeleton.findSlot('spin').currentSprite);
+    btn.onClick = store.dispatch.bind(store, { type: 'SPIN_MACHINE' });
+    */
+
+    new SlotControls(layout, store);
 
     const spriteById = layoutBuilder(baseGameLayoutData, app.stage.addChild(new PIXI.Container()));
-
 
     let anticipation = spriteById.anticipation;
     anticipation.anchor.set(0.5);
@@ -87,9 +80,6 @@ function setup(loader, res) {
 
     new Anticipation(anticipation, store);
 
-    /*
-    new SlotControls(spriteById.slotControls, store);
-    */
 
     let spineAnim = new PIXI.spine.Spine(res.bigWin.spineData);
     //spriteById.bigWin.addChild(spineAnim);

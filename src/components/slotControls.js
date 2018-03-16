@@ -2,11 +2,12 @@ import { Button } from './button.js';
 import { reelsStopped } from '../reducers/ui.js';
 import { getSimplifiedStripInfo } from '../reducers/stripInfo.js';
 import { findFirstChildWithName } from '../util/spriteUtil.js';
+import { ButtonSpine } from '../components/buttonSpine.js';
 class SlotControls {
 
-    constructor(sprite, store) {
+    constructor(spine, store) {
 
-        this.sprite = sprite
+        this.spine = spine;
         this.store = store;
 
         this.spinBtn = this.createSpinButton();
@@ -26,20 +27,19 @@ class SlotControls {
 
     createSpinButton() {
 
-        let btn = new Button(findFirstChildWithName(this.sprite, 'spinButton'));
+        let btn = new Button(this.spine.skeleton.findSlot('spin').currentSprite);
         btn.onClick = this.onSpinClick.bind(this);
         return btn;
     }
 
     createSkipButton() {
 
-        let btn = new Button(findFirstChildWithName(this.sprite, 'skipButton'));
+        let btn = new Button(this.spine.skeleton.findSlot('skip').currentSprite);
         btn.onClick = this.onSkipClick.bind(this);
         return btn;
     }
 
     onSpinClick() {
-        let reelCount = getSimplifiedStripInfo(this.store.getState(), 'BaseGame').length;
         this.store.dispatch({ type: 'SPIN_MACHINE' });
     }
 
